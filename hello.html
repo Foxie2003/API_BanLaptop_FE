@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="frm" name="frm">
+        <input type="text" id="txt">
+        <br>
+        <button onclick="saveData()">Save</button>
+        <br>
+        <button onclick="loadData()">Load</button>
+    </form>
+    <div id="loadData">
+
+    </div>
+    <script>
+        function saveData() {
+            event.preventDefault();
+            var data = document.getElementById("txt").value;
+            localStorage.setItem("data", data);
+        }
+        function loadData() {
+            event.preventDefault();
+            var data = localStorage.getItem("data");
+            document.getElementById("loadData").innerHTML = data;
+        }
+    </script>
+</body>
+</html>

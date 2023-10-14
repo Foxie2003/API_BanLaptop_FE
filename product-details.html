@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./assets/js/home-page.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="products-container" id="products">
+
+    </div>
+    <script>
+        var id = localStorage.getItem("current-product-id").valueOf();
+        const products = JSON.parse(localStorage.getItem("sanpham"));
+        // document.getElementById("products").innerHTML = "";
+        // document.getElementById("showMoreProduct").style.display = "none";
+        for (const property in products.phanloai) {
+            for (var i = 0; i < products.phanloai[property].length; i++) {
+                var productId = products.phanloai[property][i].id;
+                if(productId == id) {
+                    loadInnerProduct(products.phanloai[property][i]);
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

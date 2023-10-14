@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/sign-up.css">
+    <script src="https://kit.fontawesome.com/fd095985f5.js" crossorigin="anonymous"></script>
+    <!-- <script src="./assets/js/search.js" defer></script> -->
+    <script src="./assets/js/sign-up.js"></script>
+    <title>Thegioilaptop.com</title>
+</head>
+<body>
+    <!--        TOP HEADER       -->
+    <div class="top-header">
+        <img src="./assets/img/logo/horizontal-logo.png" alt="" id="top-logo">
+        <div id="top-search">
+            <input type="search" id="top-search-input" placeholder="Bạn đang tìm...">
+            <button id="top-search-button">
+                <i class="fa-solid fa-magnifying-glass fa-lg fa-beat-fade" style="color: #000000;"></i>
+            </button>
+        </div>
+        <div class="top-button">
+            Đăng nhập
+        </div>
+        <div class="top-button">
+            <i class="fa-solid fa-cart-shopping fa-lg"></i>
+            <span style="margin-left: 2px;"></span>
+            Giỏ hàng (0)
+        </div>
+    </div>
+    <!--        sign-up PANEL      -->
+    <div class="sign-up-panel container" id="sign-up">
+        <img src="./assets/img/logo/sign-up.png" alt="logo-sign-up">
+        <form class="sign-up-form" onsubmit="signUp()">
+            <h2 style="padding: 5px; font-size: 20px;">ĐĂNG KÝ TÀI KHOẢN</h2>
+            <label for="username">Tài khoản</label>
+            <div class="input-wrap">
+                <!-- <label for="username" style="position: absolute; margin-top: -65px;">adu</label> -->
+                <i class="fa-solid fa-user fa-lg"></i>
+                <input id="username-sign-up" type="text" name="username" placeholder="Email hoặc SĐT">
+            </div>
+            <label for="password">Mật khẩu</label>
+            <div class="input-wrap">
+                <i class="fa-solid fa-lock fa-lg"></i>
+                <input id="password-sign-up" type="password" name="password" placeholder="Mật khẩu">
+            </div>
+            <label for="confirm-password">Xác nhận mật khẩu</label>
+            <div class="input-wrap">
+                <i class="fa-solid fa-lock fa-lg"></i>
+                <input id="confirm-password-sign-up" type="password" name="confirm-password" placeholder="Xác nhận mật khẩu">
+            </div>
+            <button type="submit">ĐĂNG KÝ</button>
+            <a href="#" onclick="goToSignIn()">Bạn đã có tài khoản?</a>
+        </form>
+    </div>
+    <!--        sign-in PANEL      -->
+    <div class="sign-up-panel container hide" id="sign-in">
+        <img src="./assets/img/logo/sign-up.png" alt="logo-sign-up">
+        <form class="sign-up-form" onsubmit="signIn()">
+            <h2 style="padding-bottom: 20px;">ĐĂNG NHẬP TÀI KHOẢN</h2>
+            <label for="username">Tài khoản</label>
+            <div class="input-wrap">
+                <i class="fa-solid fa-user fa-lg"></i>
+                <input id="username-sign-in" type="text" name="username" placeholder="Email hoặc SĐT">
+            </div>
+            <label for="password">Mật khẩu</label>
+            <div class="input-wrap">
+                <i class="fa-solid fa-lock fa-lg"></i>
+                <input id="password-sign-in" type="password" name="password" placeholder="Mật khẩu">
+            </div>
+            <button type="submit">ĐĂNG NHẬP</button>
+            <a href="#" onclick="goToSignUp()">Bạn chưa có tài khoản?</a>
+        </form>
+    </div>
+    <div class="footer">
+        <div class="container" style="align-items: flex-start;">
+            <ul>
+                <li>Tích điểm Quà tặng VIP</li>
+                <li>Lịch sử mua hàng</li>
+                <li>Tìm hiểu về mua trả góp</li>
+                <li>Chính sách bảo hành</li>
+            </ul>
+            <ul>
+                <li>Giới thiệu công ty (MWG.vn)</li>
+                <li>Tuyển dụng</li>
+                <li>Gửi góp ý, khiếu nại</li>
+                <li>Tìm siêu thị (3.354 shop)</li>
+            </ul>
+            <ul>
+                <li><b>Tổng đài hỗ trợ</b> (Miễn phí gọi)</li>
+                <li>Khiếu nại: <b>1800.1062</b> (8:00 - 21:30)</li>
+                <li>Bảo hành: <b>1800.1064</b> (8:00 - 21:00)</li>
+            </ul>
+        </div>
+        <p style="width: 100%; text-align: center;">Copyright by Phương</p>
+    </div>
+</body>
+</html>

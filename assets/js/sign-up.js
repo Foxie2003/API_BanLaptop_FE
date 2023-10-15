@@ -11,12 +11,15 @@ function signUp(e) {
         userName : userName,
         password : password,
     }
-    if(userName.length > 8) {
+    if(password.length >= 8) {
         console.log(userName);
         var json = JSON.stringify(user);
         localStorage.setItem(userName, json);
         alert("Đăng ký thành công");
         window.location.href = "load-json.html";
+    }
+    else {
+        alert("Mật khẩu phải chứa tổi thiểu 8 ký tự");
     }
 }
 

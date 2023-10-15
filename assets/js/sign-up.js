@@ -12,6 +12,7 @@ function signUp(e) {
         password : password,
     }
     if(userName.length > 8) {
+        console.log(userName);
         var json = JSON.stringify(user);
         localStorage.setItem(userName, json);
         alert("Đăng ký thành công");

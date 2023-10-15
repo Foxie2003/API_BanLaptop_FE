@@ -191,8 +191,9 @@ function searchProduct(name) {
         document.getElementById("products").innerHTML
             = `<p style="font-size: 32px; font-weight: bold; color: #333; width: 100%; text-align: center; margin:200px 0;">Không có sản phẩm nào có tên "${name}" </p>
             <p style="font-size: 26px; color: #333; width: 100%; text-align: center; margin-bottom: 20px;">Xem các sản phẩm khác</p>`;
-             loaded = 0; loadAllProduct();
-             document.getElementById('showMoreProduct').style.display = 'block';
+            loaded = 0;
+            loadAllProduct();
+            document.getElementById('showMoreProduct').style.display = 'block';
     }
 }
 

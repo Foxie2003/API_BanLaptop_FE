@@ -184,13 +184,13 @@
         showSlideBody1TimeOut();
         loadAllProduct();
         //Search when press enter
-        var searchButton = document.getElementById("top-search-input");
-        searchButton.addEventListener("keypress", function (event) {
+        var searchInput = document.getElementById("top-search-input");
+        searchInput.addEventListener("keypress", function (event) {
             if (event.key === "Enter") {
                 // alert("Ok");
                 document.getElementById("top-search-button").click();
             }
-        })
+        });
 
         // Back to top button
         var btnBackToTop = document.getElementById("btnBackToTop");

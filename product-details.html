@@ -1,29 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./assets/js/home-page.js"></script>
-    <title>Document</title>
-</head>
-<body>
-    <div class="products-container" id="products">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./assets/css/sign-up.css">
+        <link rel="stylesheet" href="./assets/css/product-details.css">
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            crossorigin="anonymous"></script>
+        <script src="./assets/js/extm.js"></script>
+        <script src="./assets/js/home-page.js"></script>
+        <script src="./assets/js/product-details.js"></script>
+        <script src="https://kit.fontawesome.com/fd095985f5.js"
+            crossorigin="anonymous"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <!--        SLIDE SHOW (Top)       -->
+        <div class="slide-show">
+            <img
+                src="./assets/img/slide-show/slide-show top/BIG-T10-1200-44-1200x44.webp"
+                alt class="top-slides">
+            <img
+                src="./assets/img/slide-show/slide-show top/DH-Ty-Ty-1200-44-1200x44.webp"
+                alt class="top-slides">
+            <img
+                src="./assets/img/slide-show/slide-show top/IP15-1200-44-1200x44.webp"
+                alt class="top-slides">
+        </div>
+        <!--        TOP HEADER       -->
+        <div class="top-header">
+            <img src="./assets/img/logo/horizontal-logo.png" alt id="top-logo">
+            <div id="top-search">
+                <input type="search" id="top-search-input"
+                    placeholder="Bạn đang tìm...">
+                <button id="top-search-button"
+                    onclick="searchProduct(document.getElementById('top-search-input').value.trim());">
+                    <i class="fa-solid fa-magnifying-glass fa-lg fa-beat-fade"
+                        style="color: #000000;"></i>
+                </button>
+            </div>
+            <div class="top-button"
+                onclick="window.location.href = 'sign-up-sign-in.html';">
+                Đăng nhập
+            </div>
+            <div class="top-button">
+                <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                <span style="margin-left: 2px;"></span>
+                Giỏ hàng (0)
+            </div>
+        </div>
+        <div class="product-details-container">
+            <div class="container"
+                style="justify-content: left; border-bottom: 1px solid #ccc;">
+                <div class="product-name">
+                    Laptop Asus TUF Gaming F15 FX506HF i5 11400H/8GB/512GB/4GB
+                    RTX2050/144Hz/Win11 (HN014W)
+                </div>
+            </div>
+            <div class="container">
+                <div class="left-panel">
+                    <!--        PRODUCT SLIDESHOW (Body 1)       -->
+                    <div class="slide-show-product">
 
-    </div>
-    <script>
-        var id = localStorage.getItem("current-product-id").valueOf();
-        const products = JSON.parse(localStorage.getItem("sanpham"));
-        // document.getElementById("products").innerHTML = "";
-        // document.getElementById("showMoreProduct").style.display = "none";
-        for (const property in products.phanloai) {
-            for (var i = 0; i < products.phanloai[property].length; i++) {
-                var productId = products.phanloai[property][i].id;
-                if(productId == id) {
-                    loadInnerProduct(products.phanloai[property][i]);
-                    break;
-                }
-            }
-        }
+                        <div class="container">
+                            <div id="btn-back-image" onclick="backSlideProduct()">
+                                <i class="fa-solid fa-chevron-left fa-sm"></i>
+                            </div>
+                            <div class="slide-show">
+                                <img
+                                    src=""
+                                    alt id="product-details-slide">
+                            </div>
+                            <div id="btn-next-image" onclick="nextSlideProduct()">
+                                <i class="fa-solid fa-chevron-right fa-sm"></i>
+                            </div>
+                            <div class="dots">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-panel">
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+            showSlideProduct();
+
+        showSlideTop();
+        // var id = localStorage.getItem("current-product-id").valueOf();
+        // const products = JSON.parse(localStorage.getItem("sanpham"));
+        // // document.getElementById("products").innerHTML = "";
+        // // document.getElementById("showMoreProduct").style.display = "none";
+        // for (const property in products.phanloai) {
+        //     for (var i = 0; i < products.phanloai[property].length; i++) {
+        //         var productId = products.phanloai[property][i].id;
+        //         if(productId == id) {
+        //             loadInnerProduct(products.phanloai[property][i]);
+        //             break;
+        //         }
+        //     }
+        // }
     </script>
-</body>
+    </body>
 </html>

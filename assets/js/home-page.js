@@ -59,14 +59,14 @@ function showSlideBody1TimeOut() {
 }
 function backSlideBody1() {
     slideIndexBody1 = slideIndexBody1 - 2;
-    setTimeout(showSlideBody1(), -2500);
+    showSlideBody1();
 }
 function nextSlideBody1() {
-    setTimeout(showSlideBody1(), 0);
+    showSlideBody1()
 }
 function setIndexSlideBody1(index) {
     slideIndexBody1 = index;
-    setTimeout(showSlideBody1(), 0);
+    showSlideBody1()
 }
 
 // Load product

@@ -14,7 +14,7 @@
         <script src="./assets/js/product-details.js"></script>
         <script src="https://kit.fontawesome.com/fd095985f5.js"
             crossorigin="anonymous"></script>
-        <title>Document</title>
+        <title>Some thing</title>
     </head>
     <body>
         <!--        SLIDE SHOW (Top)       -->
@@ -31,7 +31,7 @@
         </div>
         <!--        TOP HEADER       -->
         <div class="top-header">
-            <img src="./assets/img/logo/horizontal-logo.png" alt id="top-logo">
+            <img src="./assets/img/logo/horizontal-logo.png" alt id="top-logo" onclick="window.location.href = 'home-page.html';">
             <div id="top-search">
                 <input type="search" id="top-search-input"
                     placeholder="Bạn đang tìm...">
@@ -58,8 +58,17 @@
                     Laptop Asus TUF Gaming F15 FX506HF i5 11400H/8GB/512GB/4GB
                     RTX2050/144Hz/Win11 (HN014W)
                 </div>
+                <div class="rating">
+                    <i class="fa-solid fa-star fa-xs" style="color: #fb6e2e;"></i>
+                    <i class="fa-solid fa-star fa-xs" style="color: #fb6e2e;"></i>
+                    <i class="fa-solid fa-star fa-xs" style="color: #fb6e2e;"></i>
+                    <i class="fa-solid fa-star fa-xs" style="color: #fb6e2e;"></i>
+                    <i class="fa-solid fa-star fa-xs" style="color: #e0e0e0;"></i>
+                    <span style="font-size: 13px; color: #2f80ed;">69 đánh giá</span>
+                </div>
             </div>
-            <div class="container">
+            </div>
+            <div class="container" style="margin-top: 10px; align-items: start;">
                 <div class="left-panel">
                     <!--        PRODUCT SLIDESHOW (Body 1)       -->
                     <div class="slide-show-product">
@@ -86,17 +95,362 @@
                             </div>
                         </div>
                     </div>
+                    <div id="showSpecs">
+                        Xem cấu hình chi tiết
+                    </div>
+                    <div class="img-bottom-nav">
+                        <div class="img-bottom-nav-item">
+                            <i class="fa-solid fa-medal fa-lg"></i>
+                        </div>
+                        <div class="img-bottom-nav-item">
+                            <i class="fa-solid fa-circle fa-lg"></i>
+                        </div>
+                        <div class="img-bottom-nav-item">
+                            <i class="fa-solid fa-box-open fa-lg"></i>
+                        </div>
+                        <div class="img-bottom-nav-item">
+                            <i class="fa-solid fa-circle-info fa-lg"></i>
+                        </div>
+                        <div class="img-bottom-nav-item">
+                            <i class="fa-solid fa-pen-to-square fa-lg"></i>
+                        </div>
+                    </div>
+                    <div class="img-bottom-nav">
+                        <div class="img-bottom-nav-item" style="font-size: 12px; border: none;">
+                            Điểm nổi bật
+                        </div>
+                        <div class="img-bottom-nav-item" style="font-size: 12px; border: none;">
+                            Màu sắc
+                        </div>
+                        <div class="img-bottom-nav-item" style="font-size: 12px; border: none;">
+                            Hình mở hộp
+                        </div>
+                        <div class="img-bottom-nav-item" style="font-size: 12px; border: none;">
+                            Thông số kỹ thuật
+                        </div>
+                        <div class="img-bottom-nav-item" style="font-size: 12px; border: none;">
+                            Thông tin sản phẩm
+                        </div>
+                    </div>
+                    <div class="guarantee">
+                        <div class="guarantee-item" style="font-size: 14px; color: #333;">
+                            <i class="fa-solid fa-box fa-2xl" style="font-size: 40px; color: #2f80ed;"></i>
+                            <div>Hư gì đổi nấy <b>12 tháng</b> tại 3353 siêu thị toàn quốc (miễn phí tháng đầu)</div>
+                        </div>
+                        <div class="guarantee-item" style="font-size: 14px;">
+                            <i class="fa-solid fa-shield-halved fa-2xl" style="font-size: 40px; color: #2f80ed;"></i>
+                            <div>Bảo hành <b>chính hãng laptop 2 năm</b> tại các trung tâm bảo hành hãng</div>
+                        </div>
+                        <div class="guarantee-item" style="font-size: 14px;">
+                            <i class="fa-solid fa-box-open fa-2xl" style="font-size: 40px; color: #2f80ed;"></i>
+                            <div>Bộ sản phẩm gồm: Sách hướng dẫn, Thùng máy, Sạc</div>
+                        </div>
+                    </div>
+                    <div id="product-desc">
+                        <div id="product-desc-header">
+                            <!-- Data here -->
+                        </div>
+                        <ul id="product-desc-body">
+                            <!-- Data here -->
+                        </ul>
+                    </div>
+                    <div class="container">
+                        <button id="btn-showMoreDesc" onclick="showDescBody();">
+                            Xem thêm
+                            <i class="fa-solid fa-caret-down fa-sm"></i>
+                        </button>
+                    </div>
+                    <div class="rating-details">
+                        <div class="product-name" style="font-size: 20px;">
+                            Laptop Asus TUF Gaming F15 FX506HF i5 11400H/8GB/512GB/4GB
+                            RTX2050/144Hz/Win11 (HN014W)
+                        </div>
+                        <div class="rating-panel">
+                            <div class="rating-panel-left">
+                                <span style="font-size: 30px; font-weight: bold; color: #fb6e2e;">4.0</span>
+                                <br>
+                                <i class="fa-solid fa-star fa-xs" style="color: #fb6e2e;"></i>
+                                <i class="fa-solid fa-star fa-xs" style="color: #fb6e2e;"></i>
+                                <i class="fa-solid fa-star fa-xs" style="color: #fb6e2e;"></i>
+                                <i class="fa-solid fa-star fa-xs" style="color: #fb6e2e;"></i>
+                                <i class="fa-solid fa-star fa-xs" style="color: #e0e0e0;"></i>
+                                <br>
+                                <span style="font-size: 13px; color: #2f80ed;">69 đánh giá</span>
+                            </div>
+                            <div class="rating-panel-right">
+                                <div class="rating-bar">
+                                    <span>5</span>
+                                    <i class="fa-solid fa-star fa-xs" style="margin: 0 5px;"></i>
+                                    <div style="width: 100%; background-color: #ccc; border-radius: 10px;">
+                                        <div class="rating-bar-left" style="width: 54%;"></div>
+                                    </div>
+                                    <span style="font-size: 14px; margin-left: 5px; width: 10px;">54%</span>
+                                    <!-- <div class="rating-bar-right"></div> -->
+                                </div>
+                                <div class="rating-bar">
+                                    <span>4</span>
+                                    <i class="fa-solid fa-star fa-xs" style="margin: 0 5px;"></i>
+                                    <div style="width: 100%; background-color: #ccc; border-radius: 10px;">
+                                        <div class="rating-bar-left" style="width: 31%;"></div>
+                                    </div>
+                                    <span style="font-size: 14px; margin-left: 5px; width: 10px;">31%</span>
+                                    <!-- <div class="rating-bar-right"></div> -->
+                                </div>
+                                <div class="rating-bar">
+                                    <span>3</span>
+                                    <i class="fa-solid fa-star fa-xs" style="margin: 0 5px;"></i>
+                                    <div style="width: 100%; background-color: #ccc; border-radius: 10px;">
+                                        <div class="rating-bar-left" style="width: 15%;"></div>
+                                    </div>
+                                    <span style="font-size: 14px; margin-left: 5px; width: 10px;">15%</span>
+                                    <!-- <div class="rating-bar-right"></div> -->
+                                </div>
+                                <div class="rating-bar">
+                                    <span>2</span>
+                                    <i class="fa-solid fa-star fa-xs" style="margin: 0 5px;"></i>
+                                    <div style="width: 100%; background-color: #ccc; border-radius: 10px;">
+                                        <div class="rating-bar-left" style="width: 0%;"></div>
+                                    </div>
+                                    <span style="font-size: 14px; margin-left: 5px; width: 10px;">0%</span>
+                                    <!-- <div class="rating-bar-right"></div> -->
+                                </div>
+                                <div class="rating-bar">
+                                    <span>1</span>
+                                    <i class="fa-solid fa-star fa-xs" style="margin: 0 5px;"></i>
+                                    <div style="width: 100%; background-color: #ccc; border-radius: 10px;">
+                                        <div class="rating-bar-left" style="width: 0%;"></div>
+                                    </div>
+                                    <span style="font-size: 14px; margin-left: 5px; width: 10px;">0%</span>
+                                    <!-- <div class="rating-bar-right"></div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rating-list">
+                            <div class="rating-item">
+                                <div class="rating-item-name">Nam cá heo</div>
+                                <div class="rating-item-rate">
+                                    <i class="fa-solid fa-star fa-xs" style="color: #fb6e2e;"></i>
+                                    <i class="fa-solid fa-star fa-xs" style="color: #fb6e2e;"></i>
+                                    <i class="fa-solid fa-star fa-xs" style="color: #fb6e2e;"></i>
+                                    <i class="fa-solid fa-star fa-xs" style="color: #fb6e2e;"></i>
+                                    <i class="fa-solid fa-star fa-xs" style="color: #e0e0e0;"></i>
+                                </div>
+                                <div class="rating-item-comment">
+                                    Vưa mua chay rât mươt vơi tac vu bt. Văn phong Va pin thi siêu trâu bo.sd gân 2 tiêng tut 26% .tôc đô sac qua nhanh.tuyêt vơi .mong la bên bi nưa la ok .7 năm trươc minh cung dung 1 con asus thây no cung bên kinh khung chăng hông gi. Co điêu may cu hơi lang thi thay may thôi.
+                                </div>
+                                <div class="rating-item-bottom">
+                                    <i class="fa-regular fa-thumbs-up fa-sm" style="margin-right: 4px; cursor: pointer;"></i>
+                                    <span>Hữu ích</span>
+                                    <div>20:10 15/10/2023</div>
+                                </div>
+                            </div>
+                            <div class="rating-item">
+                                <div class="rating-item-name">Bình Bong</div>
+                                <div class="rating-item-rate">
+                                    <i class="fa-solid fa-star fa-xs" style="color: #fb6e2e;"></i>
+                                    <i class="fa-solid fa-star fa-xs" style="color: #e0e0e0;"></i>
+                                    <i class="fa-solid fa-star fa-xs" style="color: #e0e0e0;"></i>
+                                    <i class="fa-solid fa-star fa-xs" style="color: #e0e0e0;"></i>
+                                    <i class="fa-solid fa-star fa-xs" style="color: #e0e0e0;"></i>
+                                </div>
+                                <div class="rating-item-comment">
+                                    Máy rẻ quá cảm ơn shop
+                                </div>
+                                <div class="rating-item-bottom">
+                                    <i class="fa-regular fa-thumbs-up fa-sm" style="margin-right: 4px; cursor: pointer;"></i>
+                                    <span>Hữu ích</span>
+                                    <div>20:00 15/10/2023</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rating-nav">
+                            <button id="btn-showMoreRating">Xem 69 đánh giá</button>
+                            <button id="btn-WriteRating">Viết đánh giá</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="right-panel">
-
+                    <div class="price-panel" id="price-panel">
+                        <div class="price-new">17.490.000₫ *</div>
+                        <div class="price-old">19.990.000₫</div>
+                        <div class="price-sale-percent">-10%</div>
+                        <div class="price-installment">Trả góp 0%</div>
+                    </div>
+                    <div class="offer-panel">
+                        <div class="offer-point">
+                            <img src="./assets/img/logo/offer-point.png" alt="">
+                            <div><b>+87.450</b> điểm tích lũy Quà Tặng VIP</div>
+                        </div>
+                        <div class="offer-img">
+                            <img src="./assets/img/offer/offer-long.png" alt="" class="offer-img-long">
+                            <div>
+                                <div class="offer-img-short" style="background-image: url(./assets/img/offer/offer-short-bg-1.png);">
+                                    <div style="font-weight: bold;">Giảm thêm đến</div>
+                                    <div style="font-size: 20px; color: #d0021c; font-weight: bold;">3.000.000₫</div>
+                                    <div style="font-size: 14px;">Cho Tân sinh viên</div>
+                                    <button>Đổi điểm nhận ưu đãi</button>
+                                </div>
+                                <div class="offer-img-short" style="background-image: url(./assets/img/offer/offer-short-bg-1.png);">
+                                    <div style="font-weight: bold;">Giảm thêm</div>
+                                    <div style="font-size: 20px; color: #d0021c; font-weight: bold;">500.000₫</div>
+                                    <div style="font-size: 14px;">| Với Học sinh, Sinh viên, Giáo viên</div>
+                                    <div style="display: flex; justify-content: center; width: 80%;">
+                                        <button style="background-color: #FE8C23;">Mua ngay</button>
+                                        <button style="border: 1px solid #FE8C23; background-color: #fff; color: #000;">Trả góp</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offer-desc">
+                            <div class="offer-desc-header" style="border-top-left-radius: 4px; border-top-right-radius: 4px;">
+                                <span style="font-weight: bold;">Khuyến mãi</span>
+                                <br>
+                                <span style="font-size: 12px;">Giá và khuyến mãi dự kiến áp dụng đến 23:00 | 31/10</span>
+                            </div>
+                            <div style="font-size: 14px; border: 1px solid #ccc; border-top: none;">Nhập mã MMSALE100 giảm ngay 1% tối đa 100.000đ khi thanh toán qua MOMO</div>
+                            <div style="font-size: 14px; border: 1px solid #ccc; border-top: none; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px;">(*) Giá hoặc khuyến mãi không áp dụng trả góp lãi suất đặc biệt (0%, 0.5%, 1%, 1.5%, 2%)</div>
+                        </div>
+                        <div class="shipping-panel">
+                            <i class="fa-solid fa-location-dot fa-lg" style="color: #2f80ed;"></i>
+                            <span>Giao tới Phường Cổ Nhuế 2, Quận Bắc Từ Liêm, Hà Nội</span>
+                            <div style="color: #219653;">Giao hàng <b>Từ 20h - 22h hôm nay</b></div>
+                            <div style="color: #219653;">Miễn phí giao hàng</div>
+                            <div style="color: #2f80ed;"><i class="fa-solid fa-shop fa-lg"></i> <span>Xem siêu thị có hàng</span></div>
+                        </div>
+                    </div>
+                    <div class="buy-panel">
+                        <button id="btn-BuyNow">MUA NGAY</button>
+                        <div style="display: flex; justify-content: space-between;">
+                            <button id="btn-BuyOption1">
+                                MUA TRẢ GÓP 0%
+                                <br>
+                                Duyệt hồ sơ trong 5 phút
+                            </button>
+                            <button id="btn-BuyOption2">
+                                TRẢ GÓP QUA THẺ
+                                <br>
+                                Visa, Mastercard, JCB, Amex
+                            </button>
+                        </div>
+                        <p>Gọi đặt mua <span style="color: #2f80ed;">1800.1060</span> (7:30 - 22:00)</p>
+                    </div>
+                    <img src="./assets/img/logo/app-download.png" alt="" class="app-download-banner">
+                    <div class="desc-panel" id="desc-panel">
+                        <div class="product-name" style="font-size: 22px;">
+                            Laptop Asus TUF Gaming F15 FX506HF i5 11400H/8GB/512GB/4GB
+                            RTX2050/144Hz/Win11 (HN014W)
+                        </div>
+                        <div class="desc-panel-item" style="background-color: #f5f5f5;">
+                            <div class="desc-panel-item-left">
+                                CPU:
+                            </div>
+                            <div class="desc-panel-item-right" id="cpu">
+                                i5, 11400H, 2.7GHz
+                            </div>
+                        </div>
+                        <div class="desc-panel-item">
+                            <div class="desc-panel-item-left">
+                                RAM:
+                            </div>
+                            <div class="desc-panel-item-right" id="ram">
+                                8 GBDDR4 2 khe (1 khe 8 GB + 1 khe rời)3200 MHz
+                            </div>
+                        </div>
+                        <div class="desc-panel-item" style="background-color: #f5f5f5;">
+                            <div class="desc-panel-item-left">
+                                Ổ cứng:
+                            </div>
+                            <div class="desc-panel-item-right" id="disk">
+                                Hỗ trợ thêm 1 khe cắm SSD M.2 PCIe mở rộng (nâng cấp tối đa 1 TB)512 GB SSD NVMe PCIe (Có thể tháo ra, lắp thanh khác tối đa 1 TB)
+                            </div>
+                        </div>
+                        <div class="desc-panel-item">
+                            <div class="desc-panel-item-left">
+                                Màn hình:
+                            </div>
+                            <div class="desc-panel-item-right" id="screen">
+                                15.6"Full HD (1920 x 1080) 144Hz
+                            </div>
+                        </div>
+                        <div class="desc-panel-item" style="background-color: #f5f5f5;">
+                            <div class="desc-panel-item-left">
+                                Card màn hình:
+                            </div>
+                            <div class="desc-panel-item-right" id="gpu">
+                                Card rờiRTX 2050 4GB
+                            </div>
+                        </div>
+                        <div class="desc-panel-item">
+                            <div class="desc-panel-item-left">
+                                Cổng kết nối:
+                            </div>
+                            <div class="desc-panel-item-right" id="port">
+                                1 x Thunderbolt 4 (hỗ trợ DisplayPort)HDMILAN (RJ45)3 x USB 3.2Jack tai nghe 3.5 mm
+                            </div>
+                        </div>
+                        <div class="desc-panel-item" style="background-color: #f5f5f5;">
+                            <div class="desc-panel-item-left">
+                                Hệ điều hành:
+                            </div>
+                            <div class="desc-panel-item-right" id="os">
+                                Windows 11 Home SL
+                            </div>
+                        </div>
+                        <div class="desc-panel-item">
+                            <div class="desc-panel-item-left">
+                                Kích thước,
+                                <br>
+                                khối lượng:
+                            </div>
+                            <div class="desc-panel-item-right" id="size">
+                                Dài 359 mm - Rộng 256 mm - Dày 22.8 ~ 24.5 mm - Nặng 2.3 kg
+                            </div>
+                        </div>
+                        <div class="desc-panel-item" style="background-color: #f5f5f5;">
+                            <div class="desc-panel-item-left">
+                                Năm ra mắt:
+                            </div>
+                            <div class="desc-panel-item-right">
+                                2023
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <!--        FOOTER      -->
+    <div class="footer">
+        <div class="container" style="align-items: flex-start;">
+            <ul>
+                <li>Tích điểm Quà tặng VIP</li>
+                <li>Lịch sử mua hàng</li>
+                <li>Tìm hiểu về mua trả góp</li>
+                <li>Chính sách bảo hành</li>
+            </ul>
+            <ul>
+                <li>Giới thiệu công ty (MWG.vn)</li>
+                <li>Tuyển dụng</li>
+                <li>Gửi góp ý, khiếu nại</li>
+                <li>Tìm siêu thị (3.354 shop)</li>
+            </ul>
+            <ul>
+                <li><b>Tổng đài hỗ trợ</b> (Miễn phí gọi)</li>
+                <li>Khiếu nại: <b>1800.1062</b> (8:00 - 21:30)</li>
+                <li>Bảo hành: <b>1800.1064</b> (8:00 - 21:00)</li>
+            </ul>
+        </div>
+        <p style="width: 100%; text-align: center;">Copyright by Phương</p>
+    </div>
 
         <script>
+            showSlideTop();
+            loadData();
             showSlideProduct();
+            loadDesc();
+            loadPrice();
+            showDescBody();
+            loadSpec();
 
-        showSlideTop();
         // var id = localStorage.getItem("current-product-id").valueOf();
         // const products = JSON.parse(localStorage.getItem("sanpham"));
         // // document.getElementById("products").innerHTML = "";

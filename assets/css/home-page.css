@@ -182,6 +182,7 @@ a {
     padding: 20px 10px;
     border-radius: 2px;
     height: 400px;
+    cursor: pointer;
 }
 .product-item > img {
     width: 100%;
@@ -200,10 +201,18 @@ a {
     color: #017698;
 }
 .product-item .price {
-    font-size: 16px;
+    font-size: 18px;
     color: #e83a45;
-    margin-top: 10px;
+    margin-left: 5px;
+    margin-top: 5px;
     font-weight: bold;
+}
+.product-item .price-old {
+    font-size: 14px;
+    color: #333;
+    margin-top: 2px;
+    margin-left: 5px;
+    text-decoration: line-through;
 }
 .product-item .desc {
     font-size: 12px;

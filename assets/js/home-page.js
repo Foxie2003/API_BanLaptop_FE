@@ -79,7 +79,7 @@ function loadInnerProduct(sanpham) {
         <img src="` + sanpham.images[0] + `" alt="">
         <div class="title">` + sanpham.name.split("/")[0] + `</div>
         <div class="price">` + format.format(sanpham.price) + `₫</div>
-        <div class="price" style="font-size: 14px; margin-top: -2px;">` + format.format(sanpham.price) + `₫</div>
+        <div class="price-old">` + format.format(sanpham.price + sanpham.price * 10 / 100) + `₫</div>
         <ul class="desc">
             <li class="screen">Màn hình: ` + sanpham.specs.screen + `</li>
             <li class="cpu">CPU: ` + sanpham.specs.cpu + `</li>

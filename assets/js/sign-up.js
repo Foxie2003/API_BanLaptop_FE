@@ -7,16 +7,20 @@ function signUp(e) {
         alert("Vui lòng xác nhận lại mật khẩu");
         return;
     }
+    if(localStorage.getItem(userName) != null) {
+        alert("Tài khoản đã tồn tại");
+        return;
+    }
     var user = {
         userName : userName,
         password : password,
+        cart : []
     }
     if(password.length >= 8) {
-        console.log(userName);
         var json = JSON.stringify(user);
         localStorage.setItem(userName, json);
         alert("Đăng ký thành công");
-        window.location.href = "load-json.html";
+        goToSignIn();
     }
     else {
         alert("Mật khẩu phải chứa tổi thiểu 8 ký tự");
@@ -44,14 +48,14 @@ function signIn(e) {
     var userName = document.getElementById("username-sign-in").value;
     var password = document.getElementById("password-sign-in").value;
     var user = localStorage.getItem(userName);
-    console.log(user);
     var data = JSON.parse(user);
     if(data == null) {
         alert("Vui lòng nhập tài khoản và mật khẩu");
     }
     else if(userName == data.userName && password == data.password) {
         alert("Đăng nhập thành công");
-        window.location.href = "load-json.html";
+        localStorage.setItem("loginData", user);
+        window.location.href = "home-page.html";
     }
     else {
         alert("Sai tài khoản mật khẩu");

@@ -32,7 +32,6 @@ function showSlideBody1() {
     }
     slides[slideIndexBody1].style.display = "block";
     dots[slideIndexBody1].className += " active";
-    console.log(slideIndexBody1);
     slideIndexBody1++;
     // setTimeout(showSlideBody1, 2500);
 }
@@ -146,12 +145,9 @@ function loadAllProduct() {
         var check = false;
         for (var i = 0; i < products.phanloai[property].length; i++){
             loading++;
-            console.log("id: " + products.phanloai[property][i].id);
-            console.log("loading: " + loading);
             if(loading > loaded) {
                 loadInnerProduct(products.phanloai[property][i]);
                 loaded++;
-                console.log("loaded: " + loaded);
                 if(loaded % 15 == 0) {
                     check = true;
                     break;
@@ -199,8 +195,32 @@ function searchProduct(name) {
 
 // Show details
 function showDetails(id) {
-    alert(id);
+    // alert(id);
     // Current ID
     localStorage.setItem("current-product-id", id);
     window.location.href = "product-details.html";
+}
+
+// Show login data
+function showLoginData() {
+    var btnLogin = document.getElementById("btn-login");
+    var loginData = JSON.parse(localStorage.getItem("loginData"));
+    if(loginData != null) {
+        btnLogin.textContent = "Đăng xuất \n[" + loginData.userName.split("@")[0] + "]";
+    }
+    else {
+        btnLogin.textContent = "Đăng nhập";
+    }
+}
+//Btn login
+function btnLoginOnClick() {
+    var loginData = JSON.parse(localStorage.getItem("loginData"));
+    if(loginData != null) {
+        localStorage.setItem("loginData", null);
+        alert("Đăng xuất thành công");
+        window.location.reload();
+    }
+    else {
+        window.location.href = 'sign-up-sign-in.html';
+    }
 }

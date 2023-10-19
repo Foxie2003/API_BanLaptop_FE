@@ -308,10 +308,12 @@
 #btn-BuyNow {
     width: 100%;
     background-color: #fb6e2e;
+    cursor: pointer;
 }
 #btn-BuyOption1, #btn-BuyOption2 {
     width: 49.2%;
     background-color: #2f80ed;
+    cursor: pointer;
 }
 .buy-panel p {
     width: 100%;

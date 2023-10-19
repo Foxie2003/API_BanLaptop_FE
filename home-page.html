@@ -26,7 +26,7 @@
                 <i class="fa-solid fa-magnifying-glass fa-lg fa-beat-fade" style="color: #000000;"></i>
             </button>
         </div>
-        <div class="top-button" onclick="window.location.href = 'sign-up-sign-in.html';">
+        <div class="top-button" id="btn-login" onclick="btnLoginOnClick();">
             Đăng nhập
         </div>
         <div class="top-button">
@@ -183,6 +183,7 @@
         showSlideTop();
         showSlideBody1TimeOut();
         loadAllProduct();
+        showLoginData();
         //Search when press enter
         var searchInput = document.getElementById("top-search-input");
         searchInput.addEventListener("keypress", function (event) {

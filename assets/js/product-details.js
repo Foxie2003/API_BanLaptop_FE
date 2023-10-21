@@ -137,6 +137,7 @@ function addToCart() {
             localStorage.setItem(loginData.userName, JSON.stringify(userData));
             alert("Sản phẩm đã được thêm vào giỏ hàng");
         }
+        showProductInCart();
     }
     else {
         alert("Vui lòng đăng nhập trước khi mua hàng");

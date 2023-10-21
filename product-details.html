@@ -45,7 +45,7 @@
                 id="btn-login" onclick="btnLoginOnClick();">
                 Đăng nhập
             </div>
-            <div class="top-button">
+            <div class="top-button" id="btn-cart" onclick="btnCartOnClick();">
                 <i class="fa-solid fa-cart-shopping fa-lg"></i>
                 <span style="margin-left: 2px;"></span>
                 Giỏ hàng (0)
@@ -441,7 +441,6 @@
         </div>
         <p style="width: 100%; text-align: center;">Copyright by Phương</p>
     </div>
-
         <script>
             showSlideTop();
             loadData();
@@ -451,19 +450,7 @@
             showDescBody();
             loadSpec();
             showLoginData();
-        // var id = localStorage.getItem("current-product-id").valueOf();
-        // const products = JSON.parse(localStorage.getItem("sanpham"));
-        // // document.getElementById("products").innerHTML = "";
-        // // document.getElementById("showMoreProduct").style.display = "none";
-        // for (const property in products.phanloai) {
-        //     for (var i = 0; i < products.phanloai[property].length; i++) {
-        //         var productId = products.phanloai[property][i].id;
-        //         if(productId == id) {
-        //             loadInnerProduct(products.phanloai[property][i]);
-        //             break;
-        //         }
-        //     }
-        // }
+            showProductInCart();
     </script>
     </body>
 </html>

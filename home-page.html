@@ -29,7 +29,7 @@
         <div class="top-button" id="btn-login" onclick="btnLoginOnClick();">
             Đăng nhập
         </div>
-        <div class="top-button">
+        <div class="top-button" id="btn-cart" onclick="btnCartOnClick();">
             <i class="fa-solid fa-cart-shopping fa-lg"></i>
             <span style="margin-left: 2px;"></span>
             Giỏ hàng (0)
@@ -184,6 +184,8 @@
         showSlideBody1TimeOut();
         loadAllProduct();
         showLoginData();
+        showProductInCart();
+
         //Search when press enter
         var searchInput = document.getElementById("top-search-input");
         searchInput.addEventListener("keypress", function (event) {

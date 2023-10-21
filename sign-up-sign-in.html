@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./assets/css/sign-up.css">
     <script src="https://kit.fontawesome.com/fd095985f5.js" crossorigin="anonymous"></script>
     <!-- <script src="./assets/js/search.js" defer></script> -->
+    <script src="./assets/js/home-page.js"></script>
     <script defer src="./assets/js/sign-up.js"></script>
     <title>Thegioilaptop.com</title>
 </head>
@@ -19,10 +20,10 @@
                 <i class="fa-solid fa-magnifying-glass fa-lg fa-beat-fade" style="color: #000000;"></i>
             </button>
         </div>
-        <div class="top-button">
+        <div class="top-button" id="btn-login" onclick="btnLoginOnClick();">
             Đăng nhập
         </div>
-        <div class="top-button">
+        <div class="top-button" id="btn-cart" onclick="btnCartOnClick();">
             <i class="fa-solid fa-cart-shopping fa-lg"></i>
             <span style="margin-left: 2px;"></span>
             Giỏ hàng (0)
@@ -97,5 +98,9 @@
         </div>
         <p style="width: 100%; text-align: center;">Copyright by Phương</p>
     </div>
+    <script>
+        showLoginData();
+        showProductInCart();
+    </script>
 </body>
 </html>

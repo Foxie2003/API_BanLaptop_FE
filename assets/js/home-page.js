@@ -224,3 +224,21 @@ function btnLoginOnClick() {
         window.location.href = 'sign-up-sign-in.html';
     }
 }
+
+//Btn cart
+function btnCartOnClick() {
+    var loginData = JSON.parse(localStorage.getItem("loginData"));
+    var cartInfo = loginData.cart;
+    window.location.href = "cart.html";
+    
+}
+
+//Show number of product in cart
+function showProductInCart() {
+    var loginData = JSON.parse(localStorage.getItem("loginData"));
+    var cartInfo = loginData.cart;
+    document.getElementById("btn-cart").innerHTML =
+    `<i class="fa-solid fa-cart-shopping fa-lg"></i>
+    <span style="margin-left: 2px;"></span>
+    Giỏ hàng (${cartInfo.length})`;
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/sign-up.css">
+    <link rel="stylesheet" href="./assets/css/home-page.css">
+    <link rel="stylesheet" href="./assets/css/cart.css">
+    <script src="./assets/js/home-page.js"></script>
+    <script src="./assets/js/cart.js"></script>
+    <script src="https://kit.fontawesome.com/fd095985f5.js"
+    crossorigin="anonymous"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            crossorigin="anonymous"></script>
+    <title>Cart</title>
+</head>
+<body>
+    <!--        SLIDE SHOW (Top)       -->
+    <div class="slide-show">
+        <img
+            src="./assets/img/slide-show/slide-show top/BIG-T10-1200-44-1200x44.webp"
+            alt class="top-slides">
+        <img
+            src="./assets/img/slide-show/slide-show top/DH-Ty-Ty-1200-44-1200x44.webp"
+            alt class="top-slides">
+        <img
+            src="./assets/img/slide-show/slide-show top/IP15-1200-44-1200x44.webp"
+            alt class="top-slides">
+    </div>
+    <!--        TOP HEADER       -->
+    <div class="top-header">
+        <img src="./assets/img/logo/horizontal-logo.png" alt id="top-logo" onclick="window.location.href = 'home-page.html';">
+        <div id="top-search">
+            <input type="search" id="top-search-input"
+                placeholder="Bạn đang tìm...">
+            <button id="top-search-button"
+                onclick="searchProduct(document.getElementById('top-search-input').value.trim());">
+                <i class="fa-solid fa-magnifying-glass fa-lg fa-beat-fade"
+                    style="color: #000000;"></i>
+            </button>
+        </div>
+        <div class="top-button"
+            id="btn-login" onclick="btnLoginOnClick();">
+            Đăng nhập
+        </div>
+        <div class="top-button" id="btn-cart">
+            <i class="fa-solid fa-cart-shopping fa-lg"></i>
+            <span style="margin-left: 2px;"></span>
+            Giỏ hàng (0)
+        </div>
+    </div>
+
+    <div class="top-nav">
+        <div class="container" style="justify-content: space-between; margin-top: 10px;">
+            <div class="top-nav-btn" style="color: #2f80ed; cursor: pointer;" onclick="window.location.href = 'home-page.html';">
+                <i class="fa-solid fa-chevron-left fa-sm"></i>
+                Mua thêm sản phẩm khác
+            </div>
+            <div class="top-nav-btn">
+                Giỏ hàng của bạn
+            </div>
+        </div>
+    </div>
+    <div class="container" style="margin-top: 10px; align-items: start;">
+        <div class="cart-info">
+            <div style="flex-direction: column;" id="cart-info">
+                <!-- <div class="cart-info-item">
+                    <div class="img-panel">
+                        <img src="./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-thumb-600x600.jpg" alt="">
+                        <button><i class="fa-regular fa-trash-can fa-sm"></i> Xóa</button>
+                    </div>
+                    <div class="info-panel">
+                        <div class="info-panel-product-name">Laptop Asus TUF Gaming F15 FX506HC i5 11400H/16GB/512GB/4GB RTX3050/144Hz/Win11 (HN949W)</div>
+                        <div class="info-panel-product-offer">* Nhập mã <b>MMSALE100</b> giảm ngay 1% tối đa 100.000đ khi thanh toán qua MOMO</div>
+                        <div class="info-panel-product-color">Màu sắc: <b>Đen</b></div>
+                    </div>
+                    <div class="price-panel">
+                        <div>
+                            <div class="price-panel-price">19.990.000₫</div>
+                            <div class="price-panel-old-price">22.990.000₫</div>
+                        </div>
+                        <div class="price-panel-quantity">
+                            <div class="price-panel-btn-minus"><i class="fa-solid fa-minus fa-lg"></i></div>
+                            <input type="number" class="price-panel-input" value="0" min="0">
+                            <div class="price-panel-btn-plus"><i class="fa-solid fa-plus fa-lg"></i></div>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="cart-info-bottom">
+                    <div class="cart-info-count">Tạm tính (2 sản phẩm):</div>
+                    <div class="cart-info-sum">46.980.000₫</div>
+                </div> -->
+            </div>
+        </div>
+        <div class="user-info">
+            <div class="container">
+                <div class="user-info-header">THÔNG TIN KHÁCH HÀNG</div>
+            </div>
+            <form id="user-form">
+                <div id="gender">
+                    <input type="radio" value="male" name="gender" style="margin-left: 0;">
+                    <label>Anh</label>
+                    <input type="radio" value="female" name="gender">
+                    <label>Chị</label>
+                </div>
+                <div id="name-phone">
+                    <label for="name">Họ và tên:</label>
+                    <input type="text" id="name" placeholder="Họ và tên">
+                    <label for="phone">SĐT:</label>
+                    <input type="text" id="phone" placeholder="+84">
+                </div>
+                <div style="margin-top: 16px; font-size: 18px;">CHỌN CÁCH THỨC NHẬN HÀNG</div>
+                <div id="ship-option">
+                    <input type="radio" value="giao" name="ship" style="margin-left: 0;">
+                    <label>Giao tận nơi</label>
+                    <input type="radio" value="nhan" name="ship" >
+                    <label>Nhận tại siêu thị</label>
+                </div>
+                <label for="address">Địa chỉ:</label>
+                <input type="text" id="address" placeholder="Địa chỉ">
+                <input type="text" id="other-request" placeholder="Yêu cầu khác (Không bắt buộc)" style="margin-bottom: 10px;">
+                <label for="offer">Sử dụng mã giảm giá:</label>
+                <input type="text" id="offer" placeholder="Mã giảm giá">
+                <div class="order-panel">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                        <div><b>Tổng tiền:</b></div>
+                        <div id="sum-price">
+                            
+                        </div>
+                    </div>
+                </div>
+                <button id="order">
+                    <b>ĐẶT HÀNG</b>
+                </button>
+                <button id="installment">
+                    <b>TRẢ GÓP QUA THẺ</b><br>
+                    <span>Visa, Mastercard, JCB, Amex</span>
+                </button>
+                <div style="font-size: 12px; color: #666; text-align: center;">Bạn có thể chọn hình thức thanh toán sau khi đặt hàng</div>
+            </form>
+        </div>
+        </div>
+    </div>
+    <!--        FOOTER      -->
+    <div class="footer">
+        <div class="container" style="align-items: flex-start;">
+            <ul>
+                <li>Tích điểm Quà tặng VIP</li>
+                <li>Lịch sử mua hàng</li>
+                <li>Tìm hiểu về mua trả góp</li>
+                <li>Chính sách bảo hành</li>
+            </ul>
+            <ul>
+                <li>Giới thiệu công ty (MWG.vn)</li>
+                <li>Tuyển dụng</li>
+                <li>Gửi góp ý, khiếu nại</li>
+                <li>Tìm siêu thị (3.354 shop)</li>
+            </ul>
+            <ul>
+                <li><b>Tổng đài hỗ trợ</b> (Miễn phí gọi)</li>
+                <li>Khiếu nại: <b>1800.1062</b> (8:00 - 21:30)</li>
+                <li>Bảo hành: <b>1800.1064</b> (8:00 - 21:00)</li>
+            </ul>
+        </div>
+        <p style="width: 100%; text-align: center;">Copyright by Phương</p>
+    </div>
+    <script>
+        showSlideTop();
+        showProductInCart();
+        loadCartData();
+        showLoginData();
+    </script>
+</body>
+</html>

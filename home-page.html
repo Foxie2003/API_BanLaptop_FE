@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/sign-up.css">
     <link rel="stylesheet" href="./assets/css/home-page.css">
+    <link rel="stylesheet" href="./assets/css/slick.css">
+    <link rel="stylesheet" href="./assets/css/slick-theme.css">
+    <script
+            src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/fd095985f5.js" crossorigin="anonymous"></script>
     <script src="./assets/js/home-page.js"></script>
     <script src="./assets/js/saveJson.js"></script>
+    <script src="./assets/js/slick.js"></script>
     <title>Home page</title>
 </head>
 <body>
@@ -126,7 +133,12 @@
             </div>
         </div>
     </div>
-
+    <!--        HOT DEAL         -->
+    <div class="hotdeal-container">
+        <div class="hotdeal-banner">DEAL SỐC <span style="color: #fff;">GIẢM TỚI 8.000.000₫</span></div>
+        <div class="products-container" style="background-color: #ff0020; margin-top: 0;" id="hotdeal-products"></div>
+        </div>
+    </div>
     <!--        PRODUCTS CONTAINER        -->
     <div class="products-container" id="products">
         <!-- <p style="font-size: 32px; font-weight: bold; color: #333; width: 100%; text-align: center; margin:200px 0;">Không có sản phẩm nào </p>
@@ -185,6 +197,7 @@
         loadAllProduct();
         showLoginData();
         showProductInCart();
+        loadHotDealProduct();
 
         //Search when press enter
         var searchInput = document.getElementById("top-search-input");
@@ -205,6 +218,23 @@
                 btnBackToTop.style.display = "none";
             }
         }
+
+        // Carousel
+        $(document).ready(function(){
+            $('#hotdeal-products').slick({
+                accessibility: true,
+                arrows:true,
+                slidesToShow: 5,
+                appendArrows: $("#hotdeal-products"),
+                // prev arrow
+                prevArrow: '<button type="button" data-role="none" class="slick-prev" style="z-index: 1000;left: 10px; background-color: #666; height: 100px; opacity: 0.5;"></button>',
+
+                // next arrow
+                nextArrow: '<button type="button" data-role="none" class="slick-next" style="z-index: 1000;right: 10px; background-color: #666; height: 100px; opacity: 0.6;"></button>',
+                autoplay: true,
+                autoplaySpeed: 3000,
+            });
+        });
     </script>
 </body>
 </html>

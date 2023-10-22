@@ -75,7 +75,7 @@ function loadInnerProduct(sanpham) {
     const format = new Intl.NumberFormat({ maximumSignificantDigits: 3 });
     document.getElementById("products").innerHTML
         += `<div class="product-item col-2-4 col-s-6" onclick="showDetails('${sanpham.id.trim()}')">
-        <img src="` + sanpham.images[0] + `" alt="">
+        <img class="product-img" src="` + sanpham.images[0] + `" alt="">
         <div class="title">` + sanpham.name.split("/")[0] + `</div>
         <div class="price">` + format.format(sanpham.price) + `₫</div>
         <div class="price-old">` + format.format(sanpham.price + sanpham.price * 10 / 100) + `₫</div>
@@ -163,6 +163,36 @@ function loadAllProduct() {
         }
         if(check) {
             break;
+        };
+    }
+}
+
+
+var hotDealProducts = [
+    "SP01", "SP02", "SP04", "SP15", "SP16", "SP20"
+];
+// Load HOTDEAL products from local storage
+function loadHotDealProduct() {
+    const products = JSON.parse(localStorage.getItem("sanpham"));
+    for (const property in products.phanloai) {
+        for (var i = 0; i < products.phanloai[property].length; i++){
+            if(hotDealProducts.includes(products.phanloai[property][i].id)) {
+                const format = new Intl.NumberFormat({ maximumSignificantDigits: 3 });
+                    document.getElementById("hotdeal-products").innerHTML
+                        += `<div class="product-item col-2-4 col-s-6" onclick="showDetails('${products.phanloai[property][i].id.trim()}')">
+                        <img class="product-img" src="` + products.phanloai[property][i].images[0] + `" alt="">
+                        <div class="title">` + products.phanloai[property][i].name.split("/")[0] + `</div>
+                        <div class="price">` + format.format(products.phanloai[property][i].price) + `₫</div>
+                        <div class="price-old">` + format.format(products.phanloai[property][i].price + products.phanloai[property][i].price * 10 / 100) + `₫</div>
+                        <ul class="desc">
+                            <li class="screen">Màn hình: ` + products.phanloai[property][i].specs.screen + `</li>
+                            <li class="cpu">CPU: ` + products.phanloai[property][i].specs.cpu + `</li>
+                            <li class="gpu">Card: ` + products.phanloai[property][i].specs.gpu + `</li>
+                            <li class="ram">Ram: ` + products.phanloai[property][i].specs.ram.split('(')[0].trim() + "," + products.phanloai[property][i].specs.ram.split(',')[2] + `</li>
+                            <li class="weight">Cân nặng: ` + products.phanloai[property][i].specs.size.split("-")[3] + `</li>
+                        </ul>
+                    </div>`;
+            }
         };
     }
 }

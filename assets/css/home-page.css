@@ -145,7 +145,11 @@ a {
 }
 /* End slide-show-body-1 */
 /* End Slide show */
-
+.main-title {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 24px;
+}
 /* Bands Gallery */
 .bands-gallery .container {
     background-color: #ccc;
@@ -183,6 +187,29 @@ a {
     border-radius: 2px;
     height: 400px;
     cursor: pointer;
+}
+.product-item i {
+    position: absolute;
+    /* transform: rotate(-45deg); */
+    font-size: 56px;
+    color: #d0021c;
+    margin-left: -6px;
+    z-index: -1;
+}
+.product-item .sale-percent {
+    z-index: 10;
+    position: absolute;
+    color: #fff;
+    margin-left: 6px;
+    margin-top: -6px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
 }
 .product-item > img {
     width: 100%;

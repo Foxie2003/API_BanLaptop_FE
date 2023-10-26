@@ -1,4 +1,5 @@
 var slideIndexProduct = 0;
+localStorage.setItem("current-product-id", window.location.href.split('?id=')[1]);
 var productId = localStorage.getItem("current-product-id");
 var productData;
 var imgs = [];
@@ -12,8 +13,14 @@ function loadData() {
             if(productId == id) {
                 haveProduct = true;
                 productData = products.phanloai[property][i];
+                if(products.phanloai[property][i].video != "linkVideo") {
+                    imgs.push(`<iframe width="100%" height="340px" src="${products.phanloai[property][i].video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`)
+                }
                 for (let index = 1; index < products.phanloai[property][i].images.length; index++) {
-                    imgs.push(products.phanloai[property][i].images[index]);
+                    imgs.push(
+                        `<img
+                        src="${products.phanloai[property][i].images[index]}" id="zoomImg">`
+                        );
                 }
                 break;
             }
@@ -42,7 +49,7 @@ function loadPrice() {
     document.getElementById("price-panel").innerHTML = 
     `<div class="price-new">${format.format(productData.price)}₫ *</div>
     <div class="price-old">${format.format(productData.price + productData.price * 10 / 100)}₫</div>
-    <div class="price-sale-percent">-10%</div>
+    <div class="price-sale-percent">-${Math.round((productData.old_price - productData.price) / productData.old_price * 100)}%</div>
     <div class="price-installment">Trả góp 0%</div>`;
 }
 function loadSpec() {
@@ -71,7 +78,7 @@ function showDescBody() {
     }
 }
 function zoomSlideProduct() {
-    $('#product-details-slide').extm({
+    $('#zoomImg').extm({
         position: 'right',
         rightPad: 5,
         squareOverlay: true,
@@ -81,7 +88,7 @@ function zoomSlideProduct() {
 
 function showSlideProduct() {
     var slide = document.getElementById("product-details-slide");
-    slide.src = imgs[slideIndexProduct];
+    slide.innerHTML = imgs[slideIndexProduct];
     zoomSlideProduct();
     
 }
@@ -91,7 +98,7 @@ function nextSlideProduct() {
     if(slideIndexProduct == imgs.length) {
         slideIndexProduct = 0;
     }
-    slide.src = imgs[slideIndexProduct];
+    slide.innerHTML = imgs[slideIndexProduct];
     zoomSlideProduct();
 }
 function backSlideProduct() {
@@ -100,7 +107,7 @@ function backSlideProduct() {
     if(slideIndexProduct == -1) {
         slideIndexProduct = imgs.length - 1;
     }
-    slide.src = imgs[slideIndexProduct];
+    slide.innerHTML = imgs[slideIndexProduct];
     zoomSlideProduct();
 }
 

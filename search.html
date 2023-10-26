@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/sign-up.css">
+    <link rel="stylesheet" href="./assets/css/home-page.css">
+    <link rel="stylesheet" href="./assets/css/slick.css">
+    <link rel="stylesheet" href="./assets/css/slick-theme.css">
+    <script
+            src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/fd095985f5.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/home-page.js"></script>
+    <script src="./assets/js/saveJson.js"></script>
+    <script src="./assets/js/slick.js"></script>
+    <title>Home page</title>
+</head>
+<body>
+    <!--        SLIDE SHOW (Top)       -->
+    <div class="slide-show">
+        <img src="./assets/img/slide-show/slide-show top/BIG-T10-1200-44-1200x44.webp" alt="" class="top-slides">
+        <img src="./assets/img/slide-show/slide-show top/DH-Ty-Ty-1200-44-1200x44.webp" alt="" class="top-slides">
+        <img src="./assets/img/slide-show/slide-show top/IP15-1200-44-1200x44.webp" alt="" class="top-slides">
+    </div>
+    <!--        TOP HEADER       -->
+    <div class="top-header">
+        <img src="./assets/img/logo/horizontal-logo.png" alt="" id="top-logo" onclick="window.location.href = 'home-page.html';">
+        <div id="top-search">
+            <input type="search" id="top-search-input" placeholder="Bạn đang tìm...">
+            <button id="top-search-button" onclixk="window.location.href = 'search.html?value=' + document.getElementById('top-search-input').value">
+                <i class="fa-solid fa-magnifying-glass fa-lg fa-beat-fade" style="color: #000000;"></i>
+            </button>
+        </div>
+        <div class="top-button" id="btn-login" onclick="btnLoginOnClick();">
+            Đăng nhập
+        </div>
+        <div class="top-button" id="btn-cart" onclick="btnCartOnClick();">
+            <i class="fa-solid fa-cart-shopping fa-lg"></i>
+            <span style="margin-left: 2px;"></span>
+            Giỏ hàng (0)
+        </div>
+    </div>
+    <!--        PRODUCTS CONTAINER        -->
+    <div class="products-container" id="products">
+        <!-- <p style="font-size: 32px; font-weight: bold; color: #333; width: 100%; text-align: center; margin:200px 0;">Không có sản phẩm nào </p>
+        <p style="font-size: 26px; color: #333; width: 100%; text-align: center; margin-bottom: 20px;">Xem các sản phẩm khác</p> -->
+        <!-- <div class="product-item col-3 col-s-6" onclick="showDetails()">
+            <span class="product-id" style="display: none;"></span>
+            <img src="./assets/img/asus/asus-tuf-gaming-f15-fx506he-i7-hn378w/asus-tuf-gaming-f15-fx506he-i7-hn378w-1.jpg" alt="">
+            <div class="title">HP 15s fq2716TU i3 1115G4 (7C0X3PA)</div>
+            <div class="container" style="align-items: center;">
+                <div class="price">10.190.000₫</div>
+                <div class="price" style="font-size: 14px; margin-top: -2px;">10000₫</div>
+            </div>
+        <ul class="desc">
+                <li class="screen">some data</li>
+                <li class="cpu">some data</li>
+                <li class="gpu">some data</li>
+                <li class="ram">some data</li>
+                <li class="weight">some data</li>
+            </ul>
+        </div> -->
+    </div>
+    <div class="container">
+        <!--        Show more        -->
+        <button id="showMoreProduct" onclick="loadAllProduct()">
+            Xem thêm sản phẩm
+        </button>
+    </div>
+    <button id="btnBackToTop" onclick="document.documentElement.scrollTop = 0;"><i class="fa-solid fa-angle-up fa-bounce fa-xl"></i></button>
+    <!--        FOOTER      -->
+    <div class="footer">
+        <div class="container" style="align-items: flex-start;">
+            <ul>
+                <li>Tích điểm Quà tặng VIP</li>
+                <li>Lịch sử mua hàng</li>
+                <li>Tìm hiểu về mua trả góp</li>
+                <li>Chính sách bảo hành</li>
+            </ul>
+            <ul>
+                <li>Giới thiệu công ty (MWG.vn)</li>
+                <li>Tuyển dụng</li>
+                <li>Gửi góp ý, khiếu nại</li>
+                <li>Tìm siêu thị (3.354 shop)</li>
+            </ul>
+            <ul>
+                <li><b>Tổng đài hỗ trợ</b> (Miễn phí gọi)</li>
+                <li>Khiếu nại: <b>1800.1062</b> (8:00 - 21:30)</li>
+                <li>Bảo hành: <b>1800.1064</b> (8:00 - 21:00)</li>
+            </ul>
+        </div>
+        <p style="width: 100%; text-align: center;">Copyright by Phương</p>
+    </div>
+    <script>
+        showSlideTop();
+        showLoginData();
+        showProductInCart();
+        searchProduct(window.location.href.split("?value=")[1]);
+
+        //Search when press enter
+        var searchInput = document.getElementById("top-search-input");
+        searchInput.addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                // alert("Ok");
+                document.getElementById("top-search-button").click();
+            }
+        });
+
+        // Back to top button
+        var btnBackToTop = document.getElementById("btnBackToTop");
+        window.onscroll = function() {
+            if (document.documentElement.scrollTop > 1000) {
+                btnBackToTop.style.display = "block";
+            }
+            else {
+                btnBackToTop.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

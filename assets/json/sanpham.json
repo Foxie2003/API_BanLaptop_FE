@@ -1,10 +1,10 @@
-    {
+{
     "phanloai": {
         "asus": [
             {
                 "id": "SP01",
                 "name": "Laptop Asus TUF Gaming F15 FX506HF i5 11400H/8GB/512GB/4GB RTX2050/144Hz/Win11 (HN014W)",
-                "video": "linkVideo",
+                "video": "https://www.youtube.com/embed/nHaySNOP0Fs?si=brwMDSThko2Y3gJR",
                 "images": [
                     "./assets/img/asus/vi-vn-asus-tuf-gaming-f15-fx506hf-i5-hn014w/asus-tuf-gaming-f15-fx506hf-i5-hn014w-thumb-600x600.jpg",
                     "./assets/img/asus/vi-vn-asus-tuf-gaming-f15-fx506hf-i5-hn014w/vi-vn-asus-tuf-gaming-f15-fx506hf-i5-hn014w--(1).jpg",
@@ -15,6 +15,7 @@
                     "./assets/img/asus/vi-vn-asus-tuf-gaming-f15-fx506hf-i5-hn014w/vi-vn-asus-tuf-gaming-f15-fx506hf-i5-hn014w--(6).jpg"
                 ],
                 "price": 16990000,
+                "old_price": 19990000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i5, 11400H, 2.7GHz",
@@ -43,7 +44,7 @@
             {
                 "id": "SP02",
                 "name": "Laptop Asus Vivobook X515EA i3 1115G4/8GB/512GB/Win11 (EJ3948W)",
-                "video": "linkVideo",
+                "video": "https://www.youtube-nocookie.com/embed/iPdoZRyUwwg?si=TTIMitOkJWT6NfDy",
                 "images": [
                     "./assets/img/asus/vi-vn-asus-vivobook-x515ea-i3-ej3948w-slider/asus-vivobook-x515ea-i3-ej3948w-thumb-600x600.jpg",
                     "./assets/img/asus/vi-vn-asus-vivobook-x515ea-i3-ej3948w-slider/vi-vn-asus-vivobook-x515ea-i3-ej3948w-slider-1.jpg",
@@ -54,6 +55,7 @@
                     "./assets/img/asus/vi-vn-asus-vivobook-x515ea-i3-ej3948w-slider/vi-vn-asus-vivobook-x515ea-i3-ej3948w-slider-6.jpg"
                 ],
                 "price": 9990000,
+                "old_price": 11290000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i3, 1115G4, 3GHz",
@@ -80,7 +82,7 @@
             {
                 "id": "SP03",
                 "name": "Laptop Asus Vivobook X415EA i3 1115G4/8GB/256GB/Win11 (EK2034W)",
-                "video": "linkVideo",
+                "video": "https://www.youtube-nocookie.com/embed/6ZJcY36F4Sw?si=RNcVf8yHYC9yMjPC",
                 "images": [
                     "./assets/img/asus/vi-vn-asus-vivobook-x415ea-i3-ek2034w/asus-vivobook-x415ea-i3-ek2034w-thumb-laptop-600x600.jpg",
                     "./assets/img/asus/vi-vn-asus-vivobook-x415ea-i3-ek2034w/vi-vn-asus-vivobook-x415ea-i3-ek2034w--(1).jpg",
@@ -92,6 +94,7 @@
                 ],
                 "price": 10490000,
                 "quantity": 100,
+                "old_price": 10990000,
                 "specs": {
                     "cpu": "i3, 1115G4, 3GHz",
                     "ram": "8 GB, DDR4 2 khe (1 khe 8 GB onboard + 1 khe trống), 3200 MHz",
@@ -128,7 +131,8 @@
                     "./assets/img/asus/asus-vivobook-15-oled-a1505va-i5-l1341w/vi-vn-asus-vivobook-15-oled-a1505va-i5-l1341w-slider-5.jpg",
                     "./assets/img/asus/asus-vivobook-15-oled-a1505va-i5-l1341w/vi-vn-asus-vivobook-15-oled-a1505va-i5-l1341w-slider-6.jpg"
                 ],
-                "price": 20490000,
+                "price": 18490000,
+                "old_price": 20990000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i5, 13500H, 2.6GHz",
@@ -155,7 +159,7 @@
             },
             {
                 "id": "SP05",
-                "name": "Laptop Asus Vivobook 16 X1605VA i5 1335U/16GB/512GB/Win11 (MB360W) ",
+                "name": "Laptop Asus Vivobook 16 X1605VA i5 1335U/16GB/512GB/Win11 (MB360W)",
                 "video": "linkVideo",
                 "images": [
                     "./assets/img/asus/asus-vivobook-16-x1605va-i5-mb360w/asus-vivobook-16-x1605va-i5-mb360w-thumb-laptop-600x600.jpg",
@@ -167,7 +171,8 @@
                     "./assets/img/asus/asus-vivobook-16-x1605va-i5-mb360w/vi-vn-asus-vivobook-16-x1605va-i5-mb360w-slider-6.jpg",
                     "./assets/img/asus/asus-vivobook-16-x1605va-i5-mb360w/vi-vn-asus-vivobook-16-x1605va-i5-mb360w-slider-7.jpg"
                 ],
-                "price": 17790000,
+                "price": 15990000,
+                "old_price": 18990000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i5, 1335U, 1.3GHz",
@@ -205,6 +210,7 @@
                     "./assets/img/asus/asus-tuf-gaming-f15-fx506he-i7-hn378w/asus-tuf-gaming-f15-fx506he-i7-hn378w-6.jpg"
                 ],
                 "price": 20990000,
+                "old_price": 22990000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i7, 11800H, 2.30 GHz",
@@ -243,7 +249,8 @@
                     "./assets/img/asus/asus-vivobook-15-x1504va-i5-nj025w/vi-vn-asus-vivobook-15-x1504va-i5-nj025w--(6).jpg",
                     "./assets/img/asus/asus-vivobook-15-x1504va-i5-nj025w/vi-vn-asus-vivobook-15-x1504va-i5-nj025w--(7).jpg"
                 ],
-                "price": 15690000,
+                "price": 15490000,
+                "old_price": 17990000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i5, 1335U, 1.3GHz",
@@ -281,6 +288,7 @@
                     "./assets/img/asus/asus-vivobook-x515ea-i5-ej4155w/asus-vivobook-x515ea-i5-ej4155w-6.jpg"
                 ],
                 "price": 13990000,
+                "old_price": 14990000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i5, 1135G7, 2.4GH",
@@ -318,6 +326,7 @@
                     "./assets/img/asus/asus-vivobook-x515ma-n4020-br480w/vi-vn-asus-vivobook-x515ma-n4020-br480w-a-6.jpg"
                 ],
                 "price": 6490000,
+                "old_price": 7890000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "Celeron, N4020, 1.1GHz",
@@ -355,6 +364,7 @@
                     "./assets/img/asus/asus-vivobook-go-15-e1504fa-r5-nj776w/vi-vn-asus-vivobook-go-15-e1504fa-r5-nj776w-slider-6.jpg"
                 ],
                 "price": 13490000,
+                "old_price": 14490000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "Ryzen 5, 7520U, 2.8GHz",
@@ -393,7 +403,8 @@
                     "./assets/img/hp/hp-15s-fq2716tu-i3-7c0x3pa/vi-vn-hp-15s-fq2716tu-i3-7c0x3pa-slider-5.jpg",
                     "./assets/img/hp/hp-15s-fq2716tu-i3-7c0x3pa/vi-vn-hp-15s-fq2716tu-i3-7c0x3pa-slider-6.jpg"
                 ],
-                "price": 9990000,
+                "price": 10590000,
+                "old_price": 13690000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i3, 1115G4, 3GHz",
@@ -430,7 +441,8 @@
                     "./assets/img/hp/hp-pavilion-15-eg2082tu-i5-7c0q5pa/vi-vn-hp-pavilion-15-eg2082tu-i5-7c0q5pa--(5).jpg",
                     "./assets/img/hp/hp-pavilion-15-eg2082tu-i5-7c0q5pa/vi-vn-hp-pavilion-15-eg2082tu-i5-7c0q5pa--(6).jpg"
                 ],
-                "price": 15990000,
+                "price": 16390000,
+                "old_price": 19790000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i5, 1240P, 1.7GHz",
@@ -467,7 +479,8 @@
                     "./assets/img/hp/hp-pavilion-14-dv2074tu-i5-7c0p3pa/vi-vn-hp-pavilion-14-dv2074tu-i5-7c0p3pa-slider-5.jpg",
                     "./assets/img/hp/hp-pavilion-14-dv2074tu-i5-7c0p3pa/vi-vn-hp-pavilion-14-dv2074tu-i5-7c0p3pa-slider-6.jpg"
                 ],
-                "price": 15890000,
+                "price": 16290000,
+                "old_price": 19690000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i5, 1235U, 1.3GHz",
@@ -504,7 +517,8 @@
                     "./assets/img/hp/hp-15s-fq5162tu-i5-7c134pa/hp-15s-fq5162tu-i5-7c134pa-slider-abc-5-1020x570.jpg",
                     "./assets/img/hp/hp-15s-fq5162tu-i5-7c134pa/hp-15s-fq5162tu-i5-7c134pa-slider-abc-6-1020x570.jpg"
                 ],
-                "price": 15190000,
+                "price": 14990000,
+                "old_price": 18890000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i5, 1235U, 1.3GHz",
@@ -541,7 +555,8 @@
                     "./assets/img/hp/hp-240-g8-i3-6l1a1pa/vi-vn-hp-240-g8-i3-6l1a1pa-5.jpg",
                     "./assets/img/hp/hp-240-g8-i3-6l1a1pa/vi-vn-hp-240-g8-i3-6l1a1pa-6.jpg"
                 ],
-                "price": 8990000,
+                "price": 9090000,
+                "old_price": 12990000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i3, 1115G4, 3GHz",
@@ -577,7 +592,8 @@
                     "./assets/img/hp/hp-15s-fq5229tu-i3-8u237pa/hp-15s-fq5229tu-i3-8u237pa-4.jpg",
                     "./assets/img/hp/hp-15s-fq5229tu-i3-8u237pa/hp-15s-fq5229tu-i3-8u237pa-5.jpg"
                 ],
-                "price": 11490000,
+                "price": 10990000,
+                "old_price": 13690000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i3, 1215U, 1.2GHz",
@@ -614,7 +630,8 @@
                     "./assets/img/hp/hp-15s-fq5147tu-i7-7c133pa/vi-vn-hp-15s-fq5147tu-i7-7c133pa--(5).jpg",
                     "./assets/img/hp/hp-15s-fq5147tu-i7-7c133pa/vi-vn-hp-15s-fq5147tu-i7-7c133pa--(6).jpg"
                 ],
-                "price": 17590000,
+                "price": 17190000,
+                "old_price": 20890000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i7, 1255U, 1.7GHz",
@@ -652,6 +669,7 @@
                     "./assets/img/hp/hp-pavilion-15-eg2081tu-i5-7c0q4pa/vi-vn-hp-pavilion-15-eg2081tu-i5-7c0q4pa-slider-6.jpg"
                 ],
                 "price": 18090000,
+                "old_price": 20990000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i5, 1240P, 1.7GHz",
@@ -688,7 +706,8 @@
                     "./assets/img/hp/hp-240-g9-i3-6l1x7pa/hp-240-g9-i3-6l1x7pa--5.jpg",
                     "./assets/img/hp/hp-240-g9-i3-6l1x7pa/hp-240-g9-i3-6l1x7pa--6.jpg"
                 ],
-                "price": 10490000,
+                "price": 9990000,
+                "old_price": 12990000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i3, 1215U, 1.2GHz",
@@ -725,7 +744,8 @@
                     "./assets/img/hp/hp-240-g9-i5-6l1y2pa/vi-vn-hp-240-g9-i5-6l1y2pa-5.jpg",
                     "./assets/img/hp/hp-240-g9-i5-6l1y2pa/vi-vn-hp-240-g9-i5-6l1y2pa-6.jpg"
                 ],
-                "price": 15890000,
+                "price": 15290000,
+                "old_price": 18590000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i5, 1235U, 1.3GHz",
@@ -764,7 +784,8 @@
                     "./assets/img/lenovo/lenovo-ideapad-3-15itl6-i5-82h803rrvn/vi-vn-lenovo-ideapad-3-15itl6-i5-82h803rrvn-slider-5.jpg",
                     "./assets/img/lenovo/lenovo-ideapad-3-15itl6-i5-82h803rrvn/vi-vn-lenovo-ideapad-3-15itl6-i5-82h803rrvn-slider-6.jpg"
                 ],
-                "price": 11990000,
+                "price": 11690000,
+                "old_price": 14490000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i5, 1155G7, 2.5GHz",
@@ -801,7 +822,8 @@
                     "./assets/img/lenovo/lenovo-ideapad-3-15itl6-i3-82h803sgvn/vi-vn-lenovo-ideapad-3-15itl6-i3-82h803sgvn-slider-5.jpg",
                     "./assets/img/lenovo/lenovo-ideapad-3-15itl6-i3-82h803sgvn/vi-vn-lenovo-ideapad-3-15itl6-i3-82h803sgvn-slider-6.jpg"
                 ],
-                "price": 10490000,
+                "price": 7990000,
+                "old_price": 10490000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i3, 1115G4, 3GHz",
@@ -839,6 +861,7 @@
                     "./assets/img/lenovo/lenovo-ideapad-slim-3-15iah8-i5-83er00evn/lenovo-ideapad-slim-3-15iah8-i5-83er00evn-6.jpg"
                 ],
                 "price": 14990000,
+                "old_price": 15490000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i5, 12450H, 2GHz",
@@ -875,7 +898,8 @@
                     "./assets/img/lenovo/lenovo-ideapad-slim-5-light-14abr8-r5-82xs002kvn/vi-vn-lenovo-ideapad-slim-5-light-14abr8-r5-82xs002kvn--(5).jpg",
                     "./assets/img/lenovo/lenovo-ideapad-slim-5-light-14abr8-r5-82xs002kvn/vi-vn-lenovo-ideapad-slim-5-light-14abr8-r5-82xs002kvn--(6).jpg"
                 ],
-                "price": 17990000,
+                "price": 14990000,
+                "old_price": 17990000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "Ryzen 5, 7530U, 2GHz",
@@ -913,6 +937,7 @@
                     "./assets/img/lenovo/lenovo-ideapad-3-15itl6-i5-82h803cvvn/vi-vn-lenovo-ideapad-3-15itl6-i5-82h803cvvn-slider-6.jpg"
                 ],
                 "price": 14490000,
+                "old_price": 15990000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i5, 1155G7, 2.5GHz",
@@ -949,7 +974,8 @@
                     "./assets/img/lenovo/lenovo-ideapad-3-15itl6-i7-82h803cuvn/vi-vn-lenovo-ideapad-3-15itl6-i7-82h803cuvn-slider-5.jpg",
                     "./assets/img/lenovo/lenovo-ideapad-3-15itl6-i7-82h803cuvn/vi-vn-lenovo-ideapad-3-15itl6-i7-82h803cuvn-slider-6.jpg"
                 ],
-                "price": 16490000,
+                "price": 15940000,
+                "old_price": 16490000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i7, 1165G7, 2.8GHz",
@@ -986,7 +1012,8 @@
                     "./assets/img/lenovo/lenovo-ideapad-3-15iau7-i3-82rk001mvn/vi-vn-lenovo-ideapad-3-15iau7-i3-82rk001mvn-5.jpg",
                     "./assets/img/lenovo/lenovo-ideapad-3-15iau7-i3-82rk001mvn/vi-vn-lenovo-ideapad-3-15iau7-i3-82rk001mvn-6.jpg"
                 ],
-                "price": 14690000,
+                "price": 9690000,
+                "old_price": 14690000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i3, 1215U, 1.2GHz",
@@ -1023,7 +1050,8 @@
                     "./assets/img/lenovo/lenovo-ideapad-1-15amn7-r5-82vg0061vn/vi-vn-lenovo-ideapad-1-15amn7-r5-82vg0061vn--(5).jpg",
                     "./assets/img/lenovo/lenovo-ideapad-1-15amn7-r5-82vg0061vn/vi-vn-lenovo-ideapad-1-15amn7-r5-82vg0061vn--(6).jpg"
                 ],
-                "price": 12690000,
+                "price": 10490000,
+                "old_price": 12690000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "Ryzen 5, 7520U, 2.8GHz",
@@ -1060,7 +1088,8 @@
                     "./assets/img/lenovo/lenovo-v14-g3-iap-i5-82ts005rvn/lenovo-v14-g3-iap-i5-82ts005rvn---5--1020x569.jpg",
                     "./assets/img/lenovo/lenovo-v14-g3-iap-i5-82ts005rvn/lenovo-v14-g3-iap-i5-82ts005rvn---6--1020x569.jpg"
                 ],
-                "price": 16690000,
+                "price": 15950000,
+                "old_price": 19500000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i5, 1235U, 1.3GHz",
@@ -1097,7 +1126,8 @@
                     "./assets/img/lenovo/lenovo-ideapad-3-15itl6-i3-82h803sfvn/vi-vn-lenovo-ideapad-3-15itl6-i3-82h803sfvn-slider-5.jpg",
                     "./assets/img/lenovo/lenovo-ideapad-3-15itl6-i3-82h803sfvn/vi-vn-lenovo-ideapad-3-15itl6-i3-82h803sfvn-slider-6.jpg"
                 ],
-                "price": 11290000,
+                "price": 8990000,
+                "old_price": 11290000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i3, 1115G4, 3GHz",
@@ -1137,6 +1167,7 @@
                     "./assets/img/acer/acer-aspire-3-a315-58-589k-i5-nxam0sv008/vi-vn-acer-aspire-3-a315-58-589k-i5-nxam0sv008--(6).jpg"
                 ],
                 "price": 10990000,
+                "old_price": 13990000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i5, 1135G7, 2.4GHz",
@@ -1149,8 +1180,8 @@
                     "size": "Dài 363.4 mm - Rộng 238.4 mm - Dày 19.9 mm - Nặng 1.7 kg"
                 },
                 "desc": {
-                    "header" : "Laptop Acer Aspire 3 A315 58 589K i5 1135G7 (NX.AM0SV.008) thuộc dòng laptop học tập - văn phòng tầm trung được Acer giới thiệu tới người dùng với thông số cấu hình ổn định, ngoại hình ưa nhìn và đặc biệt có mức giá phải chăng.",
-                    "body" : [
+                    "header": "Laptop Acer Aspire 3 A315 58 589K i5 1135G7 (NX.AM0SV.008) thuộc dòng laptop học tập - văn phòng tầm trung được Acer giới thiệu tới người dùng với thông số cấu hình ổn định, ngoại hình ưa nhìn và đặc biệt có mức giá phải chăng.",
+                    "body": [
                         "Laptop Acer Aspire được trang bị bộ vi xử lý Intel Core i5 1135G7 thế hệ 11 với tốc độ cơ bản 2.4 GHz và card tích hợp Intel Iris Xe Graphics. Nhờ đó máy có khả năng xử lý tốt các tác vụ văn phòng như Word, Excel, PowerPoint và các công việc liên quan đến đồ họa ở mức cơ bản.",
                         "Với RAM 8 GB và ổ cứng SSD dung lượng 256 GB, Acer Aspire 3 cho phép người dùng thực hiện nhiều tác vụ đa nhiệm cùng lúc một cách mượt mà và không bị giật lag. Hơn nữa ổ SSD còn giúp cho máy khởi động, sao chép dữ liệu nhanh hơn đáng kể so với ổ HDD.",
                         "Laptop Acer được trang bị màn hình kích thước 15.6 inch với độ phân giải Full HD (1920 x 1080), đi kèm công nghệ Acer ComfyView kết hợp cùng tấm nền LED Backlit tạo trải nghiệm tuyệt vời khi xem phim và làm việc văn phòng, với độ sáng và chất lượng hình ảnh được tối ưu hóa để giảm mỏi mắt, đồng thời đem lại sự thoải mái cho người dùng.",
@@ -1165,29 +1196,30 @@
                 "name": "Laptop Acer Aspire 3 A315 58 54XF i5 1135G7/8GB/512GB/Win11 (NX.AM0SV.007)",
                 "video": "linkVideo",
                 "images": [
-                        "./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-thumb-600x600.jpg",
-                        "./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-slider-1-1020x570.jpg",
-                        "./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-slider-2-1020x570.jpg",
-                        "./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-slider-3-1020x570.jpg",
-                        "./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-slider-4-1020x570.jpg",
-                        "./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-slider-5-1020x570.jpg",
-                        "./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-slider-6-1020x570.jpg"
+                    "./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-thumb-600x600.jpg",
+                    "./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-slider-1-1020x570.jpg",
+                    "./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-slider-2-1020x570.jpg",
+                    "./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-slider-3-1020x570.jpg",
+                    "./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-slider-4-1020x570.jpg",
+                    "./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-slider-5-1020x570.jpg",
+                    "./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-slider-6-1020x570.jpg"
                 ],
                 "price": 11990000,
-                "quantity" : 100,
+                "old_price": 14990000,
+                "quantity": 100,
                 "specs": {
                     "cpu": "i5, 1135G7, 2.4GHz",
-                        "ram": "8 GB, DDR4 (Onboard 4 GB + 1 khe 4 GB), Từ 2400 MHz (Hãng công bố)",
-                        "disk": "512 GB SSD NVMe PCIe (Có thể tháo ra, lắp thanh khác tối đa 1 TB), Hỗ trợ khe cắm HDD SATA (nâng cấp tối đa 2 TB)",
-                        "screen" : "15.6\", Full HD (1920 x 1080)",
-                        "gpu" : "Card tích hợp, Intel Iris Xe",
-                        "port" : "HDMI, LAN (RJ45), 1 x USB 2.0, 2 x USB 3.2, Jack tai nghe 3.5 mm",
-                        "os" : "Windows 11 Home SL",
-                        "size" : "Dài 363.4 mm - Rộng 238.4 mm - Dày 19.9 mm - Nặng 1.7 kg"
+                    "ram": "8 GB, DDR4 (Onboard 4 GB + 1 khe 4 GB), Từ 2400 MHz (Hãng công bố)",
+                    "disk": "512 GB SSD NVMe PCIe (Có thể tháo ra, lắp thanh khác tối đa 1 TB), Hỗ trợ khe cắm HDD SATA (nâng cấp tối đa 2 TB)",
+                    "screen": "15.6\", Full HD (1920 x 1080)",
+                    "gpu": "Card tích hợp, Intel Iris Xe",
+                    "port": "HDMI, LAN (RJ45), 1 x USB 2.0, 2 x USB 3.2, Jack tai nghe 3.5 mm",
+                    "os": "Windows 11 Home SL",
+                    "size": "Dài 363.4 mm - Rộng 238.4 mm - Dày 19.9 mm - Nặng 1.7 kg"
                 },
                 "desc": {
-                    "header" : "Nếu đang tìm kiếm một chiếc laptop học tập - văn phòng sở hữu thiết kế thanh lịch, hiện đại cùng thông số cấu hình đủ mạnh để vận hành mượt mà các tác vụ công việc thì laptop Acer Aspire 3 A315 58 54XF i5 (NX.AM0SV.007) là sự lựa chọn lý tưởng dành cho bạn.",
-                    "body" : [
+                    "header": "Nếu đang tìm kiếm một chiếc laptop học tập - văn phòng sở hữu thiết kế thanh lịch, hiện đại cùng thông số cấu hình đủ mạnh để vận hành mượt mà các tác vụ công việc thì laptop Acer Aspire 3 A315 58 54XF i5 (NX.AM0SV.007) là sự lựa chọn lý tưởng dành cho bạn.",
+                    "body": [
                         "Laptop Acer Aspire được trang bị bộ vi xử lý Intel Core i5 1135G7 mang đến sức mạnh vượt trội có thể xử lý nhanh gọn các tác vụ học tập, văn phòng trên Word, Excel, PowerPoint,...",
                         "Card tích hợp Intel Iris Xe hỗ trợ bạn xử lý mượt mà các tác vụ về đồ họa như thiết kế PowerPoint, chỉnh sửa hình ảnh trên Photoshop, Canva,... cũng như giải trí chơi một số tựa game MOBA ở mức cấu hình trung bình.",
                         "Laptop RAM 8 GB đảm bảo đa nhiệm trơn tru, bạn có thể nâng cấp lên tối đa 12 GB để chạy những ứng dụng nặng. Ổ cứng SSD 512 GB cung cấp không gian đủ lớn để bạn lưu trữ mọi tài liệu học tập và làm việc, tối ưu để tốc độ mở máy và ứng dụng đều nhanh chỉ trong vài giây.",
@@ -1211,6 +1243,7 @@
                     "./assets/img/acer/acer-aspire-3-a315-59-314f-i3-nxk6tsv002/vi-vn-acer-aspire-3-a315-59-314f-i3-nxk6tsv002-6.jpg"
                 ],
                 "price": 8690000,
+                "old_price": 13490000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i3, 1215U, 1.2GHz",
@@ -1223,8 +1256,8 @@
                     "size": "Dài 362.9 mm - Rộng 241.26 mm - Dày 19.9 mm - Nặng 1.7 kg"
                 },
                 "desc": {
-                    "header" : "Nếu bạn đang tìm kiếm một chiếc laptop học tập - văn phòng thì laptop Acer Aspire 3 A315 59 314F i3 (NX.K6TSV.002) sẽ là sự lựa chọn lý tưởng đáp ứng đủ nhu cầu với bộ vi xử lý Intel thế hệ thứ 12 mạnh mẽ, thiết kế linh động dễ dàng mang theo mọi lúc mọi nơi.",
-                    "body" : [
+                    "header": "Nếu bạn đang tìm kiếm một chiếc laptop học tập - văn phòng thì laptop Acer Aspire 3 A315 59 314F i3 (NX.K6TSV.002) sẽ là sự lựa chọn lý tưởng đáp ứng đủ nhu cầu với bộ vi xử lý Intel thế hệ thứ 12 mạnh mẽ, thiết kế linh động dễ dàng mang theo mọi lúc mọi nơi.",
+                    "body": [
                         "Laptop Acer Aspire được trang bị bộ vi xử lý Intel Core i3 1215U cùng card tích hợp Intel UHD đủ tốt để đáp ứng đủ mọi nhu cầu của một người dùng là sinh viên như mình, đo đạc hiệu năng bằng công cụ Cinebench R23 được 6382 điểm đa nhân và 1633 điểm đơn nhân, con số ấn tượng đối với một bộ vi xử lý thuộc dòng U tiết kiệm điện năng.",
                         "Mình hoàn toàn có thể chạy các ứng dụng văn phòng cơ bản như Word, Excel, PowerPoint,... cũng như chỉnh sửa, thiết kế hình ảnh nhẹ nhàng trên Canva, Photoshop,... đều trơn tru và mượt mà, thoải mái cho mình học tập và làm việc.",
                         "Laptop RAM 8 GB cho phép mình vận hành đa tác vụ một cách nhanh chóng, mình mở cùng lúc các ứng dụng thường dùng như Photoshop để chỉnh sửa hình ảnh, Word soạn thảo văn bản, một vài tabs FireFox tìm kiếm thông tin và các cửa sổ khác mà máy vẫn chạy ổn định, không hề xảy ra hiện tượng giật lag. Đối với những bạn nào có nhu cầu chạy các ứng dụng nặng hơn hoặc muốn nâng cao trải nghiệm có thể nâng cấp lên 32 GB, thoải mái sử dụng lâu dài mà không lo máy sẽ chạy chậm đi theo thời gian.",
@@ -1247,7 +1280,8 @@
                     "./assets/img/acer/acer-nitro-5-gaming-an515-57-5669-i5-nhqehsv001/vi-vn-acer-nitro-5-gaming-an515-57-5669-i5-nhqehsv001-5.jpg",
                     "./assets/img/acer/acer-nitro-5-gaming-an515-57-5669-i5-nhqehsv001/vi-vn-acer-nitro-5-gaming-an515-57-5669-i5-nhqehsv001-6.jpg"
                 ],
-                "price": 17490000,
+                "price": 17990000,
+                "old_price": 23790000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i5, 11400H, 2.7GHz",
@@ -1260,8 +1294,8 @@
                     "size": "Dài 363.4 mm - Rộng 255 mm - Dày 23.9 mm - Nặng 2.2 kg"
                 },
                 "desc": {
-                    "header" : "",
-                    "body" : [
+                    "header": "",
+                    "body": [
                         "",
                         "",
                         "",
@@ -1284,7 +1318,8 @@
                     "./assets/img/acer/acer-aspire-7-gaming-a715-76g-5132-i5-nhqmesv002/vi-vn-acer-aspire-7-gaming-a715-76g-5132-i5-nhqmesv002-slider-5.jpg",
                     "./assets/img/acer/acer-aspire-7-gaming-a715-76g-5132-i5-nhqmesv002/vi-vn-acer-aspire-7-gaming-a715-76g-5132-i5-nhqmesv002-slider-6.jpg"
                 ],
-                "price": 14590000,
+                "price": 15990000,
+                "old_price": 18990000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i5, 12450H, 2GHz",
@@ -1297,8 +1332,8 @@
                     "size": "Dài 362.3 mm - Rộng 237.4 mm - Dày 19.9 mm - Nặng 2.1 kg"
                 },
                 "desc": {
-                    "header" : "",
-                    "body" : [
+                    "header": "",
+                    "body": [
                         "",
                         "",
                         "",
@@ -1322,6 +1357,7 @@
                     "./assets/img/acer/acer-nitro-5-an515-58-769j-i7-nhqfhsv003/acer-nitro-5-an515-58-769j-i7-nhqfhsv003-6.jpg"
                 ],
                 "price": 24490000,
+                "old_price": 31790000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i7, 12700H, 2.30 GHz",
@@ -1334,8 +1370,8 @@
                     "size": "Dài 360.4 mm - Rộng 271.09 mm - Dày 25.9 mm - Nặng 2.5 kg"
                 },
                 "desc": {
-                    "header" : "",
-                    "body" : [
+                    "header": "",
+                    "body": [
                         "",
                         "",
                         "",
@@ -1359,6 +1395,7 @@
                     "./assets/img/acer/acer-aspire-a514-54-5127-i5-nxa28sv007/vi-vn-acer-aspire-a514-54-5127-i5-nxa28sv007-6.jpg"
                 ],
                 "price": 13690000,
+                "old_price": 15490000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i5, 1135G7, 2.4GHz",
@@ -1371,8 +1408,8 @@
                     "size": "Dài 328 mm - Rộng 223 mm - Dày 17.95 mm - Nặng 1.46 kg"
                 },
                 "desc": {
-                    "header" : "",
-                    "body" : [
+                    "header": "",
+                    "body": [
                         "",
                         "",
                         "",
@@ -1396,6 +1433,7 @@
                     "./assets/img/acer/acer-nitro-5-tiger-an515-58-52sp-i5-nhqfhsv001/vi-vn-acer-nitro-5-tiger-an515-58-52sp-i5-nhqfhsv001-6.jpg"
                 ],
                 "price": 22990000,
+                "old_price": 27990000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i5, 12500H, 2.5GHz",
@@ -1408,8 +1446,8 @@
                     "size": "Dài 360.4 mm - Rộng 271.09 mm - Dày 25.9 mm - Nặng 2.5 kg"
                 },
                 "desc": {
-                    "header" : "",
-                    "body" : [
+                    "header": "",
+                    "body": [
                         "",
                         "",
                         "",
@@ -1421,7 +1459,7 @@
             },
             {
                 "id": "SP39",
-                "name": "",
+                "name": "Laptop Acer Gaming Nitro 5 AN515 57 53F9 i5 11400H/8GB/512GB/4GB RTX3050/144Hz/Win11 (NH.QENSV.008)",
                 "video": "linkVideo",
                 "images": [
                     "./assets/img/acer/acer-gaming-nitro-5-an515-57-53f9-i5-nhqensv008/acer-gaming-nitro-5-an515-57-53f9-i5-nhqensv008-thumb-600x600.jpg",
@@ -1433,6 +1471,7 @@
                     "./assets/img/acer/acer-gaming-nitro-5-an515-57-53f9-i5-nhqensv008/vi-vn-acer-gaming-nitro-5-an515-57-53f9-i5-nhqensv008-slider-6.jpg"
                 ],
                 "price": 19990000,
+                "old_price": 24990000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i5, 11400H, 2.7GHz",
@@ -1445,8 +1484,8 @@
                     "size": "Dài 363.4 mm - Rộng 255 mm - Dày 23.9 mm - Nặng 2.2 kg"
                 },
                 "desc": {
-                    "header" : "",
-                    "body" : [
+                    "header": "",
+                    "body": [
                         "",
                         "",
                         "",
@@ -1470,6 +1509,7 @@
                     "./assets/img/acer/acer-aspire-7-gaming-a715-43g-r8ga-r5-nhqhdsv002/vi-vn-acer-aspire-7-gaming-a715-43g-r8ga-r5-nhqhdsv002-6.jpg"
                 ],
                 "price": 16490000,
+                "old_price": 21990000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "Ryzen 5, 5625U, 2.30 GHz",
@@ -1482,8 +1522,8 @@
                     "size": "Dài 363.4 mm - Rộng 254.5 mm - Dày 22.9 mm - Nặng 2.1 kg"
                 },
                 "desc": {
-                    "header" : "",
-                    "body" : [
+                    "header": "",
+                    "body": [
                         "",
                         "",
                         "",
@@ -1507,6 +1547,7 @@
                     "./assets/img/acer/acer-aspire-3-a315-58-589k-i5-nxam0sv008/vi-vn-acer-aspire-3-a315-58-589k-i5-nxam0sv008--(6).jpg"
                 ],
                 "price": 10990000,
+                "old_price": 13990000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i5, 1135G7, 2.4GHz",
@@ -1519,8 +1560,8 @@
                     "size": "Dài 363.4 mm - Rộng 238.4 mm - Dày 19.9 mm - Nặng 1.7 kg"
                 },
                 "desc": {
-                    "header" : "Laptop Acer Aspire 3 A315 58 589K i5 1135G7 (NX.AM0SV.008) thuộc dòng laptop học tập - văn phòng tầm trung được Acer giới thiệu tới người dùng với thông số cấu hình ổn định, ngoại hình ưa nhìn và đặc biệt có mức giá phải chăng.",
-                    "body" : [
+                    "header": "Laptop Acer Aspire 3 A315 58 589K i5 1135G7 (NX.AM0SV.008) thuộc dòng laptop học tập - văn phòng tầm trung được Acer giới thiệu tới người dùng với thông số cấu hình ổn định, ngoại hình ưa nhìn và đặc biệt có mức giá phải chăng.",
+                    "body": [
                         "Laptop Acer Aspire được trang bị bộ vi xử lý Intel Core i5 1135G7 thế hệ 11 với tốc độ cơ bản 2.4 GHz và card tích hợp Intel Iris Xe Graphics. Nhờ đó máy có khả năng xử lý tốt các tác vụ văn phòng như Word, Excel, PowerPoint và các công việc liên quan đến đồ họa ở mức cơ bản.",
                         "Với RAM 8 GB và ổ cứng SSD dung lượng 256 GB, Acer Aspire 3 cho phép người dùng thực hiện nhiều tác vụ đa nhiệm cùng lúc một cách mượt mà và không bị giật lag. Hơn nữa ổ SSD còn giúp cho máy khởi động, sao chép dữ liệu nhanh hơn đáng kể so với ổ HDD.",
                         "Laptop Acer được trang bị màn hình kích thước 15.6 inch với độ phân giải Full HD (1920 x 1080), đi kèm công nghệ Acer ComfyView kết hợp cùng tấm nền LED Backlit tạo trải nghiệm tuyệt vời khi xem phim và làm việc văn phòng, với độ sáng và chất lượng hình ảnh được tối ưu hóa để giảm mỏi mắt, đồng thời đem lại sự thoải mái cho người dùng.",
@@ -1535,29 +1576,30 @@
                 "name": "Laptop Acer Aspire 3 A315 58 54XF i5 1135G7/8GB/512GB/Win11 (NX.AM0SV.007)",
                 "video": "linkVideo",
                 "images": [
-                        "./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-thumb-600x600.jpg",
-                        "./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-slider-1-1020x570.jpg",
-                        "./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-slider-2-1020x570.jpg",
-                        "./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-slider-3-1020x570.jpg",
-                        "./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-slider-4-1020x570.jpg",
-                        "./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-slider-5-1020x570.jpg",
-                        "./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-slider-6-1020x570.jpg"
+                    "./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-thumb-600x600.jpg",
+                    "./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-slider-1-1020x570.jpg",
+                    "./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-slider-2-1020x570.jpg",
+                    "./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-slider-3-1020x570.jpg",
+                    "./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-slider-4-1020x570.jpg",
+                    "./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-slider-5-1020x570.jpg",
+                    "./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-slider-6-1020x570.jpg"
                 ],
                 "price": 11990000,
-                "quantity" : 100,
+                "old_price": 14990000,
+                "quantity": 100,
                 "specs": {
                     "cpu": "i5, 1135G7, 2.4GHz",
-                        "ram": "8 GB, DDR4 (Onboard 4 GB + 1 khe 4 GB), Từ 2400 MHz (Hãng công bố)",
-                        "disk": "512 GB SSD NVMe PCIe (Có thể tháo ra, lắp thanh khác tối đa 1 TB), Hỗ trợ khe cắm HDD SATA (nâng cấp tối đa 2 TB)",
-                        "screen" : "15.6\", Full HD (1920 x 1080)",
-                        "gpu" : "Card tích hợp, Intel Iris Xe",
-                        "port" : "HDMI, LAN (RJ45), 1 x USB 2.0, 2 x USB 3.2, Jack tai nghe 3.5 mm",
-                        "os" : "Windows 11 Home SL",
-                        "size" : "Dài 363.4 mm - Rộng 238.4 mm - Dày 19.9 mm - Nặng 1.7 kg"
+                    "ram": "8 GB, DDR4 (Onboard 4 GB + 1 khe 4 GB), Từ 2400 MHz (Hãng công bố)",
+                    "disk": "512 GB SSD NVMe PCIe (Có thể tháo ra, lắp thanh khác tối đa 1 TB), Hỗ trợ khe cắm HDD SATA (nâng cấp tối đa 2 TB)",
+                    "screen": "15.6\", Full HD (1920 x 1080)",
+                    "gpu": "Card tích hợp, Intel Iris Xe",
+                    "port": "HDMI, LAN (RJ45), 1 x USB 2.0, 2 x USB 3.2, Jack tai nghe 3.5 mm",
+                    "os": "Windows 11 Home SL",
+                    "size": "Dài 363.4 mm - Rộng 238.4 mm - Dày 19.9 mm - Nặng 1.7 kg"
                 },
                 "desc": {
-                    "header" : "Nếu đang tìm kiếm một chiếc laptop học tập - văn phòng sở hữu thiết kế thanh lịch, hiện đại cùng thông số cấu hình đủ mạnh để vận hành mượt mà các tác vụ công việc thì laptop Acer Aspire 3 A315 58 54XF i5 (NX.AM0SV.007) là sự lựa chọn lý tưởng dành cho bạn.",
-                    "body" : [
+                    "header": "Nếu đang tìm kiếm một chiếc laptop học tập - văn phòng sở hữu thiết kế thanh lịch, hiện đại cùng thông số cấu hình đủ mạnh để vận hành mượt mà các tác vụ công việc thì laptop Acer Aspire 3 A315 58 54XF i5 (NX.AM0SV.007) là sự lựa chọn lý tưởng dành cho bạn.",
+                    "body": [
                         "Laptop Acer Aspire được trang bị bộ vi xử lý Intel Core i5 1135G7 mang đến sức mạnh vượt trội có thể xử lý nhanh gọn các tác vụ học tập, văn phòng trên Word, Excel, PowerPoint,...",
                         "Card tích hợp Intel Iris Xe hỗ trợ bạn xử lý mượt mà các tác vụ về đồ họa như thiết kế PowerPoint, chỉnh sửa hình ảnh trên Photoshop, Canva,... cũng như giải trí chơi một số tựa game MOBA ở mức cấu hình trung bình.",
                         "Laptop RAM 8 GB đảm bảo đa nhiệm trơn tru, bạn có thể nâng cấp lên tối đa 12 GB để chạy những ứng dụng nặng. Ổ cứng SSD 512 GB cung cấp không gian đủ lớn để bạn lưu trữ mọi tài liệu học tập và làm việc, tối ưu để tốc độ mở máy và ứng dụng đều nhanh chỉ trong vài giây.",
@@ -1581,6 +1623,7 @@
                     "./assets/img/acer/acer-aspire-3-a315-59-314f-i3-nxk6tsv002/vi-vn-acer-aspire-3-a315-59-314f-i3-nxk6tsv002-6.jpg"
                 ],
                 "price": 8690000,
+                "old_price": 13490000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i3, 1215U, 1.2GHz",
@@ -1593,8 +1636,8 @@
                     "size": "Dài 362.9 mm - Rộng 241.26 mm - Dày 19.9 mm - Nặng 1.7 kg"
                 },
                 "desc": {
-                    "header" : "Nếu bạn đang tìm kiếm một chiếc laptop học tập - văn phòng thì laptop Acer Aspire 3 A315 59 314F i3 (NX.K6TSV.002) sẽ là sự lựa chọn lý tưởng đáp ứng đủ nhu cầu với bộ vi xử lý Intel thế hệ thứ 12 mạnh mẽ, thiết kế linh động dễ dàng mang theo mọi lúc mọi nơi.",
-                    "body" : [
+                    "header": "Nếu bạn đang tìm kiếm một chiếc laptop học tập - văn phòng thì laptop Acer Aspire 3 A315 59 314F i3 (NX.K6TSV.002) sẽ là sự lựa chọn lý tưởng đáp ứng đủ nhu cầu với bộ vi xử lý Intel thế hệ thứ 12 mạnh mẽ, thiết kế linh động dễ dàng mang theo mọi lúc mọi nơi.",
+                    "body": [
                         "Laptop Acer Aspire được trang bị bộ vi xử lý Intel Core i3 1215U cùng card tích hợp Intel UHD đủ tốt để đáp ứng đủ mọi nhu cầu của một người dùng là sinh viên như mình, đo đạc hiệu năng bằng công cụ Cinebench R23 được 6382 điểm đa nhân và 1633 điểm đơn nhân, con số ấn tượng đối với một bộ vi xử lý thuộc dòng U tiết kiệm điện năng.",
                         "Mình hoàn toàn có thể chạy các ứng dụng văn phòng cơ bản như Word, Excel, PowerPoint,... cũng như chỉnh sửa, thiết kế hình ảnh nhẹ nhàng trên Canva, Photoshop,... đều trơn tru và mượt mà, thoải mái cho mình học tập và làm việc.",
                         "Laptop RAM 8 GB cho phép mình vận hành đa tác vụ một cách nhanh chóng, mình mở cùng lúc các ứng dụng thường dùng như Photoshop để chỉnh sửa hình ảnh, Word soạn thảo văn bản, một vài tabs FireFox tìm kiếm thông tin và các cửa sổ khác mà máy vẫn chạy ổn định, không hề xảy ra hiện tượng giật lag. Đối với những bạn nào có nhu cầu chạy các ứng dụng nặng hơn hoặc muốn nâng cao trải nghiệm có thể nâng cấp lên 32 GB, thoải mái sử dụng lâu dài mà không lo máy sẽ chạy chậm đi theo thời gian.",
@@ -1617,7 +1660,8 @@
                     "./assets/img/acer/acer-nitro-5-gaming-an515-57-5669-i5-nhqehsv001/vi-vn-acer-nitro-5-gaming-an515-57-5669-i5-nhqehsv001-5.jpg",
                     "./assets/img/acer/acer-nitro-5-gaming-an515-57-5669-i5-nhqehsv001/vi-vn-acer-nitro-5-gaming-an515-57-5669-i5-nhqehsv001-6.jpg"
                 ],
-                "price": 17490000,
+                "price": 17990000,
+                "old_price": 23790000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i5, 11400H, 2.7GHz",
@@ -1630,8 +1674,8 @@
                     "size": "Dài 363.4 mm - Rộng 255 mm - Dày 23.9 mm - Nặng 2.2 kg"
                 },
                 "desc": {
-                    "header" : "",
-                    "body" : [
+                    "header": "",
+                    "body": [
                         "",
                         "",
                         "",
@@ -1654,7 +1698,8 @@
                     "./assets/img/acer/acer-aspire-7-gaming-a715-76g-5132-i5-nhqmesv002/vi-vn-acer-aspire-7-gaming-a715-76g-5132-i5-nhqmesv002-slider-5.jpg",
                     "./assets/img/acer/acer-aspire-7-gaming-a715-76g-5132-i5-nhqmesv002/vi-vn-acer-aspire-7-gaming-a715-76g-5132-i5-nhqmesv002-slider-6.jpg"
                 ],
-                "price": 14590000,
+                "price": 15990000,
+                "old_price": 18990000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i5, 12450H, 2GHz",
@@ -1667,8 +1712,8 @@
                     "size": "Dài 362.3 mm - Rộng 237.4 mm - Dày 19.9 mm - Nặng 2.1 kg"
                 },
                 "desc": {
-                    "header" : "",
-                    "body" : [
+                    "header": "",
+                    "body": [
                         "",
                         "",
                         "",
@@ -1692,6 +1737,7 @@
                     "./assets/img/acer/acer-nitro-5-an515-58-769j-i7-nhqfhsv003/acer-nitro-5-an515-58-769j-i7-nhqfhsv003-6.jpg"
                 ],
                 "price": 24490000,
+                "old_price": 31790000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i7, 12700H, 2.30 GHz",
@@ -1704,8 +1750,8 @@
                     "size": "Dài 360.4 mm - Rộng 271.09 mm - Dày 25.9 mm - Nặng 2.5 kg"
                 },
                 "desc": {
-                    "header" : "",
-                    "body" : [
+                    "header": "",
+                    "body": [
                         "",
                         "",
                         "",
@@ -1729,6 +1775,7 @@
                     "./assets/img/acer/acer-aspire-a514-54-5127-i5-nxa28sv007/vi-vn-acer-aspire-a514-54-5127-i5-nxa28sv007-6.jpg"
                 ],
                 "price": 13690000,
+                "old_price": 15490000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i5, 1135G7, 2.4GHz",
@@ -1741,8 +1788,8 @@
                     "size": "Dài 328 mm - Rộng 223 mm - Dày 17.95 mm - Nặng 1.46 kg"
                 },
                 "desc": {
-                    "header" : "",
-                    "body" : [
+                    "header": "",
+                    "body": [
                         "",
                         "",
                         "",
@@ -1766,6 +1813,7 @@
                     "./assets/img/acer/acer-nitro-5-tiger-an515-58-52sp-i5-nhqfhsv001/vi-vn-acer-nitro-5-tiger-an515-58-52sp-i5-nhqfhsv001-6.jpg"
                 ],
                 "price": 22990000,
+                "old_price": 27990000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i5, 12500H, 2.5GHz",
@@ -1778,8 +1826,8 @@
                     "size": "Dài 360.4 mm - Rộng 271.09 mm - Dày 25.9 mm - Nặng 2.5 kg"
                 },
                 "desc": {
-                    "header" : "",
-                    "body" : [
+                    "header": "",
+                    "body": [
                         "",
                         "",
                         "",
@@ -1791,7 +1839,7 @@
             },
             {
                 "id": "SP39",
-                "name": "",
+                "name": "Laptop Acer Gaming Nitro 5 AN515 57 53F9 i5 11400H/8GB/512GB/4GB RTX3050/144Hz/Win11 (NH.QENSV.008)",
                 "video": "linkVideo",
                 "images": [
                     "./assets/img/acer/acer-gaming-nitro-5-an515-57-53f9-i5-nhqensv008/acer-gaming-nitro-5-an515-57-53f9-i5-nhqensv008-thumb-600x600.jpg",
@@ -1803,6 +1851,7 @@
                     "./assets/img/acer/acer-gaming-nitro-5-an515-57-53f9-i5-nhqensv008/vi-vn-acer-gaming-nitro-5-an515-57-53f9-i5-nhqensv008-slider-6.jpg"
                 ],
                 "price": 19990000,
+                "old_price": 24990000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "i5, 11400H, 2.7GHz",
@@ -1815,8 +1864,8 @@
                     "size": "Dài 363.4 mm - Rộng 255 mm - Dày 23.9 mm - Nặng 2.2 kg"
                 },
                 "desc": {
-                    "header" : "",
-                    "body" : [
+                    "header": "",
+                    "body": [
                         "",
                         "",
                         "",
@@ -1840,6 +1889,7 @@
                     "./assets/img/acer/acer-aspire-7-gaming-a715-43g-r8ga-r5-nhqhdsv002/vi-vn-acer-aspire-7-gaming-a715-43g-r8ga-r5-nhqhdsv002-6.jpg"
                 ],
                 "price": 16490000,
+                "old_price": 21990000,
                 "quantity": 100,
                 "specs": {
                     "cpu": "Ryzen 5, 5625U, 2.30 GHz",
@@ -1852,8 +1902,8 @@
                     "size": "Dài 363.4 mm - Rộng 254.5 mm - Dày 22.9 mm - Nặng 2.1 kg"
                 },
                 "desc": {
-                    "header" : "",
-                    "body" : [
+                    "header": "",
+                    "body": [
                         "",
                         "",
                         "",
@@ -1862,6 +1912,159 @@
                         ""
                     ]
                 }
+            }
+        ]
+    },
+    "phukien": {
+        "mouse": [
+            {
+                "id": "SP41",
+                "name": "Chuột Không dây Rapoo B2",
+                "images": [
+                    "./assets/img/mouse/chuot-khong-day-rapoo-b2/chuot-khong-day-rapoo-b2-thumb-1-600x600.jpg",
+                    "./assets/img/mouse/chuot-khong-day-rapoo-b2/chuot-khong-day-rapoo-b2-1.jpg",
+                    "./assets/img/mouse/chuot-khong-day-rapoo-b2/chuot-khong-day-rapoo-b2-2.jpg",
+                    "./assets/img/mouse/chuot-khong-day-rapoo-b2/chuot-khong-day-rapoo-b2-3.jpg",
+                    "./assets/img/mouse/chuot-khong-day-rapoo-b2/chuot-khong-day-rapoo-b2-4.jpg",
+                    "./assets/img/mouse/chuot-khong-day-rapoo-b2/chuot-khong-day-rapoo-b2-20-2.jpg"
+                ],
+                "price": 100000,
+                "old_price": 150000,
+                "quantity": 100
+            },
+            {
+                "id": "SP42",
+                "name": "Chuột Không dây DareU LM106G",
+                "images": [
+                    "./assets/img/mouse/chuot-khong-day-dareu-lm106g/chuot-khong-day-dareu-lm106g-thumb-5-1-600x600.jpg",
+                    "./assets/img/mouse/chuot-khong-day-dareu-lm106g/chuot-khong-day-dareu-lm106g-20.jpg",
+                    "./assets/img/mouse/chuot-khong-day-dareu-lm106g/chuot-khong-day-dareu-lm106g-21.jpg",
+                    "./assets/img/mouse/chuot-khong-day-dareu-lm106g/chuot-khong-day-dareu-lm106g-22.jpg",
+                    "./assets/img/mouse/chuot-khong-day-dareu-lm106g/chuot-khong-day-dareu-lm106g-23.jpg"
+                ],
+                "price": 100000,
+                "old_price": 150000,
+                "quantity": 100
+            },
+            {
+                "id": "SP43",
+                "name": "Chuột Không Dây Gaming Rapoo VT960 Pro",
+                "images": [
+                    "./assets/img/mouse/chuot-khong-day-gaming-rapoo-vt960-pro/chuot-khong-day-gaming-rapoo-vt960-pro-thumb-600x600.jpg",
+                    "./assets/img/mouse/chuot-khong-day-gaming-rapoo-vt960-pro/chuot-khong-day-gaming-rapoo-vt960-pro-1.jpg",
+                    "./assets/img/mouse/chuot-khong-day-gaming-rapoo-vt960-pro/chuot-khong-day-gaming-rapoo-vt960-pro-2.jpg",
+                    "./assets/img/mouse/chuot-khong-day-gaming-rapoo-vt960-pro/chuot-khong-day-gaming-rapoo-vt960-pro-3.jpg",
+                    "./assets/img/mouse/chuot-khong-day-gaming-rapoo-vt960-pro/chuot-khong-day-gaming-rapoo-vt960-pro-4.jpg",
+                    "./assets/img/mouse/chuot-khong-day-gaming-rapoo-vt960-pro/chuot-khong-day-gaming-rapoo-vt960-pro-5.jpg"
+                ],
+                "price": 1350000,
+                "old_price": 1690000,
+                "quantity": 100
+            },
+            {
+                "id": "SP44",
+                "name": "Chuột Có dây Gaming Asus TUF M3",
+                "images": [
+                    "./assets/img/mouse/chuot-gaming-asus-tuf-m3-den/chuot-gaming-asus-tuf-m3-den01-600x600.jpg",
+                    "./assets/img/mouse/chuot-gaming-asus-tuf-m3-den/chuot-gaming-asus-tuf-m3-den-1-org.jpg",
+                    "./assets/img/mouse/chuot-gaming-asus-tuf-m3-den/chuot-gaming-asus-tuf-m3-den-2-org.jpg",
+                    "./assets/img/mouse/chuot-gaming-asus-tuf-m3-den/chuot-gaming-asus-tuf-m3-den-3-org.jpg",
+                    "./assets/img/mouse/chuot-gaming-asus-tuf-m3-den/chuot-gaming-asus-tuf-m3-den-4-org.jpg",
+                    "./assets/img/mouse/chuot-gaming-asus-tuf-m3-den/chuot-gaming-asus-tuf-m3-den-5-org.jpg"
+                ],
+                "price": 450000,
+                "old_price": 550000,
+                "quantity": 100
+            },
+            {
+                "id": "SP45",
+                "name": "Chuột Có dây Gaming Corsair M55 RGB Pro",
+                "images": [
+                    "./assets/img/mouse/chuot-gaming-corsair-m55-rgb-pro-den/chuot-gaming-corsair-m55-rgb-pro-den-thumb1-600x600.jpeg",
+                    "./assets/img/mouse/chuot-gaming-corsair-m55-rgb-pro-den/chuot-gaming-corsair-m55-rgb-pro-den-1-org.jpg",
+                    "./assets/img/mouse/chuot-gaming-corsair-m55-rgb-pro-den/chuot-gaming-corsair-m55-rgb-pro-den-2-org.jpg",
+                    "./assets/img/mouse/chuot-gaming-corsair-m55-rgb-pro-den/chuot-gaming-corsair-m55-rgb-pro-den-3-org.jpg",
+                    "./assets/img/mouse/chuot-gaming-corsair-m55-rgb-pro-den/chuot-gaming-corsair-m55-rgb-pro-den-4-org.jpg",
+                    "./assets/img/mouse/chuot-gaming-corsair-m55-rgb-pro-den/chuot-gaming-corsair-m55-rgb-pro-den-5-org.jpg"
+                ],
+                "price": 780000,
+                "old_price": 920000,
+                "quantity": 100
+            },
+            {
+                "id": "SP46",
+                "name": "Chuột Bluetooth Apple MK2E3",
+                "images": [
+                    "./assets/img/mouse/chuot-bluetooth-apple-mk2e3-trang/chuot-bluetooth-apple-mk2e3-trang-thumb-600x600.jpg",
+                    "./assets/img/mouse/chuot-bluetooth-apple-mk2e3-trang/chuot-bluetooth-apple-mk2e3-trang-1.jpg",
+                    "./assets/img/mouse/chuot-bluetooth-apple-mk2e3-trang/chuot-bluetooth-apple-mk2e3-trang-2.jpg",
+                    "./assets/img/mouse/chuot-bluetooth-apple-mk2e3-trang/chuot-bluetooth-apple-mk2e3-trang-3.jpg",
+                    "./assets/img/mouse/chuot-bluetooth-apple-mk2e3-trang/chuot-bluetooth-apple-mk2e3-trang-4.jpg",
+                    "./assets/img/mouse/chuot-bluetooth-apple-mk2e3-trang/chuot-bluetooth-apple-mk2e3-trang-200.jpg"
+                ],
+                "price": 1990000,
+                "old_price": 2490000,
+                "quantity": 100
+            },
+            {
+                "id": "SP47",
+                "name": "Chuột Có dây Gaming Razer DeathAdder Essential",
+                "images": [
+                    "./assets/img/mouse/chuot-co-day-gaming-razer-deathadder-essential/chuot-co-day-gaming-razer-deathadder-essential-thumb-600x600.jpeg",
+                    "./assets/img/mouse/chuot-co-day-gaming-razer-deathadder-essential/chuot-co-day-gaming-razer-deathadder-essential-1-org.jpg",
+                    "./assets/img/mouse/chuot-co-day-gaming-razer-deathadder-essential/chuot-co-day-gaming-razer-deathadder-essential-2-org.jpg",
+                    "./assets/img/mouse/chuot-co-day-gaming-razer-deathadder-essential/chuot-co-day-gaming-razer-deathadder-essential-3-org.jpg",
+                    "./assets/img/mouse/chuot-co-day-gaming-razer-deathadder-essential/chuot-co-day-gaming-razer-deathadder-essential-4-org.jpg",
+                    "./assets/img/mouse/chuot-co-day-gaming-razer-deathadder-essential/chuot-co-day-gaming-razer-deathadder-essential-5-org.jpg"
+                ],
+                "price": 450000,    
+                "old_price": 750000,
+                "quantity": 100
+            },
+            {
+                "id": "SP48",
+                "name": "Chuột Có dây Gaming HyperX Pulsefire FPS Pro RGB",
+                "images": [
+                    "./assets/img/mouse/chuot-gaming-hyperx-pulsefire-fps-pro-rgb-den/chuot-gaming-hyperx-pulsefire-fps-pro-rgb-den01-600x600.jpg",
+                    "./assets/img/mouse/chuot-gaming-hyperx-pulsefire-fps-pro-rgb-den/chuot-gaming-hyperx-pulsefire-fps-pro-rgb-den-1-org.jpg",
+                    "./assets/img/mouse/chuot-gaming-hyperx-pulsefire-fps-pro-rgb-den/chuot-gaming-hyperx-pulsefire-fps-pro-rgb-den-2-org.jpg",
+                    "./assets/img/mouse/chuot-gaming-hyperx-pulsefire-fps-pro-rgb-den/chuot-gaming-hyperx-pulsefire-fps-pro-rgb-den-3-org.jpg",
+                    "./assets/img/mouse/chuot-gaming-hyperx-pulsefire-fps-pro-rgb-den/chuot-gaming-hyperx-pulsefire-fps-pro-rgb-den-4-org.jpg",
+                    "./assets/img/mouse/chuot-gaming-hyperx-pulsefire-fps-pro-rgb-den/chuot-gaming-hyperx-pulsefire-fps-pro-rgb-den-5-org.jpg"
+                ],
+                "price": 640000,    
+                "old_price": 990000,
+                "quantity": 100
+            },
+            {
+                "id": "SP49",
+                "name": "Chuột Có dây DareU EM908",
+                "images": [
+                    "./assets/img/mouse/chuot-co-day-dareu-em908-den/chuot-co-day-dareu-em908-den-thumb-1-600x600.jpeg",
+                    "./assets/img/mouse/chuot-co-day-dareu-em908-den/chuot-co-day-dareu-em908-1-1.jpg",
+                    "./assets/img/mouse/chuot-co-day-dareu-em908-den/chuot-co-day-dareu-em908-2-1.jpg",
+                    "./assets/img/mouse/chuot-co-day-dareu-em908-den/chuot-co-day-dareu-em908-3-1.jpg",
+                    "./assets/img/mouse/chuot-co-day-dareu-em908-den/chuot-co-day-dareu-em908-4-1.jpg",
+                    "./assets/img/mouse/chuot-co-day-dareu-em908-den/chuot-co-day-dareu-em908-5-1.jpg"
+                ],
+                "price": 314000,    
+                "old_price": 419000,
+                "quantity": 100
+            },
+            {
+                "id": "SP50",
+                "name": "Chuột Không dây Bluetooth Gaming Asus TUF M4 WL",
+                "images": [
+                    "./assets/img/mouse/chuot-khong-day-gaming-asus-tuf-m4-wl/chuot-khong-day-gaming-asus-tuf-m4-wl-thumb-1-1-600x600.jpeg",
+                    "./assets/img/mouse/chuot-khong-day-gaming-asus-tuf-m4-wl/chuot-khong-day-gaming-asus-tuf-m4-wl-1-1.jpg",
+                    "./assets/img/mouse/chuot-khong-day-gaming-asus-tuf-m4-wl/chuot-khong-day-gaming-asus-tuf-m4-wl-2-1.jpg",
+                    "./assets/img/mouse/chuot-khong-day-gaming-asus-tuf-m4-wl/chuot-khong-day-gaming-asus-tuf-m4-wl-3-1.jpg",
+                    "./assets/img/mouse/chuot-khong-day-gaming-asus-tuf-m4-wl/chuot-khong-day-gaming-asus-tuf-m4-wl-4-1.jpg",
+                    "./assets/img/mouse/chuot-khong-day-gaming-asus-tuf-m4-wl/chuot-khong-day-gaming-asus-tuf-m4-wl-5-1.jpg"
+                ],
+                "price": 1020000,    
+                "old_price": 1190000,
+                "quantity": 100
             }
         ]
     }

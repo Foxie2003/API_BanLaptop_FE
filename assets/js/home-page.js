@@ -73,12 +73,16 @@ let loaded = 0; //Product loaded
 
 function loadInnerProduct(sanpham) {
     const format = new Intl.NumberFormat({ maximumSignificantDigits: 3 });
+    console.log(sanpham.price / sanpham.old_price);
     document.getElementById("products").innerHTML
         += `<div class="product-item col-2-4 col-s-6" onclick="showDetails('${sanpham.id.trim()}')">
+        <div class="sale-percent">
+        -${Math.round((sanpham.old_price - sanpham.price) / sanpham.old_price * 100)}%
+        <i class="fa-solid fa-tag fa-xl"></i></div>
         <img class="product-img" src="` + sanpham.images[0] + `" alt="">
         <div class="title">` + sanpham.name.split("/")[0] + `</div>
         <div class="price">` + format.format(sanpham.price) + `₫</div>
-        <div class="price-old">` + format.format(sanpham.price + sanpham.price * 10 / 100) + `₫</div>
+        <div class="price-old">` + format.format(sanpham.old_price) + `₫</div>
         <ul class="desc">
             <li class="screen">Màn hình: ` + sanpham.specs.screen + `</li>
             <li class="cpu">CPU: ` + sanpham.specs.cpu + `</li>
@@ -180,6 +184,9 @@ function loadHotDealProduct() {
                 const format = new Intl.NumberFormat({ maximumSignificantDigits: 3 });
                     document.getElementById("hotdeal-products").innerHTML
                         += `<div class="product-item col-2-4 col-s-6" onclick="showDetails('${products.phanloai[property][i].id.trim()}')">
+                        <div class="sale-percent">
+                        -${Math.round((products.phanloai[property][i].old_price - products.phanloai[property][i].price) / products.phanloai[property][i].old_price * 100)}%
+                        <i class="fa-solid fa-tag fa-xl"></i></div>
                         <img class="product-img" src="` + products.phanloai[property][i].images[0] + `" alt="">
                         <div class="title">` + products.phanloai[property][i].name.split("/")[0] + `</div>
                         <div class="price">` + format.format(products.phanloai[property][i].price) + `₫</div>
@@ -197,15 +204,17 @@ function loadHotDealProduct() {
     }
 }
 
+
 // Search products from local storage
 function searchProduct(name) {
     name = name.toLowerCase();
     const products = JSON.parse(localStorage.getItem("sanpham"));
     document.getElementById("products").innerHTML = "";
-    document.getElementById("showMoreProduct").style.display = "none";
+    // document.getElementById("showMoreProduct").style.display = "none";
     var haveProduct = false;
     for (const property in products.phanloai) {
         for (var i = 0; i < products.phanloai[property].length; i++) {
+            // console.log(products.phanloai[property][i].name);
             var productName = products.phanloai[property][i].name.toLowerCase();
             if(productName.includes(name)) {
                 haveProduct = true;
@@ -227,8 +236,7 @@ function searchProduct(name) {
 function showDetails(id) {
     // alert(id);
     // Current ID
-    localStorage.setItem("current-product-id", id);
-    window.location.href = "product-details.html";
+    window.location.href = "product-details.html?id=" + id;
 }
 
 // Show login data
@@ -266,9 +274,11 @@ function btnCartOnClick() {
 //Show number of product in cart
 function showProductInCart() {
     var loginData = JSON.parse(localStorage.getItem("loginData"));
-    var cartInfo = loginData.cart;
-    document.getElementById("btn-cart").innerHTML =
-    `<i class="fa-solid fa-cart-shopping fa-lg"></i>
-    <span style="margin-left: 2px;"></span>
-    Giỏ hàng (${cartInfo.length})`;
+    if(loginData != null) {
+        var cartInfo = loginData.cart;
+        document.getElementById("btn-cart").innerHTML =
+        `<i class="fa-solid fa-cart-shopping fa-lg"></i>
+        <span style="margin-left: 2px;"></span>
+        Giỏ hàng (${cartInfo.length})`;
+    }
 }

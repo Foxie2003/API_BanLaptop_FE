@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/sign-up.css">
     <link rel="stylesheet" href="./assets/css/home-page.css">
+    <link rel="stylesheet" href="./assets/css/accessory.css">
     <link rel="stylesheet" href="./assets/css/slick.css">
     <link rel="stylesheet" href="./assets/css/slick-theme.css">
     <script
@@ -13,9 +14,10 @@
             crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/fd095985f5.js" crossorigin="anonymous"></script>
     <script src="./assets/js/home-page.js"></script>
+    <script src="./assets/js/accessory.js"></script>
     <script src="./assets/js/saveJson.js"></script>
     <script src="./assets/js/slick.js"></script>
-    <title>Home page</title>
+    <title>Phụ kiện</title>
 </head>
 <body>
     <!--        SLIDE SHOW (Top)       -->
@@ -42,101 +44,24 @@
             Giỏ hàng (0)
         </div>
     </div>
-    <!--        SLIDE SHOW (Body 1)       -->
-    <div class="slide-show-body-1">
-
+    <div class="container" style="justify-content: left;">
+        <div class="main-title">Phụ kiện laptop</div>
+    </div>
+    <!--        PRODUCT TYPE CONTAINER       -->
+    <div class="product-type-container">
         <div class="container">
-            <div class="slide-show">
-                <img src="./assets/img/slide-show/slide-show body 1/acer-1200-300-1200x300.png" alt="" class="body-1-slides fade">
-                <img src="./assets/img/slide-show/slide-show body 1/asus-1200-300-1200x300-1.png" alt="" class="body-1-slides fade">
-                <img src="./assets/img/slide-show/slide-show body 1/b2s-1200-300-1200x300.png" alt="" class="body-1-slides fade">
-                <img src="./assets/img/slide-show/slide-show body 1/gaming-1200-300-1200x300-1.png" alt="" class="body-1-slides fade">
-                <img src="./assets/img/slide-show/slide-show body 1/HP-1200-300-1200x300.png" alt="" class="body-1-slides fade">
-                <img src="./assets/img/slide-show/slide-show body 1/i3-1200-300-1200x300.png" alt="" class="body-1-slides fade">
-                <img src="./assets/img/slide-show/slide-show body 1/Lenovo-1200-300-1200x300.png" alt="" class="body-1-slides fade">
-                <img src="./assets/img/slide-show/slide-show body 1/mac-m1-1200-300-1200x300.png" alt="" class="body-1-slides fade">
-                <img src="./assets/img/slide-show/slide-show body 1/msi-1200-300-1200x300.png" alt="" class="body-1-slides fade">
-                <img src="./assets/img/slide-show/slide-show body 1/Nvidia-1200-628-1200x300.png" alt="" class="body-1-slides fade">
+            <div class="product-type-item">
+                <img src="./assets/img/logo/accessory-types/mouse-120x120.png" alt="">
+                <div>Chuột máy tính</div>
             </div>
-            <div class="btn-back" onclick="backSlideBody1()">
-                ❮
+            <div class="product-type-item">
+                <img src="./assets/img/logo/accessory-types/keyboard-120x120.png" alt="">
+                <div>Bàn phím</div>
             </div>
-            <div class="btn-next" onclick="nextSlideBody1()">
-                ❯
+            <div class="product-type-item">
+                <img src="./assets/img/logo/accessory-types/gamepad-120x120.png" alt="">
+                <div>Tay cầm chơi game</div>
             </div>
-            <div class="dots">
-                <div class="dot" onclick="setIndexSlideBody1(0)"></div>
-                <div class="dot" onclick="setIndexSlideBody1(1)"></div>
-                <div class="dot" onclick="setIndexSlideBody1(2)"></div>
-                <div class="dot" onclick="setIndexSlideBody1(3)"></div>
-                <div class="dot" onclick="setIndexSlideBody1(4)"></div>
-                <div class="dot" onclick="setIndexSlideBody1(5)"></div>
-                <div class="dot" onclick="setIndexSlideBody1(6)"></div>
-                <div class="dot" onclick="setIndexSlideBody1(7)"></div>
-                <div class="dot" onclick="setIndexSlideBody1(8)"></div>
-                <div class="dot" onclick="setIndexSlideBody1(9)"></div>
-            </div>
-        </div>
-    </div>
-    <!--        BANDS GALLERY        -->
-    <div class="bands-gallery">
-        <div class="container" style="border-bottom-left-radius: 0; border-bottom-right-radius: 0; padding-top: 10px;">
-            <div class="bands-item">
-                <img src="./assets/img/logo/bands/logo-all.png" onclick="document.getElementById('products').innerHTML = ''; loaded = 0; loadAllProduct(); document.getElementById('showMoreProduct').style.display = 'block';" alt="" >
-            </div>
-            <div class="bands-item" onclick="loadHpProduct();">
-                <img src="./assets/img/logo/bands/logo-hp-149x40-1.png" alt="" >
-            </div>
-            <div class="bands-item" onclick="loadAsusProduct();">
-                <img src="./assets/img/logo/bands/logo-asus-149x40.png" alt="" >
-            </div>
-            <div class="bands-item" onclick="loadLenovoProduct();">
-                <img src="./assets/img/logo/bands/logo-lenovo-149x40.png" alt="" >
-            </div>
-            <div class="bands-item" onclick="loadAcerProduct();">
-                <img src="./assets/img/logo/bands/logo-acer-149x40.png" alt="" >
-            </div>
-            <div class="bands-item">
-                <img src="./assets/img/logo/bands/logo-dell-149x40.png" alt="" >
-            </div>
-            <div class="bands-item">
-                <img src="./assets/img/logo/bands/logo-msi-149x40.png" alt="" >
-            </div>
-            <div class="bands-item">
-                <img src="./assets/img/logo/bands/logo-macbook-149x40.png" alt="" >
-            </div>
-        </div>
-        <div class="container" style="border-top-left-radius: 0; border-top-right-radius: 0; padding-bottom: 10px;">
-            <div class="bands-item">
-                <img src="./assets/img/logo/bands/logo-itel-149x40.png" alt="" >
-            </div>
-            <div class="bands-item">
-                <img src="./assets/img/logo/bands/logo-gigabyte-149x40.png" alt="" >
-            </div>
-            <div class="bands-item">
-                <img src="./assets/img/logo/bands/logo-surface-149x40-1.png" alt="" >
-            </div>
-            <div class="bands-item">
-                <img src="./assets/img/logo/bands/Masstel42-b0-200x48-1.png" alt="" >
-            </div>
-            <div class="bands-item">
-                <img src="./assets/img/logo/bands/logo-lg-149x40.png" alt="" >
-            </div>
-            <div class="bands-item">
-                <img src="./assets/img/logo/bands/logo-singpc-149x40-1.jpg" alt="" >
-            </div>
-            <div class="bands-item" style="background: none !important; border: none !important;">
-                <img src="" alt="" >
-            </div>
-            <div class="bands-item" style="background: none !important; border: none !important;">
-                <img src="" alt="" >
-            </div>
-        </div>
-    </div>
-    <!--        HOT DEAL         -->
-    <div class="hotdeal-container">
-        <div class="hotdeal-banner">DEAL SỐC <span style="color: #fff;">GIẢM TỚI 8.000.000₫</span></div>
-        <div class="products-container" style="background-color: #ff0020; margin-top: 0;" id="hotdeal-products"></div>
         </div>
     </div>
     <!--        PRODUCTS CONTAINER        -->
@@ -191,11 +116,9 @@
     <script>
         savaJsonToLocalStorage();
         showSlideTop();
-        showSlideBody1TimeOut();
-        loadAllProduct();
+        loadAllAccessory();
         showLoginData();
         showProductInCart();
-        loadHotDealProduct();
 
         //Search when press enter
         var searchInput = document.getElementById("top-search-input");

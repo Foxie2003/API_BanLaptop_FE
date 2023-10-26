@@ -36,7 +36,7 @@
             <input type="search" id="top-search-input"
                 placeholder="Bạn đang tìm...">
             <button id="top-search-button"
-                onclick="searchProduct(document.getElementById('top-search-input').value.trim());">
+                onclick="window.location.href = 'search.html?value=' + document.getElementById('top-search-input').value">
                 <i class="fa-solid fa-magnifying-glass fa-lg fa-beat-fade"
                     style="color: #000000;"></i>
             </button>

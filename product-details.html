@@ -36,7 +36,7 @@
                 <input type="search" id="top-search-input"
                     placeholder="Bạn đang tìm...">
                 <button id="top-search-button"
-                    onclick="searchProduct(document.getElementById('top-search-input').value.trim());">
+                onclick="window.location.href = 'search.html?value=' + document.getElementById('top-search-input').value">
                     <i class="fa-solid fa-magnifying-glass fa-lg fa-beat-fade"
                         style="color: #000000;"></i>
                 </button>
@@ -77,10 +77,8 @@
                             <div id="btn-back-image" onclick="backSlideProduct()">
                                 <i class="fa-solid fa-chevron-left fa-sm"></i>
                             </div>
-                            <div class="slide-show">
-                                <img
-                                    src=""
-                                    alt id="product-details-slide">
+                            <div class="slide-show" id="product-details-slide" style="height: 340px;">
+                                <!-- Slides here -->
                             </div>
                             <div id="btn-next-image" onclick="nextSlideProduct()">
                                 <i class="fa-solid fa-chevron-right fa-sm"></i>
@@ -95,7 +93,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="showSpecs">
+                    <div id="showSpecs" onclick="window.location.href = '#product-desc-header'">
                         Xem cấu hình chi tiết
                     </div>
                     <div class="img-bottom-nav">

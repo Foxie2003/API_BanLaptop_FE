@@ -1,0 +1,29 @@
+.product-type-container > div{
+    justify-content: left;
+    align-items: start;
+}
+.product-type-item {
+    margin: 20px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.product-type-item > img {
+    padding: 10px;
+    width: 100px;
+    background-color: #F4F4F4;
+    border-radius: 100px;
+}
+.product-type-item:hover > img {
+    border: 1px solid #288ad6;
+    color: #288ad6;
+}
+.product-type-item:hover > div {
+    color: #288ad6;
+}
+.product-type-item > div {
+    margin-top: 10px;
+    text-align: center;
+}

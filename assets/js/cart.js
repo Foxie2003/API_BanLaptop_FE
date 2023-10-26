@@ -5,9 +5,10 @@ function loadCartData() {
         alert("Giỏ hàng trống \nHãy tiếp tục mua sắm nhé <3")
         document.getElementById("cart-info").innerHTML = 
         `<p style="font-size: 32px; font-weight: bold; color: #333; width: 100%; text-align: center; margin:200px 0;">Không có sản phẩm nào trong giỏ</p>`;
-        // window.location.href = "home-page.html";
+        document.querySelector('.user-info').style.display = "none";
     }
     else {
+        document.querySelector('.user-info').style.display = "block";
         document.getElementById("cart-info").innerHTML = "";
         const format = new Intl.NumberFormat({ maximumSignificantDigits: 3 });
         var priceSum = 0;
@@ -16,7 +17,7 @@ function loadCartData() {
             `<div class="cart-info-item">
             <div class="img-panel">
                 <img src="${productInfo.product.images[0]}" alt="">
-                <button><i class="fa-regular fa-trash-can fa-sm"></i> Xóa</button>
+                <button onclick="btnDelete('${productInfo.product.id}');"><i class="fa-regular fa-trash-can fa-sm"></i> Xóa</button>
             </div>
             <div class="info-panel">
                 <div class="info-panel-product-name">${productInfo.product.name}</div>
@@ -65,6 +66,18 @@ function btnPlusOnClick(id) {
     for (let index = 0; index < cartInfo.length; index++) {
         if(cartInfo[index].product.id == id) {
             cartInfo[index].quantity++;
+            loginData.cart = cartInfo;
+            localStorage.setItem("loginData", JSON.stringify(loginData));
+            loadCartData();
+            return;
+        }
+    }
+}
+
+function btnDelete(id) {
+    for (let index = 0; index < cartInfo.length; index++) {
+        if(cartInfo[index].product.id == id) {
+            cartInfo.splice(index, 1);
             loginData.cart = cartInfo;
             localStorage.setItem("loginData", JSON.stringify(loginData));
             loadCartData();

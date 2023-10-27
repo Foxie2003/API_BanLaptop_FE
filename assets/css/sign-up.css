@@ -82,6 +82,75 @@ a {
 }
 /* End Top header */
 
+/* Top-menu */
+.top-menu {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 60px;
+    background-color: #ffd400;
+    align-items: center;
+    padding: 0 20px;
+    cursor: pointer;
+}
+.top-menu-item {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+.top-menu-item:hover > .top-sub-menu {
+    display: block;
+}
+.top-menu-item .top-menu-item-title {
+    margin: 0 6px;
+}
+.menu-item-border {
+    width: 1px;
+    height: 60%;
+    background-color: #ffe56c;
+}
+.menu-item-border:first-child {
+    display: none;
+}
+.admin {
+    display: none;
+}
+.top-sub-menu {
+    position: absolute;
+    top: 180px;
+    z-index: 100;
+    display: none;
+}
+.top-sub-menu > i {
+    display: block;
+    height: 0;
+    width: 60%;
+    text-align: center;
+    font-size: 50px;
+    color: #fff;
+}
+.top-sub-menu-panel {
+    min-width: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 4px;
+    /* https://getcssscan.com/css-box-shadow-examples */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.top-sub-menu-item {
+    padding: 16px;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+}
+.top-sub-menu-item:last-child {
+    border: none;
+}
+.top-sub-menu-item:hover {
+    color: #017698;
+}
+/* End Top-menu */
+
 /* sign-up panel */
 .sign-up-panel {
     padding: 20px 0;

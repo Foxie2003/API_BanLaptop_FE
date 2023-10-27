@@ -170,7 +170,6 @@
     </div>
     <!--        SLIDE SHOW (Body 1)       -->
     <div class="slide-show-body-1">
-
         <div class="container">
             <div class="slide-show">
                 <img src="./assets/img/slide-show/slide-show body 1/acer-1200-300-1200x300.png" alt="" class="body-1-slides fade">
@@ -208,7 +207,7 @@
     <div class="bands-gallery">
         <div class="container" style="border-bottom-left-radius: 0; border-bottom-right-radius: 0; padding-top: 10px;">
             <div class="bands-item">
-                <img src="./assets/img/logo/bands/logo-all.png" onclick="document.getElementById('products').innerHTML = ''; loaded = 0; loadAllProduct(); document.getElementById('showMoreProduct').style.display = 'block';" alt="" >
+                <img src="./assets/img/logo/bands/logo-all.png" onclick="document.getElementById('products').innerHTML = ''; loaded = 0; loadAllProduct(); document.getElementById('showMoreProduct').style.display = 'block'; window.scrollTo(0, 1050);" alt="" >
             </div>
             <div class="bands-item" onclick="loadHpProduct();">
                 <img src="./assets/img/logo/bands/logo-hp-149x40-1.png" alt="" >
@@ -264,6 +263,9 @@
         <div class="hotdeal-banner">DEAL SỐC <span style="color: #fff;">GIẢM TỚI 8.000.000₫</span></div>
         <div class="products-container" style="background-color: #ff0020; margin-top: 0;" id="hotdeal-products"></div>
         </div>
+    </div>
+    <div class="container" style="justify-content: left;">
+        <div class="main-title"></div>
     </div>
     <!--        PRODUCTS CONTAINER        -->
     <div class="products-container" id="products">
@@ -351,10 +353,10 @@
                 slidesToShow: 5,
                 appendArrows: $("#hotdeal-products"),
                 // prev arrow
-                prevArrow: '<button type="button" data-role="none" class="slick-prev" style="z-index: 1000;left: 10px; background-color: #666; height: 100px; opacity: 0.5;"></button>',
+                prevArrow: '<button type="button" data-role="none" class="slick-prev" style="z-index: 100;left: 10px; background-color: #666; height: 100px; opacity: 0.5;"></button>',
 
                 // next arrow
-                nextArrow: '<button type="button" data-role="none" class="slick-next" style="z-index: 1000;right: 10px; background-color: #666; height: 100px; opacity: 0.6;"></button>',
+                nextArrow: '<button type="button" data-role="none" class="slick-next" style="z-index: 100;right: 10px; background-color: #666; height: 100px; opacity: 0.6;"></button>',
                 autoplay: true,
                 autoplaySpeed: 2500,
             });

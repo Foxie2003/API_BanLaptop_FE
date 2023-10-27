@@ -84,6 +84,10 @@ a {
 
 /* Top-menu */
 .top-menu {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0; /* required */
+    z-index: 1000;
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -117,7 +121,7 @@ a {
 }
 .top-sub-menu {
     position: absolute;
-    top: 180px;
+    top: 56px;
     z-index: 100;
     display: none;
 }

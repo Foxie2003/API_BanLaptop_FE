@@ -94,6 +94,9 @@ function loadInnerProduct(sanpham) {
 }
 
 function loadAsusProduct() {
+    document.querySelector(".main-title").textContent = "Laptop Asus";
+    showBorder(2);
+    window.scrollTo(0, 1050);
     const products = JSON.parse(localStorage.getItem("sanpham"));
         document.getElementById("products").innerHTML = "";
         document.getElementById("showMoreProduct").style.display = "none";
@@ -103,6 +106,9 @@ function loadAsusProduct() {
 }
 
 function loadHpProduct() {
+    document.querySelector(".main-title").textContent = "Laptop HP";
+    showBorder(1);
+    window.scrollTo(0, 1050);
     const products = JSON.parse(localStorage.getItem("sanpham"));
     document.getElementById("products").innerHTML = "";
     document.getElementById("showMoreProduct").style.display = "none";
@@ -112,6 +118,9 @@ function loadHpProduct() {
 }
 
 function loadLenovoProduct() {
+    document.querySelector(".main-title").textContent = "Laptop Lenovo";
+    showBorder(3);
+    window.scrollTo(0, 1050);
     const products = JSON.parse(localStorage.getItem("sanpham"));
     document.getElementById("products").innerHTML = "";
     document.getElementById("showMoreProduct").style.display = "none";
@@ -121,6 +130,9 @@ function loadLenovoProduct() {
 }
 
 function loadAcerProduct() {
+    document.querySelector(".main-title").textContent = "Laptop Acer";
+    showBorder(4);
+    window.scrollTo(0, 1050);
     const products = JSON.parse(localStorage.getItem("sanpham"));
     document.getElementById("products").innerHTML = "";
     document.getElementById("showMoreProduct").style.display = "none";
@@ -141,8 +153,18 @@ function countProduct() {
     return count;
 }
 
+function showBorder(index) {
+    var bands = document.getElementsByClassName("bands-item");
+    for (let i = 0; i < bands.length; i++) {
+        bands[i].style.border = "none";
+    }
+    bands[index].style.border = "2px solid #017698";
+}
+
 // Load all products from local storage
 function loadAllProduct() {
+    showBorder(0);
+    document.querySelector(".main-title").textContent = "Tất cả sản phẩm";
     const products = JSON.parse(localStorage.getItem("sanpham"));
     var loading = 0;
     for (const property in products.phanloai) {

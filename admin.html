@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/sign-up.css">
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <script src="https://kit.fontawesome.com/fd095985f5.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/admin.js"></script>
+    <title>Admin</title>
+</head>
+<body>
+    <!--        ADMIN HEADER         -->
+    <div class="admin-header">
+        <div class="admin-header-left">
+            <div class="admin-header-logo">
+                <img src="./assets/img/logo/admin-page-logo.png"></img>
+            </div>
+            <div class="admin-header-button">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="admin-header-right">
+            <div class="admin-header-button">
+                <i class="fa-solid fa-gear"></i>
+            </div>
+            <div class="admin-header-button">
+                <i class="fa-solid fa-bell"></i>
+            </div>
+            <div class="admin-header-button">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="admin-header-button">
+                <i class="fa-solid fa-expand"></i>
+            </div>
+            <div class="admin-header-profile">
+                <img src="./assets/img/logo/admin-profile-pic.jfif" alt="">
+                <div class="header-profile-info">
+                    <div class="profile-info-name">Foxie hihi</div>
+                    <div class="profile-info-email">foxie@gmail.com</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--        ADMIN PANEL          -->
+    <div class="admin-panel">
+        <div class="admin-panel-left">
+            <div class="panel-left-item">
+                <div class="left-item-content" id="home-panel" onclick="showSubItems('home-sub-panel');">
+                    <i class="fa-solid fa-house"></i>
+                    <div>Bảng điều khiển</div>
+                    <i class="fa-solid fa-angle-down" style="margin-left: auto;"></i>
+                </div>
+                <div class="left-sub-item-panel" id="home-sub-panel">
+                    <div class="left-sub-item">
+                        <i class="fa-solid fa-minus"></i>
+                        <div>Dark theme</div>
+                    </div>
+                    <div class="left-sub-item">
+                        <i class="fa-solid fa-minus"></i>
+                        <div>Light theme</div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-left-item">
+                <div class="left-item-content" id="product-panel" onclick="showSubItems('product-sub-panel');">
+                    <i class="fa-solid fa-box-open"></i>
+                    <div>Quản lý sản phẩm</div>
+                    <i class="fa-solid fa-angle-down" style="margin-left: auto;"></i>
+                </div>
+                <div class="left-sub-item-panel" id="product-sub-panel">
+                    <div class="left-sub-item">
+                        <i class="fa-solid fa-minus"></i>
+                        <div>Laptop</div>
+                    </div>
+                    <div class="left-sub-item">
+                        <i class="fa-solid fa-minus"></i>
+                        <div>Phụ kiện</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="admin-panel-right">
+
+        </div>
+    </div>
+</body>
+</html>

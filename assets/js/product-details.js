@@ -127,7 +127,8 @@ function addToCart() {
                 localStorage.setItem("loginData", JSON.stringify(loginData));
                 localStorage.setItem(loginData.userName, JSON.stringify(loginData));
                 
-                alert("Sản phẩm đã có trong giỏ hàng");
+                // alert("Sản phẩm đã có trong giỏ hàng");
+                showMessage("Sản phẩm đã có trong giỏ hàng" + `<a href="cart.html">[Đến giỏ hàng]</a>`, "success-message", '<i class="fa-solid fa-cart-plus">');
                 break;
             }
         }
@@ -142,12 +143,59 @@ function addToCart() {
 
             localStorage.setItem("loginData", JSON.stringify(loginData));
             localStorage.setItem(loginData.userName, JSON.stringify(userData));
-            alert("Sản phẩm đã được thêm vào giỏ hàng");
+            // alert("Sản phẩm đã được thêm vào giỏ hàng");
+            showMessage("Sản phẩm đã được thêm vào giỏ hàng" + `<a href="cart.html">[Đến giỏ hàng]</a>`, "success-message", '<i class="fa-solid fa-cart-plus">');
         }
         showProductInCart();
     }
     else {
-        alert("Vui lòng đăng nhập trước khi mua hàng");
-        window.location.href = "sign-up-sign-in.html";
+        // alert("Vui lòng đăng nhập trước khi mua hàng");
+        showQuestion(
+            "Bạn chưa đăng nhập!", 
+            "Bạn vẫn có muốn chuyển hướng đến trang đăng nhập không?", 
+            '<i class="fa-regular fa-circle-question"></i>', 
+            "window.location.href = 'sign-up-sign-in.html'", 
+            "hideQuestion();");
     }
+}
+
+function showMessage(message, type, icon) {
+    var messagePanel = document.getElementById("message-panel");
+    messagePanel.innerHTML += `
+    <div class="message-timeout">
+                <div class="message-box ${type}">
+                    <div class="message-icon">${icon}</i></div>
+                    <div class="message">${message}</div>
+                    <div class="message-button ${type}"><i class="fa-regular fa-circle-xmark"></i></div>
+                </div>
+                <div class="timeout ${type}"></div>
+            </div>`;
+    var arrMessage = document.getElementsByClassName("message-timeout");
+    var message = arrMessage[arrMessage.length - 1];
+    message.style.display = "block";
+    message.classList.add("show-message-animation");
+    document.querySelector(".timeout").classList.add("timeout-animation");
+    setTimeout(function () {
+        message.style.display = "none";
+    }, 5250);
+}
+function showQuestion(title, question, icon, yesFun, noFun) {
+    var questionPanel = document.getElementById("question-panel");
+    questionPanel.style.display = "flex";
+    questionPanel.innerHTML = `
+    <div class="question-box">
+        <div class="question-title">${title}<i class="fa-solid fa-xmark" onclick="hideQuestion();"></i></div>
+        <div class="question-content">
+            <div class="question-icon">${icon}</div>
+            <div class="question">${question}</div>
+        </div>
+        <div class="question-button-panel">
+            <div class="question-button" id="question-button-yes" onclick="${yesFun}">Có</div>
+            <div class="question-button" id="question-button-no" onclick="${noFun}">Không</div>
+        </div>
+    </div>`;
+}
+function hideQuestion() {
+    var questionPanel = document.getElementById("question-panel");
+    questionPanel.style.display = "none";
 }

@@ -277,7 +277,8 @@ function btnLoginOnClick() {
     var loginData = JSON.parse(localStorage.getItem("loginData"));
     if(loginData != null) {
         localStorage.setItem("loginData", null);
-        alert("Đăng xuất thành công");
+        // alert("Đăng xuất thành công");
+        showMessage("Đăng xuất thành công", "success-message", '<i class="fa-regular fa-face-smile"></i>');
         window.location.reload();
     }
     else {

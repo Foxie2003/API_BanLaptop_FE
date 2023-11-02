@@ -14,7 +14,7 @@ function loadCartData() {
         var priceSum = 0;
         cartInfo.forEach(productInfo => {
             document.getElementById("cart-info").innerHTML +=
-            `<div class="cart-info-item">
+            `<div class="cart-info-item" onclick="window.location.href = '${"product-details.html?id=" + productInfo.product.id}'">
             <div class="img-panel">
                 <img src="${productInfo.product.images[0]}" alt="">
                 <button onclick="btnDelete('${productInfo.product.id}');"><i class="fa-regular fa-trash-can fa-sm"></i> Xóa</button>
@@ -48,6 +48,7 @@ function loadCartData() {
 }
 
 function btnMinusOnClick(id) {
+    event.stopPropagation()
     for (let index = 0; index < cartInfo.length; index++) {
         if(cartInfo[index].product.id == id) {
             cartInfo[index].quantity--;
@@ -63,6 +64,7 @@ function btnMinusOnClick(id) {
 }
 
 function btnPlusOnClick(id) {
+    event.stopPropagation()
     for (let index = 0; index < cartInfo.length; index++) {
         if(cartInfo[index].product.id == id) {
             cartInfo[index].quantity++;
@@ -75,6 +77,7 @@ function btnPlusOnClick(id) {
 }
 
 function btnDelete(id) {
+    event.stopPropagation()
     for (let index = 0; index < cartInfo.length; index++) {
         if(cartInfo[index].product.id == id) {
             cartInfo.splice(index, 1);

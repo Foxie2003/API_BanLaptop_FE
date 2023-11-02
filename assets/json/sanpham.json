@@ -1534,7 +1534,7 @@
                 }
             },
             {
-                "id": "SP31",
+                "id": "SP41",
                 "name": "Laptop Acer Aspire 3 A315 58 589K i5 1135G7/8GB/256GB/Win11 (NX.AM0SV.008)",
                 "video": "linkVideo",
                 "images": [
@@ -1572,7 +1572,7 @@
                 }
             },
             {
-                "id": "SP32",
+                "id": "SP42",
                 "name": "Laptop Acer Aspire 3 A315 58 54XF i5 1135G7/8GB/512GB/Win11 (NX.AM0SV.007)",
                 "video": "linkVideo",
                 "images": [
@@ -1610,7 +1610,7 @@
                 }
             },
             {
-                "id": "SP33",
+                "id": "SP43",
                 "name": "Laptop Acer Aspire 3 A315 59 314F i3 1215U/8GB/256GB/Win11 (NX.K6TSV.002)",
                 "video": "linkVideo",
                 "images": [
@@ -1648,7 +1648,7 @@
                 }
             },
             {
-                "id": "SP34",
+                "id": "SP44",
                 "name": "Laptop Acer Nitro 5 Gaming AN515 57 5669 i5 11400H/8GB/512GB/144Hz/4GB GTX1650/Win11 (NH.QEHSV.001)",
                 "video": "linkVideo",
                 "images": [
@@ -1686,7 +1686,7 @@
                 }
             },
             {
-                "id": "SP35",
+                "id": "SP45",
                 "name": "Laptop Acer Aspire 7 Gaming A715 76G 5132 i5 12450H/8GB/512GB/4GB GTX1650/144Hz/Win11 (NH.QMESV.002)",
                 "video": "linkVideo",
                 "images": [
@@ -1724,7 +1724,7 @@
                 }
             },
             {
-                "id": "SP36",
+                "id": "SP46",
                 "name": "Laptop Acer Gaming Nitro 5 AN515 58 769J i7 12700H/8GB/512GB/4GB RTX3050/144Hz/Win11",
                 "video": "linkVideo",
                 "images": [
@@ -1762,7 +1762,7 @@
                 }
             },
             {
-                "id": "SP37",
+                "id": "SP47",
                 "name": "Laptop Acer Aspire 5 A514 54 5127 i5 1135G7/8GB/512GB/Win11 (NX.A28SV.007)",
                 "video": "linkVideo",
                 "images": [
@@ -1800,7 +1800,7 @@
                 }
             },
             {
-                "id": "SP38",
+                "id": "SP48",
                 "name": "Laptop Acer Nitro 5 Tiger AN515 58 52SP i5 12500H/8GB/512GB/4GB RTX3050/144Hz/Win11 (NH.QFHSV.001)",
                 "video": "linkVideo",
                 "images": [
@@ -1838,7 +1838,7 @@
                 }
             },
             {
-                "id": "SP39",
+                "id": "SP49",
                 "name": "Laptop Acer Gaming Nitro 5 AN515 57 53F9 i5 11400H/8GB/512GB/4GB RTX3050/144Hz/Win11 (NH.QENSV.008)",
                 "video": "linkVideo",
                 "images": [
@@ -1876,7 +1876,7 @@
                 }
             },
             {
-                "id": "SP40",
+                "id": "SP50",
                 "name": "Laptop Acer Aspire 7 Gaming A715 43G R8GA R5 5625U/8GB/512GB/4GB RTX3050/144Hz/Win11 (NH.QHDSV.002)",
                 "video": "linkVideo",
                 "images": [
@@ -1918,7 +1918,7 @@
     "phukien": {
         "mouse": [
             {
-                "id": "SP41",
+                "id": "SP51",
                 "name": "Chuột Không dây Rapoo B2",
                 "images": [
                     "./assets/img/mouse/chuot-khong-day-rapoo-b2/chuot-khong-day-rapoo-b2-thumb-1-600x600.jpg",
@@ -1933,7 +1933,7 @@
                 "quantity": 100
             },
             {
-                "id": "SP42",
+                "id": "SP52",
                 "name": "Chuột Không dây DareU LM106G",
                 "images": [
                     "./assets/img/mouse/chuot-khong-day-dareu-lm106g/chuot-khong-day-dareu-lm106g-thumb-5-1-600x600.jpg",
@@ -1947,7 +1947,7 @@
                 "quantity": 100
             },
             {
-                "id": "SP43",
+                "id": "SP53",
                 "name": "Chuột Không Dây Gaming Rapoo VT960 Pro",
                 "images": [
                     "./assets/img/mouse/chuot-khong-day-gaming-rapoo-vt960-pro/chuot-khong-day-gaming-rapoo-vt960-pro-thumb-600x600.jpg",
@@ -1962,7 +1962,7 @@
                 "quantity": 100
             },
             {
-                "id": "SP44",
+                "id": "SP54",
                 "name": "Chuột Có dây Gaming Asus TUF M3",
                 "images": [
                     "./assets/img/mouse/chuot-gaming-asus-tuf-m3-den/chuot-gaming-asus-tuf-m3-den01-600x600.jpg",
@@ -1977,7 +1977,7 @@
                 "quantity": 100
             },
             {
-                "id": "SP45",
+                "id": "SP55",
                 "name": "Chuột Có dây Gaming Corsair M55 RGB Pro",
                 "images": [
                     "./assets/img/mouse/chuot-gaming-corsair-m55-rgb-pro-den/chuot-gaming-corsair-m55-rgb-pro-den-thumb1-600x600.jpeg",
@@ -1992,7 +1992,7 @@
                 "quantity": 100
             },
             {
-                "id": "SP46",
+                "id": "SP56",
                 "name": "Chuột Bluetooth Apple MK2E3",
                 "images": [
                     "./assets/img/mouse/chuot-bluetooth-apple-mk2e3-trang/chuot-bluetooth-apple-mk2e3-trang-thumb-600x600.jpg",
@@ -2007,7 +2007,7 @@
                 "quantity": 100
             },
             {
-                "id": "SP47",
+                "id": "SP57",
                 "name": "Chuột Có dây Gaming Razer DeathAdder Essential",
                 "images": [
                     "./assets/img/mouse/chuot-co-day-gaming-razer-deathadder-essential/chuot-co-day-gaming-razer-deathadder-essential-thumb-600x600.jpeg",
@@ -2022,7 +2022,7 @@
                 "quantity": 100
             },
             {
-                "id": "SP48",
+                "id": "SP58",
                 "name": "Chuột Có dây Gaming HyperX Pulsefire FPS Pro RGB",
                 "images": [
                     "./assets/img/mouse/chuot-gaming-hyperx-pulsefire-fps-pro-rgb-den/chuot-gaming-hyperx-pulsefire-fps-pro-rgb-den01-600x600.jpg",
@@ -2037,7 +2037,7 @@
                 "quantity": 100
             },
             {
-                "id": "SP49",
+                "id": "SP59",
                 "name": "Chuột Có dây DareU EM908",
                 "images": [
                     "./assets/img/mouse/chuot-co-day-dareu-em908-den/chuot-co-day-dareu-em908-den-thumb-1-600x600.jpeg",
@@ -2052,7 +2052,7 @@
                 "quantity": 100
             },
             {
-                "id": "SP50",
+                "id": "SP60",
                 "name": "Chuột Không dây Bluetooth Gaming Asus TUF M4 WL",
                 "images": [
                     "./assets/img/mouse/chuot-khong-day-gaming-asus-tuf-m4-wl/chuot-khong-day-gaming-asus-tuf-m4-wl-thumb-1-1-600x600.jpeg",

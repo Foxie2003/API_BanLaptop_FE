@@ -54,6 +54,7 @@ body, html {
 /* ADMIN PANEL */
 .admin-panel {
     height: calc(100% - 48px);
+    display: flex;
 }
 /* ADMIN PANEL LEFT */
 .admin-panel-left {
@@ -61,7 +62,38 @@ body, html {
     top: 48px;
     width: 20%;
     height: 100%;
-    background-color: #ccc;
+    background-color: #fff;
+    border-right: 1px solid #E6E6E6;
+    transform-origin: left;
+    overflow: hidden;
+}
+.show-menu {
+    animation: 0.4s show-menu linear;
+}
+.hide-menu {
+    animation: 0.4s hide-menu linear;
+}
+@keyframes show-menu {
+    0% {
+        transform: scaleX(0);
+    }
+    90% {
+        transform: scaleX(1.1);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+@keyframes hide-menu {
+    0% {
+        transform: scaleX(1);
+    }
+    10% {
+        transform: scaleX(1.1);
+    }
+    100% {
+        transform: scaleX(0);
+    }
 }
 .panel-left-item {
     font-size: 20px;
@@ -69,11 +101,11 @@ body, html {
 }
 .left-item-content, .left-sub-item {
     height: 48px;
-    background-color: #eee;
+    background-color: #fff;
     display: flex;
     align-items: center;
     padding-left: 10px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #E6E6E6;
 }
 .left-item-content i, .left-sub-item i {
     margin-right: 10px;
@@ -119,3 +151,119 @@ body, html {
 }
 
 /* END ADMIN PANEL LEFT */
+
+/* ADMIN PANEL RIGTH */
+.admin-panel-right {
+    width: 80%;
+    height: 100%;
+    background-color: #fefefe;
+}
+.admin-panel-right-header {
+    width: 100%;
+    height: 48px;
+    background-color: #fff;
+    border: 1px solid #E6E6E6;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 48px;
+    padding-left: 10px;
+}
+.admin-table {
+    display: block;
+    width: 100%;
+    height: calc(100% - 48px - 48px);
+    text-align: left;
+    overflow: auto;
+    white-space: nowrap;
+}
+.admin-table th {
+    position: sticky;
+    top: 0px;
+    background-color: #f4f4f4;
+    font-size: 18px;
+    padding: 20px;
+    border-bottom: 1px solid #E6E6E6;
+}
+.admin-table td {
+    font-size: 16px;
+    padding: 10px 20px;
+    border-bottom: 1px solid #E6E6E6;
+}
+.table-image {
+    width: 160px;
+}
+.table-button {
+    background-color: #ffd400;
+    padding: 10px 20px;
+    width: fit-content;
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.table-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#currentPage {
+    width: 50px;
+    height: 40px;
+    font-size: 30px;
+    text-align: center;
+}
+#totalPage {
+    width: 50px;
+    height: 40px;
+    font-size: 34px;
+}
+/* END ADMIN PANEL RIGTH */
+
+/* PRODUCT DETAILS PANEL */
+.product-detail {
+    position: absolute;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.product-detail > i {
+    background-color: #fff;
+    color: #ccc;
+    font-size: 32px;
+    align-self: flex-end;
+    margin-right: 5%;
+}
+.product-detail > i:hover {
+    color: #ff5100;
+}
+.product-detail-panel {
+    width: 90%;
+    height: 90%;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #E6E6E6;
+}
+/* END PRODUCT DETAILS PANEL */
+.edit-detail {
+    position: absolute;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.edit-detail-panel {
+    width: 90%;
+    height: 90%;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #E6E6E6;
+}

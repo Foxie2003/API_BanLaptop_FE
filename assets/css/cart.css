@@ -13,6 +13,7 @@ input::-webkit-inner-spin-button {
     background-color: rgba(0, 0, 0, 0.01);
 }
 .cart-info-item {
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
     width: 100%;

@@ -5,18 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/sign-up.css">
     <link rel="stylesheet" href="assets/css/admin.css">
-    <script src="https://kit.fontawesome.com/fd095985f5.js" crossorigin="anonymous"></script>
+    <link href="./assets/font/fontawesome-free-6.4.2-web/css/fontawesome.css" rel="stylesheet">
+    <link href="./assets/font/fontawesome-free-6.4.2-web/css/brands.css" rel="stylesheet">
+    <link href="./assets/font/fontawesome-free-6.4.2-web/css/solid.css" rel="stylesheet">
     <script src="./assets/js/admin.js"></script>
     <title>Admin</title>
 </head>
 <body>
+    <!--        SHOW PRODUCT DETAILS         -->
+    <div class="product-detail">
+        <i class="fa-solid fa-rectangle-xmark" onclick='document.querySelector(".product-detail").style.display = "none";'></i>
+        <iframe class="product-detail-panel" src="" id="product-iframe"></iframe>
+    </div>
+    <!--        SHOW EDIT DETAILS        -->
+    <!-- <div class="edit-detail">
+        <div class="edit-detail-panel">
+
+        </div>
+    </div> -->
     <!--        ADMIN HEADER         -->
     <div class="admin-header">
         <div class="admin-header-left">
             <div class="admin-header-logo">
                 <img src="./assets/img/logo/admin-page-logo.png"></img>
             </div>
-            <div class="admin-header-button">
+            <div class="admin-header-button" onclick="showMenu()">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
@@ -44,7 +57,7 @@
     </div>
     <!--        ADMIN PANEL          -->
     <div class="admin-panel">
-        <div class="admin-panel-left">
+        <div class="admin-panel-left show-menu" id="menu">
             <div class="panel-left-item">
                 <div class="left-item-content" id="home-panel" onclick="showSubItems('home-sub-panel');">
                     <i class="fa-solid fa-house"></i>
@@ -81,8 +94,88 @@
             </div>
         </div>
         <div class="admin-panel-right">
-
+            <div class="admin-panel-right-header" id="print">
+                [Tên chức năng]
+            </div>
+            <div class="admin-table-header"></div>
+            <table class="admin-table" id="admin-table">
+                <tr>
+                    <th>
+                        ID sản phẩm
+                    </th>
+                    <th>
+                        Tên
+                    </th>
+                    <th>
+                        Ảnh thumbnail
+                    </th>
+                    <th>
+                        Giá mới
+                    </th>
+                    <th>
+                        Giá cũ
+                    </th>
+                    <th>
+                        Số lượng
+                    </th>
+                    <th>
+                        Chức năng
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        SP31
+                    </td>
+                    <td style="max-width: 300px; overflow: hidden; text-overflow: ellipsis;">
+                        Laptop Acer Aspire 3 A315 58 589K i5 1135G7/8GB/256GB/Win11 (NX.AM0SV.008)
+                    </td>
+                    <td>
+                        <img class="table-image" src="./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-thumb-600x600.jpg" alt="">
+                    </td>
+                    <td>
+                        1000000
+                    </td>
+                    <td>
+                        9999999
+                    </td>
+                    <td>
+                        100
+                    </td>
+                    <td>
+                        <div style="display: flex;">
+                            <div class="table-button">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                            <div class="table-button">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </div>
+                            <div class="table-button">
+                                <i class="fa-solid fa-trash"></i>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div class="table-nav">
+                <div class="table-button" onclick="setCurrentPage(1);">
+                    <i class="fa-solid fa-angles-left"></i>
+                </div>
+                <div class="table-button" onclick="setCurrentPage(getCurrentPage() - 1);">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <input type="text" id="currentPage">
+                <div id="totalPage">/ 1</div>
+                <div class="table-button" onclick="setCurrentPage(getCurrentPage() + 1);">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                <div class="table-button"onclick="setCurrentPage(getTotalPage());">
+                    <i class="fa-solid fa-angles-right"></i>
+                </div>
+            </div>
         </div>
     </div>
+    <script>
+        showDataTableLaptop();
+    </script>
 </body>
 </html>

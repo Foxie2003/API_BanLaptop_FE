@@ -18,11 +18,101 @@
         <iframe class="product-detail-panel" src="" id="product-iframe"></iframe>
     </div>
     <!--        SHOW EDIT DETAILS        -->
-    <!-- <div class="edit-detail">
+    <div class="edit-detail">
         <div class="edit-detail-panel">
+            <div class="edit-detail-header">
+                Chỉnh sửa thông tin sản phẩm
+            </div>
+            <form class="edit-detail-form">
+                <label for="product-id">ID:</label>
+                <input type="text" id="product-id" placeholder="SP01">
+                <label for="product-name">Tên:</label>
+                <input type="text" id="product-name" placeholder="Laptop Asus TUF Gaming F15 FX506HE i7 11800H/16GB/512GB/4GB RTX3050Ti/144Hz/Win11 (HN378W)">
+                <label for="product-video">Video review:</label>
+                <input type="text" id="product-video" placeholder="https://www.youtube.com/watch?v=vPz8ftK_4bk">
 
+                <div class="detail-image">
+                    <!-- TODO: CUSTOM THIS TO SHOW IMAGE -->
+                    <label for="product-image" style="float: left;">Hình ảnh:</label>
+                    <div class="product-image-container">
+                        <div class="product-image-hover">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <img src="./assets/img/acer/acer-aspire-3-a315-58-589k-i5-nxam0sv008/vi-vn-acer-aspire-3-a315-58-589k-i5-nxam0sv008--(1).jpg" alt="">
+                    </div>
+                    <div class="product-image-container">
+                        <div class="product-image-hover">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <img src="./assets/img/acer/acer-aspire-3-a315-58-589k-i5-nxam0sv008/vi-vn-acer-aspire-3-a315-58-589k-i5-nxam0sv008--(1).jpg" alt="">
+                    </div>
+                    <div class="product-image-container">
+                        <div class="product-image-hover">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <img src="./assets/img/acer/acer-aspire-3-a315-58-589k-i5-nxam0sv008/vi-vn-acer-aspire-3-a315-58-589k-i5-nxam0sv008--(1).jpg" alt="">
+                    </div>
+                    <div class="product-image-container">
+                        <div class="product-image-hover">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <img src="./assets/img/acer/acer-aspire-3-a315-58-589k-i5-nxam0sv008/vi-vn-acer-aspire-3-a315-58-589k-i5-nxam0sv008--(1).jpg" alt="">
+                    </div>
+                    <div class="product-image-container">
+                        <div class="product-image-hover">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <img src="./assets/img/acer/acer-aspire-3-a315-58-589k-i5-nxam0sv008/vi-vn-acer-aspire-3-a315-58-589k-i5-nxam0sv008--(1).jpg" alt="">
+                    </div>
+                    <div class="product-image-container">
+                        <div class="product-image-hover">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <img src="./assets/img/acer/acer-aspire-3-a315-58-589k-i5-nxam0sv008/vi-vn-acer-aspire-3-a315-58-589k-i5-nxam0sv008--(1).jpg" alt="">
+                    </div>
+                    <div class="product-image-container">
+                        <div class="product-image-hover" style="display: flex; opacity: 0.4;">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <img style="opacity: 0;" src="./assets/img/acer/acer-aspire-3-a315-58-589k-i5-nxam0sv008/vi-vn-acer-aspire-3-a315-58-589k-i5-nxam0sv008--(1).jpg" alt="">
+                    </div>
+                    <input type="file" class="product-image" accept="image/*">
+                </div>
+
+                <label for="product-new-price">Giá mới:</label>
+                <input type="text" id="product-new-price" placeholder="100.000.000">
+                <label for="product-old-price">Giá cũ:</label>
+                <input type="text" id="product-old-price" placeholder="150.000.000">
+                <label for="product-quantity">Số lượng:</label>
+                <input type="text" id="product-quantity" placeholder="10.000">
+                <div class="detail-specs">
+                    <h3>Thông tin cấu hình</h3>
+                    <label for="product-cpu">CPU:</label>
+                    <input type="text" id="product-cpu" placeholder="i7, 11800H, 2.30 GHz">
+                    <label for="product-ram">Ram:</label>
+                    <input type="text" id="product-ram" placeholder="16 GB, DDR4 2 khe (1 khe 8 GB + 1 khe 8 GB), 3200 MHz">
+                    <label for="product-disk">Ổ cứng:</label>
+                    <textarea id="product-disk" rows="3" placeholder="Hỗ trợ thêm 1 khe cắm SSD M.2 PCIe mở rộng (nâng cấp tối đa 1 TB), 512 GB SSD NVMe PCIe (Có thể tháo ra, lắp thanh khác tối đa 1 TB)"></textarea>
+                    <label for="product-screen">Màn hình:</label>
+                    <input type="text" id="product-screen" placeholder='15.6", Full HD (1920 x 1080), 144Hz'>
+                    <label for="product-gpu">Card màn hình:</label>
+                    <input type="text" id="product-gpu" placeholder="Card rời, RTX 3050Ti 4GB">
+                    <label for="product-port">Cổng kết nối:</label>
+                    <input type="text" id="product-port" placeholder="1 x Thunderbolt 4 (hỗ trợ DisplayPort), HDMI, LAN (RJ45), 3 x USB 3.2, Jack tai nghe 3.5 mm">
+                    <label for="product-os">Hệ điều hành:</label>
+                    <input type="text" id="product-os" placeholder="Windows 11 Home SL">
+                    <label for="product-size">Kích thước:</label>
+                    <input type="text" id="product-size" placeholder="Dài 359 mm - Rộng 256 mm - Dày 22.8 ~ 24.5 mm - Nặng 2.3 kg">
+                </div>
+                <div class="detail-desc">
+                    <label for="product-header">Tiêu đề:</label>
+                    <textarea id="product-header" rows="3" placeholder="Laptop Asus TUF Gaming F15 FX506HE i7 11800H (HN378W) mang vẻ đẹp ấn tượng, cuốn hút đậm chất gaming, đi cùng cấu hình mạnh mẽ, đa dạng tính năng, chiếc laptop gaming từ nhà Asus này sẽ trở thành người bạn đồng hành lý tưởng trên những chiến trường ảo cho các anh em game thủ."></textarea>
+                    <label for="product-body">Nội dung mô tả:</label>
+                    <textarea id="product-body" rows="6" placeholder="Laptop Asus TUF Gaming được trang bị bộ vi xử lý Intel Core i7 11800H và card rời NVIDIA GeForce RTX 3050Ti với 4 GB VRAM mang đến hiệu năng xử lý mạnh mẽ, vừa giúp người dùng thoải mái thực hiện các công việc thiết kế, đồ hoạ, render video,... trên nền tảng Adobe, vừa cho phép chiến mượt mà các tựa game."></textarea>
+                </div>
+            </form>
         </div>
-    </div> -->
+    </div>
     <!--        ADMIN HEADER         -->
     <div class="admin-header">
         <div class="admin-header-left">

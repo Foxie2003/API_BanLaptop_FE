@@ -166,7 +166,7 @@ function showMessage(message, type, icon) {
                 <div class="message-box ${type}">
                     <div class="message-icon">${icon}</i></div>
                     <div class="message">${message}</div>
-                    <div class="message-button ${type}"><i class="fa-regular fa-circle-xmark"></i></div>
+                    <div class="message-button ${type}" onclick="hideMessage()"><i class="fa-regular fa-circle-xmark"></i></div>
                 </div>
                 <div class="timeout ${type}"></div>
             </div>`;
@@ -179,6 +179,12 @@ function showMessage(message, type, icon) {
         message.style.display = "none";
     }, 5250);
 }
+
+function hideMessage() {
+    var messagePanel = document.getElementById("message-panel");
+    messagePanel.innerHTML = "";
+}
+
 function showQuestion(title, question, icon, yesFun, noFun) {
     var questionPanel = document.getElementById("question-panel");
     questionPanel.style.display = "flex";

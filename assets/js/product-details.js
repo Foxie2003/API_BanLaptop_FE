@@ -48,7 +48,7 @@ function loadPrice() {
     const format = new Intl.NumberFormat({ maximumSignificantDigits: 3 });
     document.getElementById("price-panel").innerHTML = 
     `<div class="price-new">${format.format(productData.price)}₫ *</div>
-    <div class="price-old">${format.format(productData.price + productData.price * 10 / 100)}₫</div>
+    <div class="price-old">${format.format(productData.old_price)}₫</div>
     <div class="price-sale-percent">-${Math.round((productData.old_price - productData.price) / productData.old_price * 100)}%</div>
     <div class="price-installment">Trả góp 0%</div>`;
 }

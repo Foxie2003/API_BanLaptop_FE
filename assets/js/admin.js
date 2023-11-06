@@ -153,7 +153,7 @@ function showDataTableLaptop() {
                             <div class="table-button" onclick="showEditDetals('${product.id}');">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </div>
-                            <div class="table-button" onclick="">
+                            <div class="table-button" onclick="showDeleteDetals('${product.id}')">
                                 <i class="fa-solid fa-trash"></i>
                             </div>
                         </div>
@@ -304,8 +304,8 @@ function showEditDetals(id) {
             <img src="${productData.images[i]}" alt="">
             <input type="file" onchange="setImageLink(this)" class="product-image" accept="image/*">
         </div>`;
-        if (i == productData.images.length - 1) {
-            ImagesData +=
+    }
+    ImagesData +=
                 `<div class="product-image-container">
             <div class="product-image-hover" style="display: flex; opacity: 0.4; width: 250px; height: 180px;" onclick="addProductImage(this);">
                 <i class="fa-solid fa-circle-xmark" style="display: none" onclick="deleteProductImage(this)"></i>
@@ -314,8 +314,6 @@ function showEditDetals(id) {
             <img src="" alt="">
             <input type="file" onchange="setImageLink(this)" class="product-image" accept="image/*">
         </div>`;
-        }
-    }
     productImages.innerHTML =
         `<label for="product-image" style="float: left;">Hình ảnh:</label>
     ${ImagesData}`;
@@ -360,7 +358,14 @@ function addDetals() {
     var imagesData = [];
     var imageContainers = productImages.querySelectorAll(".product-image-container");
     imageContainers.forEach(imageContainer => {
-        imagesData.push(imageContainer.querySelector("img").getAttribute("src"));
+        var imageURL = imageContainer.querySelector("img").getAttribute("src");
+        if(imageURL != "") {
+            imagesData.push(imageURL);
+        }
+    });
+    var descBody = [];
+    productBody.value.split("\n").forEach(item => {
+        descBody.push(item);
     });
 
     addLaptopObj(createLaptopObj(productID.value, productName.value, productVideo.value,
@@ -368,7 +373,7 @@ function addDetals() {
         productQuantity.value,
         createLaptopSpecsObj(productCpu.value, productRam.value, productDisk.value, productScreen.value,
             productGpu.value, productPort.value, productOS.value, productSize.value),
-            createLaptopDescsObj(productHeader.value, productBody.value)), productBand.value);
+            createLaptopDescsObj(productHeader.value, descBody)), productBand.value);
 }
 
 function editDetals() {
@@ -392,13 +397,26 @@ function editDetals() {
     var productHeader = document.getElementById("product-header");
     var productBody = document.getElementById("product-body");
 
-    // test create product json
-    createLaptopObj(productID.value, productName.value, productVideo.value,
-        productImages.value, productNewPrice.value, productOldPrice.value,
+    var imagesData = [];
+    var imageContainers = productImages.querySelectorAll(".product-image-container");
+    imageContainers.forEach(imageContainer => {
+        var imageURL = imageContainer.querySelector("img").getAttribute("src");
+        if(imageURL != "") {
+            imagesData.push(imageURL);
+        }
+    });
+    var descBody = [];
+    productBody.value.split("\n").forEach(item => {
+        alert("push")
+        descBody.push(item);
+    });
+
+    editLaptopObj(createLaptopObj(productID.value, productName.value, productVideo.value,
+        imagesData, productNewPrice.value.replaceAll(",", ""), productOldPrice.value.replaceAll(",", ""),
         productQuantity.value,
         createLaptopSpecsObj(productCpu.value, productRam.value, productDisk.value, productScreen.value,
             productGpu.value, productPort.value, productOS.value, productSize.value),
-            createLaptopDescsObj(productHeader.value, productBody.value));
+            createLaptopDescsObj(productHeader.value, descBody)), productID.value);
 }
 
 function hideEditDetals() {
@@ -502,7 +520,7 @@ function showAddProduct() {
             </div>
             <div class="detail-nav">
                 <button class="form-button" onclick="addDetals()">Lưu</button>
-                <button class="form-button" onclick="hideEditDetals()">Hủy</button>
+                <button class="form-button" onclick="hideAddProduct()">Hủy</button>
             </div>
         </form>
     </div>`;
@@ -628,7 +646,7 @@ function createLaptopSpecsObj(cpu, ram, disk, screen, gpu, port, os, size) {
 function createLaptopDescsObj(header, body) {
     return descs = {
         header: `${header}`,
-        body: `${body}`
+        body: body
     };
 }
 
@@ -650,8 +668,35 @@ function addLaptopObj(laptopObj, bandName) {
         if(band == bandName) {
             laptopStorage[band].push(laptopObj);
             localStorage.setItem("sanpham", JSON.stringify(storage));
-            alert("added");
             break;
+        }
+    }
+}
+
+function editLaptopObj(laptopObj, laptopID) {
+    var storage = JSON.parse(localStorage.getItem("sanpham"));
+    var laptopStorage = storage.phanloai;
+    for(const band in laptopStorage) {
+        for(var i = 0; i < laptopStorage[band].length; i++) {
+            if(laptopStorage[band][i].id == laptopID) {
+                laptopStorage[band][i] = laptopObj;
+                localStorage.setItem("sanpham", JSON.stringify(storage));
+                break;
+            }
+        }
+    }
+}
+
+function showDeleteDetals(id) {
+    var storage = JSON.parse(localStorage.getItem("sanpham"));
+    var laptopStorage = storage.phanloai;
+    for(const band in laptopStorage) {
+        for(var i = 0; i < laptopStorage[band].length; i++) {
+            if(laptopStorage[band][i].id == id) {
+                laptopStorage[band].splice(i, 1);
+                localStorage.setItem("sanpham", JSON.stringify(storage));
+                break;
+            }
         }
     }
 }

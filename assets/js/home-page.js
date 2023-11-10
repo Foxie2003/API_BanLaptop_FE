@@ -73,7 +73,15 @@ let loaded = 0; //Product loaded
 
 function loadInnerProduct(sanpham) {
     const format = new Intl.NumberFormat({ maximumSignificantDigits: 3 });
-    console.log(sanpham.price / sanpham.old_price);
+    var specs = ""
+    if(sanpham.specs != null) {
+        specs =
+        `<li class="screen">Màn hình: ` + sanpham.specs.screen + `</li>
+        <li class="cpu">CPU: ` + sanpham.specs.cpu + `</li>
+        <li class="gpu">Card: ` + sanpham.specs.gpu + `</li>
+        <li class="ram">Ram: ` + sanpham.specs.ram.split('(')[0].trim() + "," + sanpham.specs.ram.split(',')[2] + `</li>
+        <li class="weight">Cân nặng: ` + sanpham.specs.size.split("-")[3] + `</li>`;
+    }
     document.getElementById("products").innerHTML
         += `<div class="product-item col-2-4 col-s-6" onclick="showDetails('${sanpham.id.trim()}')">
         <div class="sale-percent">
@@ -84,11 +92,7 @@ function loadInnerProduct(sanpham) {
         <div class="price">` + format.format(sanpham.price) + `₫</div>
         <div class="price-old">` + format.format(sanpham.old_price) + `₫</div>
         <ul class="desc">
-            <li class="screen">Màn hình: ` + sanpham.specs.screen + `</li>
-            <li class="cpu">CPU: ` + sanpham.specs.cpu + `</li>
-            <li class="gpu">Card: ` + sanpham.specs.gpu + `</li>
-            <li class="ram">Ram: ` + sanpham.specs.ram.split('(')[0].trim() + "," + sanpham.specs.ram.split(',')[2] + `</li>
-            <li class="weight">Cân nặng: ` + sanpham.specs.size.split("-")[3] + `</li>
+            ${specs}
         </ul>
     </div>`;
 }
@@ -158,7 +162,12 @@ function showBorder(index) {
     for (let i = 0; i < bands.length; i++) {
         bands[i].style.border = "none";
     }
-    bands[index].style.border = "2px solid #017698";
+    try {
+        bands[index].style.border = "2px solid #017698";
+    }
+    catch {
+
+    }
 }
 
 // Load all products from local storage
@@ -232,21 +241,22 @@ function searchProduct(name) {
     name = name.toLowerCase();
     const products = JSON.parse(localStorage.getItem("sanpham"));
     document.getElementById("products").innerHTML = "";
-    // document.getElementById("showMoreProduct").style.display = "none";
+    document.querySelector(".main-title").textContent = `Kết quả tìm kiếm của "${name}"`;
     var haveProduct = false;
-    for (const property in products.phanloai) {
-        for (var i = 0; i < products.phanloai[property].length; i++) {
-            // console.log(products.phanloai[property][i].name);
-            var productName = products.phanloai[property][i].name.toLowerCase();
-            if(productName.includes(name)) {
-                haveProduct = true;
-                loadInnerProduct(products.phanloai[property][i]);
+    for (const productType in products) {
+        for (const property in products[productType]) {
+            for (var i = 0; i < products[productType][property].length; i++) {
+                var productName = products[productType][property][i].name.toLowerCase();
+                if(productName.includes(name)) {
+                    haveProduct = true;
+                    loadInnerProduct(products[productType][property][i]);
+                }
             }
         }
     }
     if (!haveProduct) {
         document.getElementById("products").innerHTML
-            = `<p style="font-size: 32px; font-weight: bold; color: #333; width: 100%; text-align: center; margin:200px 0;">Không có sản phẩm nào có tên "${name}" </p>
+            = `<p style="font-size: 32px; font-weight: bold; color: #333; width: 100%; text-align: center; margin:200px 0;">Không có sản phẩm nào có tên "${decodeURIComponent(name)}" </p>
             <p style="font-size: 26px; color: #333; width: 100%; text-align: center; margin-bottom: 20px;">Xem các sản phẩm khác</p>`;
             loaded = 0;
             loadAllProduct();
@@ -303,5 +313,45 @@ function showProductInCart() {
         `<i class="fa-solid fa-cart-shopping fa-lg"></i>
         <span style="margin-left: 2px;"></span>
         Giỏ hàng (${cartInfo.length})`;
+    }
+}
+
+//Sort products by price low to high
+function sortLowToHigh() {
+    var productsContainer = document.getElementById("products");
+    var products = Array.from(productsContainer.querySelectorAll(".product-item"));
+    products.sort(function(a, b) {
+        var priceA = parseInt(a.querySelector(".price").textContent.replaceAll(",", ".").split("đ")[0]);
+        var priceB = parseInt(b.querySelector(".price").textContent.replaceAll(",", ".").split("đ")[0]);
+        return priceA - priceB;
+    });
+    productsContainer.innerHTML = "";
+    products.forEach(function(product) {
+        productsContainer.appendChild(product);
+    });
+}
+
+//Sort products by price high to low
+function sortHighToLow() {
+    var productsContainer = document.getElementById("products");
+    var products = Array.from(productsContainer.querySelectorAll(".product-item"));
+    products.sort(function(a, b) {
+        var priceA = parseInt(a.querySelector(".price").textContent.replaceAll(",", ".").split("đ")[0]);
+        var priceB = parseInt(b.querySelector(".price").textContent.replaceAll(",", ".").split("đ")[0]);
+        return priceB - priceA;
+    });
+    productsContainer.innerHTML = "";
+    products.forEach(function(product) {
+        productsContainer.appendChild(product);
+    });
+}
+
+function sort() {
+    var sortBox = document.querySelector(".sort-box");
+    if(sortBox.value == "high-to-low") {
+        sortHighToLow();
+    }
+    if(sortBox.value == "low-to-high") {
+        sortLowToHigh();
     }
 }

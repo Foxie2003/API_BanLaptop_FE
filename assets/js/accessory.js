@@ -45,3 +45,14 @@ function loadAllAccessory() {
         };
     }
 }
+
+function countProduct() {
+    const products = JSON.parse(localStorage.getItem("sanpham"));
+    var count = 0;
+    for (const property in products.phukien) {
+        for (var i = 0; i < products.phukien[property].length; i++) {
+            count++;
+        }
+    }
+    return count;
+}

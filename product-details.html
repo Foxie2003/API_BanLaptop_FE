@@ -4,7 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./assets/css/sign-up.css">
+        <link rel="stylesheet" href="./assets/css/home-page.css">
         <link rel="stylesheet" href="./assets/css/product-details.css">
+        <link rel="stylesheet" href="./assets/css/slick.css">
+        <link rel="stylesheet" href="./assets/css/slick-theme.css">
         <script
             src="https://code.jquery.com/jquery-3.7.1.js"
             integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
@@ -12,6 +15,7 @@
         <script src="./assets/js/extm.js"></script>
         <script src="./assets/js/home-page.js"></script>
         <script src="./assets/js/product-details.js"></script>
+        <script src="./assets/js/slick.js"></script>
         <script src="https://kit.fontawesome.com/fd095985f5.js"
             crossorigin="anonymous"></script>
         <title id="title">Some thing</title>
@@ -102,19 +106,11 @@
                             <div id="btn-back-image" onclick="backSlideProduct()">
                                 <i class="fa-solid fa-chevron-left fa-sm"></i>
                             </div>
-                            <div class="slide-show" id="product-details-slide" style="height: 380px;">
+                            <div class="slide-show" style="background-color: #fff;" id="product-details-slide" style="height: 380px;">
                                 <!-- Slides here -->
                             </div>
                             <div id="btn-next-image" onclick="nextSlideProduct()">
                                 <i class="fa-solid fa-chevron-right fa-sm"></i>
-                            </div>
-                            <div class="dots">
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
                             </div>
                         </div>
                     </div>
@@ -185,8 +181,8 @@
                     </div>
                     <div class="rating-details">
                         <div class="product-name" style="font-size: 20px;">
-                            Laptop Asus TUF Gaming F15 FX506HF i5 11400H/8GB/512GB/4GB
-                            RTX2050/144Hz/Win11 (HN014W)
+                            [Laptop Asus TUF Gaming F15 FX506HF i5 11400H/8GB/512GB/4GB
+                            RTX2050/144Hz/Win11 (HN014W)]
                         </div>
                         <div class="rating-panel">
                             <div class="rating-panel-left">
@@ -294,9 +290,9 @@
                 </div>
                 <div class="right-panel">
                     <div class="price-panel" id="price-panel">
-                        <div class="price-new">17.490.000₫ *</div>
-                        <div class="price-old">19.990.000₫</div>
-                        <div class="price-sale-percent">-10%</div>
+                        <div class="price-new">[17.490.000₫ *]</div>
+                        <div class="price-old">[19.990.000₫]</div>
+                        <div class="price-sale-percent">[-10%]</div>
                         <div class="price-installment">Trả góp 0%</div>
                     </div>
                     <div class="offer-panel">
@@ -360,15 +356,15 @@
                     <img src="./assets/img/logo/app-download.png" alt="" class="app-download-banner">
                     <div class="desc-panel" id="desc-panel">
                         <div class="product-name" style="font-size: 22px;">
-                            Laptop Asus TUF Gaming F15 FX506HF i5 11400H/8GB/512GB/4GB
-                            RTX2050/144Hz/Win11 (HN014W)
+                            [Laptop Asus TUF Gaming F15 FX506HF i5 11400H/8GB/512GB/4GB
+                            RTX2050/144Hz/Win11 (HN014W)]
                         </div>
                         <div class="desc-panel-item" style="background-color: #f5f5f5;">
                             <div class="desc-panel-item-left">
                                 CPU:
                             </div>
                             <div class="desc-panel-item-right" id="cpu">
-                                i5, 11400H, 2.7GHz
+                                [i5, 11400H, 2.7GHz]
                             </div>
                         </div>
                         <div class="desc-panel-item">
@@ -376,7 +372,7 @@
                                 RAM:
                             </div>
                             <div class="desc-panel-item-right" id="ram">
-                                8 GBDDR4 2 khe (1 khe 8 GB + 1 khe rời)3200 MHz
+                                [8 GBDDR4 2 khe (1 khe 8 GB + 1 khe rời)3200 MHz]
                             </div>
                         </div>
                         <div class="desc-panel-item" style="background-color: #f5f5f5;">
@@ -384,7 +380,7 @@
                                 Ổ cứng:
                             </div>
                             <div class="desc-panel-item-right" id="disk">
-                                Hỗ trợ thêm 1 khe cắm SSD M.2 PCIe mở rộng (nâng cấp tối đa 1 TB)512 GB SSD NVMe PCIe (Có thể tháo ra, lắp thanh khác tối đa 1 TB)
+                                [Hỗ trợ thêm 1 khe cắm SSD M.2 PCIe mở rộng (nâng cấp tối đa 1 TB)512 GB SSD NVMe PCIe (Có thể tháo ra, lắp thanh khác tối đa 1 TB)]
                             </div>
                         </div>
                         <div class="desc-panel-item">
@@ -392,7 +388,7 @@
                                 Màn hình:
                             </div>
                             <div class="desc-panel-item-right" id="screen">
-                                15.6"Full HD (1920 x 1080) 144Hz
+                                [15.6"Full HD (1920 x 1080) 144Hz]
                             </div>
                         </div>
                         <div class="desc-panel-item" style="background-color: #f5f5f5;">
@@ -400,7 +396,7 @@
                                 Card màn hình:
                             </div>
                             <div class="desc-panel-item-right" id="gpu">
-                                Card rờiRTX 2050 4GB
+                                [Card rời, RTX 2050 4GB]
                             </div>
                         </div>
                         <div class="desc-panel-item">
@@ -408,7 +404,7 @@
                                 Cổng kết nối:
                             </div>
                             <div class="desc-panel-item-right" id="port">
-                                1 x Thunderbolt 4 (hỗ trợ DisplayPort)HDMILAN (RJ45)3 x USB 3.2Jack tai nghe 3.5 mm
+                                [1 x Thunderbolt 4 (hỗ trợ DisplayPort)HDMILAN (RJ45)3 x USB 3.2Jack tai nghe 3.5 mm]
                             </div>
                         </div>
                         <div class="desc-panel-item" style="background-color: #f5f5f5;">
@@ -416,7 +412,7 @@
                                 Hệ điều hành:
                             </div>
                             <div class="desc-panel-item-right" id="os">
-                                Windows 11 Home SL
+                                [Windows 11 Home SL]
                             </div>
                         </div>
                         <div class="desc-panel-item">
@@ -426,7 +422,7 @@
                                 khối lượng:
                             </div>
                             <div class="desc-panel-item-right" id="size">
-                                Dài 359 mm - Rộng 256 mm - Dày 22.8 ~ 24.5 mm - Nặng 2.3 kg
+                                [Dài 359 mm - Rộng 256 mm - Dày 22.8 ~ 24.5 mm - Nặng 2.3 kg]
                             </div>
                         </div>
                         <div class="desc-panel-item" style="background-color: #f5f5f5;">
@@ -441,6 +437,12 @@
                 </div>
             </div>
         </div>
+        <!--        ACCESSORY PRODUCT          -->
+    <div class="accessory-container">
+        <div class="accessory-banner">GIẢM CỰC LỚN&nbsp;<span style="color: #fff;">KHI MUA PHỤ KIỆN</span></div>
+        <div class="products-container" style="background-color: #ff0020; margin-top: 0;" id="accessory-products"></div>
+        </div>
+    </div>
         <!--        FOOTER      -->
     <div class="footer">
         <div class="container" style="align-items: flex-start;">
@@ -474,6 +476,24 @@
             loadSpec();
             showLoginData();
             showProductInCart();
+            loadAcessoryProduct();
+
+            // Carousel
+            $(document).ready(function(){
+                $('#accessory-products').slick({
+                    accessibility: true,
+                    arrows:true,
+                    slidesToShow: 5,
+                    appendArrows: $("#accessory-products"),
+                    // prev arrow
+                    prevArrow: '<button type="button" data-role="none" class="slick-prev" style="z-index: 100;left: 10px; background-color: #666; height: 100px; opacity: 0.5;"></button>',
+
+                    // next arrow
+                    nextArrow: '<button type="button" data-role="none" class="slick-next" style="z-index: 100;right: 10px; background-color: #666; height: 100px; opacity: 0.6;"></button>',
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                });
+            });
     </script>
     </body>
 </html>

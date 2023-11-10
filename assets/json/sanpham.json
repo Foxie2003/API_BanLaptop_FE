@@ -2066,6 +2066,190 @@
                 "old_price": 1190000,
                 "quantity": 100
             }
+        ],
+        "keybroad": [
+            {
+                "id": "SP61",
+                "name": "Bàn Phím Không Dây DareU EK807G",
+                "images": [
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-thumb2-600x600.jpeg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-1-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-2-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-3-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-4-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-5-1.jpg"
+                ],
+                "price": 531000,
+                "old_price": 666000,
+                "quantity": 100
+            },
+            {
+                "id": "SP62",
+                "name": "Bàn Phím Cơ Có Dây Gaming Rapoo V500alloy",
+                "images": [
+                    "./assets/img/keybroad/co-co-day-gaming-rapoo-v500alloy-den/co-co-day-gaming-rapoo-v500alloy-den-thumb-600x600.jpeg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-1-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-2-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-3-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-4-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-5-1.jpg"
+                ],
+                "price": 495000,
+                "old_price": 550000,
+                "quantity": 100
+            },
+            {
+                "id": "SP63",
+                "name": "Bàn Phím Cơ Bluetooth Dareu EK75 Pro",
+                "images": [
+                    "./assets/img/keybroad/ban-phim-co-bluetooth-dareu-ek75-pro/ban-phim-co-bluetooth-dareu-ek75-pro-thumb-600x600.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-1-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-2-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-3-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-4-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-5-1.jpg"
+                ],
+                "price": 1000000,
+                "old_price": 1390000,
+                "quantity": 100
+            },
+            {
+                "id": "SP64",
+                "name": "Bộ Bàn Phím Chuột Không Dây Bluetooth Rapoo 8000M",
+                "images": [
+                    "./assets/img/keybroad/bo-chuot-khong-day-rapoo-8000m/bo-chuot-khong-day-rapoo-8000m-thumb-600x600.jpeg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-1-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-2-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-3-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-4-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-5-1.jpg"
+                ],
+                "price": 450000,
+                "old_price": 500000,
+                "quantity": 100
+            },
+            {
+                "id": "SP65",
+                "name": "Bàn Phím Cơ Có Dây Gaming Razer BlackWidow V3",
+                "images": [
+                    "./assets/img/keybroad/ban-phim-co-co-day-gaming-razer-blackwidow-v3/ban-phim-co-co-day-gaming-razer-blackwidow-v3-160722-120853-600x600.jpeg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-1-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-2-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-3-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-4-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-5-1.jpg"
+                ],
+                "price": 2000000,
+                "old_price": 3640000,
+                "quantity": 100
+            },
+            {
+                "id": "SP66",
+                "name": "Bàn Phím Cơ Có Dây Gaming Razer Huntsman Tournament Edition",
+                "images": [
+                    "./assets/img/keybroad/co-day-gaming-razer-huntsman-tournament-edition/co-day-gaming-razer-huntsman-tournament-edition-thumb-600x600.jpeg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-1-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-2-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-3-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-4-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-5-1.jpg"
+                ],
+                "price": 1950000,
+                "old_price": 3550000,
+                "quantity": 100
+            },
+            {
+                "id": "SP67",
+                "name": "Bàn Phím Có Dây Gaming Rapoo V50S",
+                "images": [
+                    "./assets/img/keybroad/ban-phim-co-day-gaming-rapoo-v50s/ban-phim-co-day-gaming-rapoo-v50s-thumb-600x600.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-1-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-2-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-3-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-4-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-5-1.jpg"
+                ],
+                "price": 340000,
+                "old_price": 390000,
+                "quantity": 100
+            },
+            {
+                "id": "SP68",
+                "name": "Bàn Phím Cơ Có Dây Dareu EK75",
+                "images": [
+                    "./assets/img/keybroad/ban-phim-co-co-day-dareu-ek75/ban-phim-co-co-day-dareu-ek75-thumb-600x600.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-1-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-2-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-3-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-4-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-5-1.jpg"
+                ],
+                "price": 630000,
+                "old_price": 790000,
+                "quantity": 100
+            },
+            {
+                "id": "SP69",
+                "name": "Bàn Phím Cơ Gaming MSI Vigor GK50 Elite",
+                "images": [
+                    "./assets/img/keybroad/ban-phim-co-gaming-msi-vigor-gk50-elite/ban-phim-co-gaming-msi-vigor-gk50-elite-thumb-600x600.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-1-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-2-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-3-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-4-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-5-1.jpg"
+                ],
+                "price": 2000000,
+                "old_price": 2500000,
+                "quantity": 100
+            },
+            {
+                "id": "SP70",
+                "name": "Bàn Phím Cơ Bluetooth Rapoo V700 - 8A",
+                "images": [
+                    "./assets/img/keybroad/ban-phim-co-bluetooth-rapoo-v700-8a/ban-phim-co-bluetooth-rapoo-v700-8a-thumb-5-600x600.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-1-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-2-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-3-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-4-1.jpg",
+                    "./assets/img/keybroad/khong-day-dareu-ek807g/khong-day-dareu-ek807g-5-1.jpg"
+                ],
+                "price": 1340000,
+                "old_price": 1490000,
+                "quantity": 100
+            }
+        ],
+        "gamepad": [
+            {
+                "id": "SP71",
+                "name": "Tay Cầm Chơi Game Bluetooth DareU H101X",
+                "images": [
+                    "./assets/img/gamepad/tay-cam-bluetooth-dareu-h101x/tay-cam-bluetooth-dareu-h101x-thumb-600x600.jpg"
+                ],
+                "price": 525000,
+                "old_price": 750000,
+                "quantity": 100
+            },
+            {
+                "id": "SP72",
+                "name": "Tay cầm không dây MSI Force GC30 V2",
+                "images": [
+                    "./assets/img/gamepad/tay-cam-khong-day-msi-force-gc30-v2/tay-cam-khong-day-msi-force-gc30-v2-thumb-5-600x600.jpg"
+                ],
+                "price": 760000,
+                "old_price": 1090000,
+                "quantity": 100
+            },
+            {
+                "id": "SP73",
+                "name": "Tay Cầm Chơi Game Có Dây Rapoo V600 Đen",
+                "images": [
+                    "./assets/img/gamepad/co-day-rapoo-v600-den/co-day-rapoo-v600-den-1.-600x600.jpg"
+                ],
+                "price": 460000,
+                "old_price": 590000,
+                "quantity": 100
+            }
         ]
     }
 }

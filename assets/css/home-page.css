@@ -150,6 +150,12 @@ a {
     font-weight: bold;
     font-size: 24px;
 }
+.sort-box {
+    font-size: 18px;
+    padding: 5px;
+    border: 1px solid #333;
+    border-radius: 4px;
+}
 /* Bands Gallery */
 .bands-gallery .container {
     background-color: #ccc;
@@ -292,7 +298,7 @@ a {
 .hotdeal-banner {
     height: 90px;
     width: 100%;
-    background:url(https://cdn.tgdd.vn/2023/07/banner/desk-1200x90.png);background-size:cover;
+    background:url(../img/logo/hotdeal-1200x90.png);background-size:cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -301,3 +307,4 @@ a {
     color: #ff0020;
 }
 /* END HOT DEAL */
+

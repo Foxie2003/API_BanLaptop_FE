@@ -7,22 +7,24 @@ var descs;
 function loadData() {
     const products = JSON.parse(localStorage.getItem("sanpham"));
     var haveProduct = false;
-    for (const property in products.phanloai) {
-        for (var i = 0; i < products.phanloai[property].length; i++) {
-            var id = products.phanloai[property][i].id;
-            if(productId == id) {
-                haveProduct = true;
-                productData = products.phanloai[property][i];
-                if(products.phanloai[property][i].video != "linkVideo") {
-                    imgs.push(`<iframe width="100%" height="340px" src="${products.phanloai[property][i].video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`)
+    for (const productType in products) {
+        for (const band in products[productType]) {
+            for (var i = 0; i < products[productType][band].length; i++) {
+                var id = products[productType][band][i].id;
+                if(productId == id) {
+                    haveProduct = true;
+                    productData = products[productType][band][i];
+                    if(products[productType][band][i].video != "linkVideo" && products[productType][band][i].video != null) {
+                        imgs.push(`<iframe width="100%" height="340px" src="${products[productType][band][i].video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`)
+                    }
+                    for (let index = 1; index < products[productType][band][i].images.length; index++) {
+                        imgs.push(
+                            `<img
+                            src="${products[productType][band][i].images[index]}" id="zoomImg">`
+                            );
+                    }
+                    break;
                 }
-                for (let index = 1; index < products.phanloai[property][i].images.length; index++) {
-                    imgs.push(
-                        `<img
-                        src="${products.phanloai[property][i].images[index]}" id="zoomImg">`
-                        );
-                }
-                break;
             }
         }
     }
@@ -38,11 +40,16 @@ function loadData() {
 }
 function loadDesc() {
     descs = productData.desc;
-    document.getElementById("product-desc-header").innerHTML = "";
-    document.getElementById("product-desc-header").innerHTML = descs.header;
-    descs.body.forEach(info => {
-        document.getElementById("product-desc-body").innerHTML += "<li>" + info + "</li>";
-    });
+    if(descs != null) {
+        document.getElementById("product-desc-header").innerHTML = "";
+        document.getElementById("product-desc-header").innerHTML = descs.header;
+        descs.body.forEach(info => {
+            document.getElementById("product-desc-body").innerHTML += "<li>" + info + "</li>";
+        });
+    }
+    else {
+        document.getElementById("btn-showMoreDesc").style.display = "none"
+    }
 }
 function loadPrice() {
     const format = new Intl.NumberFormat({ maximumSignificantDigits: 3 });
@@ -53,14 +60,19 @@ function loadPrice() {
     <div class="price-installment">Trả góp 0%</div>`;
 }
 function loadSpec() {
-    document.getElementById("cpu").innerText = productData.specs.cpu;
-    document.getElementById("ram").innerText = productData.specs.ram;
-    document.getElementById("disk").innerText = productData.specs.disk;
-    document.getElementById("screen").innerText = productData.specs.screen;
-    document.getElementById("gpu").innerText = productData.specs.gpu;
-    document.getElementById("port").innerText = productData.specs.port;
-    document.getElementById("os").innerText = productData.specs.os;
-    document.getElementById("size").innerText = productData.specs.size;
+    if(productData.specs != null) {
+        document.getElementById("cpu").innerText = productData.specs.cpu;
+        document.getElementById("ram").innerText = productData.specs.ram;
+        document.getElementById("disk").innerText = productData.specs.disk;
+        document.getElementById("screen").innerText = productData.specs.screen;
+        document.getElementById("gpu").innerText = productData.specs.gpu;
+        document.getElementById("port").innerText = productData.specs.port;
+        document.getElementById("os").innerText = productData.specs.os;
+        document.getElementById("size").innerText = productData.specs.size;
+    }
+    else {
+        document.getElementById("desc-panel").style.display = "none";
+    }
 }
 function showDescBody() {
     var descBody = document.getElementById("product-desc-body");
@@ -185,7 +197,7 @@ function hideMessage() {
     messagePanel.innerHTML = "";
 }
 
-function showQuestion(title, question, icon, yesFun, noFun) {
+function showQuestion(title, question, icon, yesFunc, noFunc) {
     var questionPanel = document.getElementById("question-panel");
     questionPanel.style.display = "flex";
     questionPanel.innerHTML = `
@@ -196,12 +208,47 @@ function showQuestion(title, question, icon, yesFun, noFun) {
             <div class="question">${question}</div>
         </div>
         <div class="question-button-panel">
-            <div class="question-button" id="question-button-yes" onclick="${yesFun}">Có</div>
-            <div class="question-button" id="question-button-no" onclick="${noFun}">Không</div>
+            <div class="question-button" id="question-button-yes" onclick="${yesFunc}">Có</div>
+            <div class="question-button" id="question-button-no" onclick="${noFunc}">Không</div>
         </div>
     </div>`;
 }
+
 function hideQuestion() {
     var questionPanel = document.getElementById("question-panel");
     questionPanel.style.display = "none";
+}
+
+function loadAcessoryProduct() {
+    const products = JSON.parse(localStorage.getItem("sanpham"));
+    var productArr = [];
+    for (const property in products.phukien) {
+        for (var i = 0; i < products.phukien[property].length; i++){
+            const format = new Intl.NumberFormat({ maximumSignificantDigits: 3 });
+            productArr.push(`<div class="product-item col-2-4 col-s-6" onclick="showDetails('${products.phukien[property][i].id.trim()}')">
+            <div class="sale-percent">
+            -${Math.round((products.phukien[property][i].old_price - products.phukien[property][i].price) / products.phukien[property][i].old_price * 100)}%
+            <i class="fa-solid fa-tag fa-xl"></i></div>
+            <img class="product-img" src="` + products.phukien[property][i].images[0] + `" alt="">
+            <div class="title">` + products.phukien[property][i].name.split("/")[0] + `</div>
+            <div class="price">` + format.format(products.phukien[property][i].price) + `₫</div>
+            <div class="price-old">` + format.format(products.phukien[property][i].old_price) + `₫</div>
+            </div>`);
+        };
+    }
+    shuffleArray(productArr);
+    productArr.forEach(content => {
+        document.getElementById("accessory-products").innerHTML += content;
+    });
+}
+
+// Knuth Shuffle
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        // Tạo một chỉ số ngẫu nhiên từ 0 đến i
+        const j = Math.floor(Math.random() * (i + 1));
+
+        // Hoán đổi giá trị của hai phần tử
+        [array[i], array[j]] = [array[j], array[i]];
+    }
 }

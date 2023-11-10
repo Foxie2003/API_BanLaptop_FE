@@ -29,7 +29,7 @@
         <img src="./assets/img/logo/horizontal-logo.png" alt="" id="top-logo" onclick="window.location.href = 'home-page.html';">
         <div id="top-search">
             <input type="search" id="top-search-input" placeholder="Bạn đang tìm...">
-            <button id="top-search-button" onclixk="window.location.href = 'search.html?value=' + document.getElementById('top-search-input').value">
+            <button id="top-search-button" onclick="window.location.href = 'search.html?value=' + document.getElementById('top-search-input').value">
                 <i class="fa-solid fa-magnifying-glass fa-lg fa-beat-fade" style="color: #000000;"></i>
             </button>
         </div>
@@ -41,6 +41,14 @@
             <span style="margin-left: 2px;"></span>
             Giỏ hàng (0)
         </div>
+    </div>
+    <div class="container" style="justify-content: space-between; margin-top: 10px;">
+        <div class="main-title"></div>
+        <select class="sort-box" onchange="sort()">
+            <option value="default" selected>Sắp xếp theo</option>
+            <option value="high-to-low">Giá cao đến thấp</option>
+            <option value="low-to-high">Giá thấp đến cao</option>
+        </select>
     </div>
     <!--        PRODUCTS CONTAINER        -->
     <div class="products-container" id="products">

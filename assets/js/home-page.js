@@ -254,6 +254,7 @@ function searchProduct(name) {
             }
         }
     }
+    getSearchProduct();
     if (!haveProduct) {
         document.getElementById("products").innerHTML
             = `<p style="font-size: 32px; font-weight: bold; color: #333; width: 100%; text-align: center; margin:200px 0;">Không có sản phẩm nào có tên "${decodeURIComponent(name)}" </p>
@@ -321,8 +322,8 @@ function sortLowToHigh() {
     var productsContainer = document.getElementById("products");
     var products = Array.from(productsContainer.querySelectorAll(".product-item"));
     products.sort(function(a, b) {
-        var priceA = parseInt(a.querySelector(".price").textContent.replaceAll(",", ".").split("đ")[0]);
-        var priceB = parseInt(b.querySelector(".price").textContent.replaceAll(",", ".").split("đ")[0]);
+        var priceA = parseInt(a.querySelector(".price").textContent.replaceAll(",", "").split("đ")[0]);
+        var priceB = parseInt(b.querySelector(".price").textContent.replaceAll(",", "").split("đ")[0]);
         return priceA - priceB;
     });
     productsContainer.innerHTML = "";
@@ -336,8 +337,8 @@ function sortHighToLow() {
     var productsContainer = document.getElementById("products");
     var products = Array.from(productsContainer.querySelectorAll(".product-item"));
     products.sort(function(a, b) {
-        var priceA = parseInt(a.querySelector(".price").textContent.replaceAll(",", ".").split("đ")[0]);
-        var priceB = parseInt(b.querySelector(".price").textContent.replaceAll(",", ".").split("đ")[0]);
+        var priceA = parseInt(a.querySelector(".price").textContent.replaceAll(",", "").split("đ")[0]);
+        var priceB = parseInt(b.querySelector(".price").textContent.replaceAll(",", "").split("đ")[0]);
         return priceB - priceA;
     });
     productsContainer.innerHTML = "";
@@ -353,5 +354,31 @@ function sort() {
     }
     if(sortBox.value == "low-to-high") {
         sortLowToHigh();
+    }
+}
+
+var searchProduct;
+
+function getSearchProduct() {
+    var productsContainer = document.getElementById("products");
+    return searchProduct = Array.from(productsContainer.querySelectorAll(".product-item"));
+}
+
+function priceFilter() {
+    var productsContainer = document.getElementById("products");
+    var products = searchProduct;
+    var minPrice = document.getElementById("min_price").value.replaceAll(",", "");
+    var maxPrice = document.getElementById("max_price").value.replaceAll(",", "");
+    productsContainer.innerHTML = "";
+    var filterProducts = products.filter(function(product) {
+        price = parseInt(product.querySelector(".price").textContent.replaceAll(",", "").split("đ")[0]);
+        return (price >= minPrice && price <= maxPrice)
+    });
+    filterProducts.forEach(function(product) {
+        productsContainer.appendChild(product);
+    });
+    if(filterProducts.length == 0) {
+        document.getElementById("products").innerHTML
+            = `<p style="font-size: 32px; font-weight: bold; color: #333; width: 100%; text-align: center; margin:200px 0;">Không có sản phẩm nào trong khoảng giá</p>`;
     }
 }

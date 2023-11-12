@@ -149,6 +149,7 @@ a {
     margin-top: 10px;
     font-weight: bold;
     font-size: 24px;
+    margin-right: auto;
 }
 .sort-box {
     font-size: 18px;
@@ -307,4 +308,17 @@ a {
     color: #ff0020;
 }
 /* END HOT DEAL */
+
+/* PRICE FILTER */
+.price-filter > p {
+    font-size: 20px;
+    margin: 5px 0;
+}
+.price-filter > input {
+    font-size: 18px;
+}
+.ui-state-default {
+    border-radius: 100px;
+}
+/* END PRICE FILTER */
 

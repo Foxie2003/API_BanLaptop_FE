@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" type="text/css" media="all" />
     <link rel="stylesheet" href="./assets/css/sign-up.css">
     <link rel="stylesheet" href="./assets/css/home-page.css">
     <link rel="stylesheet" href="./assets/css/slick.css">
     <link rel="stylesheet" href="./assets/css/slick-theme.css">
-    <script
-            src="https://code.jquery.com/jquery-3.7.1.js"
-            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-            crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/fd095985f5.js" crossorigin="anonymous"></script>
-    <script src="./assets/js/home-page.js"></script>
-    <script src="./assets/js/saveJson.js"></script>
-    <script src="./assets/js/slick.js"></script>
+    <link rel="stylesheet" href="./assets/css/price_range_style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+        <script src="https://kit.fontawesome.com/fd095985f5.js" crossorigin="anonymous"></script>
+        <script src="./assets/js/home-page.js"></script>
+        <script src="./assets/js/saveJson.js"></script>
+        <script src="./assets/js/slick.js"></script>
+        <script src="./assets/js/price_range_script.js"></script>
     <title>Home page</title>
 </head>
 <body>
@@ -42,8 +43,20 @@
             Giỏ hàng (0)
         </div>
     </div>
-    <div class="container" style="justify-content: space-between; margin-top: 10px;">
+    <div class="container">
         <div class="main-title"></div>
+    </div>
+    <div class="container" style="justify-content: space-between;">
+        <div class="price-filter">
+            <p>Tìm theo khoảng giá: </p>
+            <div id="slider-range" class="price-filter-range" name="rangeInput" style="width: 300px;"></div>
+            Từ
+            <input type="text" id="min_price" class="price-range-field" disabled/>
+            đ
+            Đến
+            <input type="text" id="max_price" class="price-range-field" disabled/>
+            đ
+        </div>
         <select class="sort-box" onchange="sort()">
             <option value="default" selected>Sắp xếp theo</option>
             <option value="high-to-low">Giá cao đến thấp</option>
@@ -73,7 +86,7 @@
     </div>
     <div class="container">
         <!--        Show more        -->
-        <button id="showMoreProduct" onclick="loadAllProduct()">
+        <button id="showMoreProduct" onclick="" style="display: none;">
             Xem thêm sản phẩm
         </button>
     </div>

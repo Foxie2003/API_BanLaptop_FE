@@ -39,7 +39,45 @@
                         "Laptop Asus còn có lối thiết kế hầm hố với sắc đen nam tính, tạo nên sự mạnh mẽ và đậm tính thể thao. Điểm nhấn của bàn phím là đèn nền RGB có thể chuyển đổi màu sắc, tạo điểm nhấn độc đáo khi sử dụng nơi đông người.",
                         "Máy có nhiều cổng giao tiếp hữu ích: Thunderbolt 4, Jack tai nghe 3.5 mm, USB 3.2, HDMI và LAN (RJ45)."
                     ]
-                }
+                },
+                "rating": [
+                    {
+                        "userName": "Foxie2003",
+                        "score": 1.5,
+                        "comment": "Vưa mua chay rât mươt vơi tac vu bt. Văn phong Va pin thi siêu trâu bo.sd gân 2 tiêng tut 26% .tôc đô sac qua nhanh.tuyêt vơi .mong la bên bi nưa la ok .7 năm trươc minh cung dung 1 con asus thây no cung bên kinh khung chăng hông gi. Co điêu may cu hơi lang thi thay may thôi.",
+                        "dateTime": "9:22 11/11/2023"
+                    },
+                    {
+                        "userName": "Foxie2003",
+                        "score": 1.5,
+                        "comment": "Vưa mua chay rât mươt vơi tac vu bt. Văn phong Va pin thi siêu trâu bo.sd gân 2 tiêng tut 26% .tôc đô sac qua nhanh.tuyêt vơi .mong la bên bi nưa la ok .7 năm trươc minh cung dung 1 con asus thây no cung bên kinh khung chăng hông gi. Co điêu may cu hơi lang thi thay may thôi.",
+                        "dateTime": "9:22 11/11/2023"
+                    },
+                    {
+                        "userName": "Foxie2003",
+                        "score": 1.5,
+                        "comment": "hei hei hie",
+                        "dateTime": "9:22 11/11/2023"
+                    },
+                    {
+                        "userName": "Foxie2003",
+                        "score": 1.5,
+                        "comment": "hei hei hie adu má Hihi",
+                        "dateTime": "9:22 11/11/2023"
+                    },
+                    {
+                        "userName": "Foxie2003",
+                        "score": 1.5,
+                        "comment": "hei hei hie",
+                        "dateTime": "9:22 11/11/2023"
+                    },
+                    {
+                        "userName": "Foxie2003",
+                        "score": 1.5,
+                        "comment": "hei hei hie",
+                        "dateTime": "9:22 11/11/2023"
+                    }
+                ]
             },
             {
                 "id": "SP02",
@@ -77,7 +115,8 @@
                         "Với khối lượng 1.8 kg, bạn vẫn có thể dễ dàng mang theo thiết bị khi có nhu cầu di chuyển. Laptop sở hữu lớp vỏ màu bạc tạo nên diện mạo hiện đại, một sự lựa chọn tuyệt vời cho cả công việc và học tập.",
                         "Laptop Asus cũng có nhiều cổng giao tiếp như: USB Type-C, USB Type-A, HDMI và Jack tai nghe 3.5 mm để kết nối thuận tiện."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP03",
@@ -116,7 +155,8 @@
                         "Với thiết kế mỏng nhẹ, khối lượng chỉ 1.55 kg, bạn có thể dễ dàng mang theo Asus Vivobook X415EA khi di chuyển. Vỏ máy được làm bằng nhựa cao cấp, bề mặt phủ màu bạc sang trọng, tạo nên một thiết kế đơn giản nhưng hiện đại.",
                         "Laptop cũng được trang bị đầy đủ các cổng giao tiếp như: USB Type-A, USB Type-C, HDMI và Jack tai nghe 3.5 mm, giúp bạn kết nối với các thiết bị khác một cách dễ dàng."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP04",
@@ -155,7 +195,8 @@
                         "Ngoại hình của laptop Asus mang đến cảm giác vừa hiện đại nhưng rất đơn giản. Lớp vỏ nhựa sở hữu màu đen thanh lịch, đạt chuẩn quân đội MIL STD 810H nên mình rất yên tâm nếu có vô tình làm máy va chạm nhẹ. Mang tính di động cao khi có khối lượng 1.7 kg và độ mỏng 19.9 mm, chắc hẳn sẽ thuận tiện bỏ vào balo đồng hành cùng bạn đi đến trường học, quán cafe để giải quyết công việc.",
                         "Laptop Asus Vivobook 15 OLED A1505VA i5 13500H (L1341W) sở hữu thiết kế thanh lịch, hiệu năng mạnh mẽ cùng màn hình OLED rực rỡ chắc hẳn sẽ đáp ứng được đầy đủ nhu cầu của các bạn học sinh, văn phòng, thiết kế."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP05",
@@ -194,7 +235,8 @@
                         "Khối lượng của Asus Vivobook 16 là 1.88 kg dễ dàng bỏ vào balo, thuận tiện cho người dùng khi cần mang theo laptop trong các chuyến công tác, học tập hoặc đi du lịch.",
                         "Laptop Asus được hoàn thiện bởi gam màu bạc, tạo nên một diện mạo sang trọng và tinh tế cho sản phẩm, phù hợp với nhiều phong cách, không gian của bạn."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP06",
@@ -233,7 +275,8 @@
                         "Công nghệ DTS Audio đem đến chất âm sinh động, các dải âm tách biệt, to rõ, giúp bạn đắm chìm vào những trải nghiệm giải trí thư giãn nhất.",
                         "Laptop Asus được hoàn thiện với chất liệu nhựa cao cấp, khung máy chắc chắn cùng các đường nét mạnh mẽ chuẩn gaming chắc chắn sẽ chinh phục bất cứ gu thẩm mỹ nào của anh em game thủ. Ngoài ra, với đèn nền chuyển màu RGB - 1 vùng, người dùng có thể tuỳ ý chỉnh màu sắc yêu thích để mang lại nhiều cảm hứng hơn khi chơi game."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP07",
@@ -272,7 +315,8 @@
                         "Thiết kế của laptop Asus Vivobook cũng rất đẹp với tông màu bạc sang trọng và vỏ ngoài được làm bằng chất liệu nhựa chắc chắn, khối lượng 1.7 kg cùng độ dày 17.9 mm không quá nặng để bạn vẫn có thể linh động mang máy theo bên mình khi cần di chuyển.",
                         "Thiết kế bản lề mở 180 độ giúp cho người dùng có thể mở nắp máy ở nhiều góc độ khác nhau để làm việc, xem phim hoặc chơi game một cách thoải mái hơn. Tính năng bảo mật vân tay và công tắc khóa camera giúp bảo vệ dữ liệu cá nhân trên máy tính."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP08",
@@ -310,7 +354,8 @@
                         "Công nghệ màn hình LED Backlit cho ra màu sắc trung thực, cân bằng và độ tương phản tốt. Hơn nữa, công nghệ chống chói Anti Glare trên máy cũng đảm bảo được khả năng hiển thị khi sử dụng ngoài trời hay dưới điều kiện ánh sáng mạnh.",
                         "VGA Webcam giúp người dùng tham gia các hoạt động học tập online hay làm việc trực tuyến một cách dễ dàng mà không cần kết nối thêm với camera ngoài."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP09",
@@ -348,7 +393,8 @@
                         "Mình dùng phần mềm Cinebench R23 để kiểm tra cấu hình máy, kết quả thu được với số điểm đơn nhân và đa nhân lần lượt là 438 điểm và 792 điểm, số điểm là hợp lý dành cho sản phẩm trong phân khúc dưới 10 triệu đồng. Tuy chiếc máy vẫn chơi game được nhưng sẽ không tối ưu cho nhu cầu giải trí.",
                         "Tổng kết lại, chiếc máy rất phù hợp với học sinh, sinh viên ở mức nhu cầu đơn giản nhờ thời lượng pin ấn tượng, thiết kế lịch sự, hiệu năng tốt, có trang bị bảo mật vân tay, đem đến sự thuận lợi cho các bạn với mức giá dễ tiếp cận."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP10",
@@ -386,7 +432,8 @@
                         "Bảo mật trên máy cũng được đặt lên hàng đầu với công tắc khóa camera giúp kiểm soát việc sử dụng camera trên máy tính, đảm bảo thông tin riêng tư của bạn không bị lộ qua hình ảnh. Tính năng bảo mật vân tay giúp bạn đăng nhập vào máy tính một cách nhanh chóng chỉ với một chạm đơn giản.",
                         "Laptop học tập - văn phòng cũng được trang bị nhiều cổng kết nối thông dụng như: USB Type-C, USB 2.0, Jack tai nghe 3.5 mm, USB 3.2 và HDMI đảm bảo bạn dễ dàng kết nối với các thiết bị ngoại vi khác nhau."
                     ]
-                }
+                },
+                "rating": []
             }
         ],
         "hp": [
@@ -426,7 +473,8 @@
                         "Ngoại hình tao nhã đến từ chiếc áo màu bạc tạo vẻ thanh lịch, tối giản. Khối lượng 1.7 kg cùng độ dày 17.9 mm mang tính di động cao, thuận tiện cùng bạn di chuyển đến khắp mọi nơi mà không chiếm quá nhiều không gian.",
                         "Hàng loạt cổng kết nối nằm dọc ở hai bên thân máy như: SuperSpeed USB A, SuperSpeed USB Type-C, Jack tai nghe 3.5 mm, HDMI và khe đọc thẻ nhớ SD đáp ứng đa nhu cầu khi cần sử dụng với chuột, bàn phím, màn hình rời,..."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP12",
@@ -464,7 +512,8 @@
                         "Laptop có màn hình 15.6 inch độ phân giải Full HD (1920 x 1080) cùng công nghệ BrightView và tấm nền IPS cho trải nghiệm hình ảnh rõ nét, góc nhìn được mở rộng, bảo vệ thị giác nếu bạn chơi game trong thời gian lâu.",
                         "Công nghệ Realtek High Definition Audio được tích hợp trong chiếc laptop học tập - văn phòng này mang đến những âm thanh to rõ, cho bạn đắm chìm trong thế giới thanh âm đầy thư giãn."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP13",
@@ -502,7 +551,8 @@
                         "Thiết kế bắt mắt với sự kết hợp hoàn hảo giữa lớp vỏ nhựa cùng nắp lưng bằng kim loại tạo vẻ sang trọng. Khối lượng chỉ vỏn vẹn 1.41 kg linh hoạt mang theo bên mình trong mọi tình huống.",
                         "Dọc hai bên laptop có các cổng thông dụng như: HDMI, Jack tai nghe 3.5 mm, SuperSpeed USB Type-C và SuperSpeed USB A."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP14",
@@ -540,7 +590,8 @@
                         "Thiết kế vỏ nhựa giúp chống trầy xước và bụi bẩn tốt hơn, sắc bạc sang trọng thu hút mọi ánh nhìn khi bạn sử dụng nơi đám đông. Khối lượng 1.7 kg không quá nặng đối với một chiếc laptop học tập - văn phòng để bạn mang theo máy di chuyển đến bất kỳ nơi nào.",
                         "Chiếc laptop HP cơ bản này có các cổng giao tiếp thông dụng như: USB Type-C, Jack tai nghe 3.5 mm, USB 3.2, HDMI."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP15",
@@ -578,7 +629,8 @@
                         "Các cổng kết nối được trang bị trên laptop như USB 3.1, HDMI, Jack tai nghe 3.5 mm, LAN (RJ45) và USB Type-C hỗ trợ kết nối với các thiết bị ngoại vi khác nhanh chóng và dễ dàng hơn.",
                         "Khối lượng chỉ vỏn vẹn 1.47 kg giúp bạn dễ dàng để vào balo và linh hoạt di chuyển đến đến trường lớp, công ty,... mà không quá cồng kềnh."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP16",
@@ -615,7 +667,8 @@
                         "Laptop HP cơ bản được hoàn thiện với gam màu bạc trung tính, vỏ nhựa cứng cáp cùng kiểu dáng hiện đại để bạn có thể mang theo làm việc ở bất cứ đâu. Với khối lượng 1.69 kg, laptop dễ dàng nằm gọn trong balo cho bạn mang theo đến trường học, cơ quan hay quán coffee.",
                         "Đầy đủ các cổng kết nối thông dụng dọc hai bên máy như: USB Type-C (chỉ hỗ trợ truyền dữ liệu), Jack tai nghe 3.5 mm, USB Type-A, HDMI và khe SD để thực hiện kết nối nhanh chóng khi cần thiết."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP17",
@@ -653,7 +706,8 @@
                         "Màn hình 15.6 inch độ phân giải Full HD (1920 x 1080) đi cùng công nghệ LED Backlit và Anti Glare cung cấp màu sắc chân thực, góc nhìn rộng, giúp người dùng có trải nghiệm giải trí tuyệt vời, phù hợp cho các công việc liên quan đến đồ họa, thiết kế và các tác vụ cần sử dụng màn hình lớn.",
                         "Công nghệ Realtek High Definition Audio giúp cải thiện chất lượng âm thanh trên laptop, cho người dùng trải nghiệm âm thanh tốt hơn khi xem phim, nghe nhạc hay gọi video."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP18",
@@ -691,7 +745,8 @@
                         "Công nghệ Realtek High Definition Audio mang đến chất âm sống động và được khuếch đại với tần số cao, đắm chìm bạn vào những trải nghiệm phim ảnh, âm nhạc tuyệt vời.",
                         "Máy được thiết kế với kiểu dáng thanh lịch và tinh tế, vỏ máy bằng nhựa và chiếu nghỉ tay được chế tác với kim loại cũng mang đến tính bền bỉ, chắc chắn nhất định trong quá trình sử dụng. Ngoài ra, khối lượng tổng thể 1.72 kg vẫn rất dễ dàng cho người dùng có thể mang theo laptop mọi lúc, mọi nơi."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP19",
@@ -729,7 +784,8 @@
                         "Chất âm to rõ cùng trình duyệt chỉnh sửa độ nét của âm thanh cho người dùng trải nghiệm giải trí phim ảnh, âm nhạc sống động nhờ hệ thống loa Realtek High Definition.",
                         "Mẫu laptop HP cơ bản này cũng có HD webcam hỗ trợ người dùng làm việc, học tập trực tuyến thuận tiện mà không phải tốn thời gian kết nối thêm với thiết bị bên ngoài."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP20",
@@ -767,7 +823,8 @@
                         "Laptop RAM 8 GB đảm nhiệm tốt khả năng vận hành các ứng dụng văn phòng như Word, Excel, PowerPoint,... cũng như nghe nhạc trên Spotify, YouTube và tìm kiếm thông tin trên Chrome. Bạn có thể lắp thêm một thanh RAM 8 GB khác nếu ngành học hoặc công việc đòi hỏi phải chạy những ứng dụng nặng.",
                         "Ổ cứng SSD 512 GB với người dùng là sinh viên như mình cũng đủ để lưu trữ mọi tài liệu học tập cũng như công việc, nhưng nếu có nhu cầu lưu trữ nhiều ứng dụng hoặc tài liệu cỡ nặng thì bạn hoàn toàn có thể tháo ổ SSD trong máy để lắp thanh khác tối đa 1 TB, thoả thích lưu trữ mà không lo hết dung lượng bộ nhớ."
                     ]
-                }
+                },
+                "rating": []
             }
         ],
         "lenovo": [
@@ -807,7 +864,8 @@
                         "HD webcam giúp người dùng tham gia các hoạt động học tập online hay làm việc trực tuyến một cách dễ dàng, bạn có thể sử dụng công tắc khóa camera để đóng mở webcam thủ công khi không sử dụng để đảm bảo an toàn cho thông tin hình ảnh. Bên cạnh đó, tính năng bảo mật vân tay hỗ trợ truy cập dễ dàng hơn chỉ với 1 chạm đơn giản.",
                         "Laptop Lenovo Ideapad được thiết kế với kiểu dáng hiện đại và phong cách sang trọng, khối lượng 1.65 kg của laptop vẫn dễ dàng cho người dùng mang theo mình mọi lúc mọi nơi phục vụ công việc."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP22",
@@ -845,7 +903,8 @@
                         "Công nghệ Dolby Audio cho một chất âm chi tiết có độ phân giải cao, đồng thời bạn cũng có thể thay đổi các thông số bass, treble,... tùy vào các hoạt động khác nhau để tận hưởng được trải nghiệm âm thanh tốt hơn.",
                         "Laptop Lenovo được thiết kế với kiểu dáng thanh lịch và sang trọng cho bạn có thể sử dụng ở bất cứ nơi đâu. Bên cạnh đó, khối lượng máy 1.65 kg thuận tiện cho bạn mang theo mình để phục vụ công việc."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP23",
@@ -883,7 +942,8 @@
                         "Full HD Webcam cung cấp cho bạn chất lượng hình ảnh rõ nét khi tham gia các hoạt động trực tuyến, làm việc online hay gọi video. Bên cạnh đó, hình ảnh và quyền riêng tư của bạn cũng được đảm bảo an toàn với công tắc khoá camera cho phép đóng mở thủ công bất kì lúc nào.",
                         "Laptop Lenovo IdeaPad được hoàn thiện với kiểu dáng hiện đại, lớp vỏ nhựa cao cấp cũng như đạt độ bền chuẩn quân đội MIL STD 810H đảm bảo độ bền chắc, phù hợp sử dụng ở bất cứ đâu. Thêm vào đó, dữ liệu hình ảnh và thông tin của người dùng cũng được bảo vệ an toàn hơn nhờ công nghệ TPM 2.0 và tính năng bảo mật vân tay"
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP24",
@@ -921,7 +981,8 @@
                         "Theo thông tin chính thức mà mình tìm hiểu được từ Lenovo, IdeaPad Slim 5 Light được trang bị hệ thống tản nhiệt nâng cao với 2 quạt làm mát và 2 ống dẫn nhiệt bố trí ở phía trên và dưới bo mạch chủ để giúp máy tản nhiệt tốt hơn. Trong quá trình trải nghiệm, cá nhân mình đánh giá hệ thống tản nhiệt của thiết bị hoạt động tốt khi sử dụng thông thường, máy không bị quá nóng và quạt cũng không gây ra tiếng ồn. Tất nhiên đối với một chiếc máy mỏng nhẹ, khi chạy các tác vụ đòi hỏi nhiều tài nguyên như làm việc với đồ họa hay chơi game thì máy tỏa nhiệt khá cao và quạt cũng kêu ồn hơn.",
                         "Tổng thể, Lenovo IdeaPad Slim 5 Light 14ABR8 R5 7530U (82XS002KVN) là một chiếc laptop tầm trung với nhiều trang bị tốt như màn hình Full HD, bộ vi xử lý mạnh mẽ, RAM và ổ cứng nhanh. Máy phù hợp cho đối tượng người dùng văn phòng, học sinh và sinh viên, cần một chiếc laptop để xử lý công việc, xem phim, lướt web và chơi game nhẹ."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP25",
@@ -959,7 +1020,8 @@
                         "Với thiết kế vỏ nhựa cùng khối lượng tương đối nhẹ - 1.65 kg, laptop Lenovo có tính di động cao, tiện lợi khi mang theo bên mình. Công tắc khóa camera, cảm biến vân tay và TPM 2.0 giúp bảo vệ thông tin cá nhân của người dùng.",
                         "Laptop được trang bị các cổng giao tiếp phổ biến như: HDMI, USB 2.0, USB 3.2, USB-C và Jack 3.5 mm, đáp ứng nhu cầu kết nối với nhiều thiết bị khác nhau."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP26",
@@ -997,7 +1059,8 @@
                         "Ngoài ra, card Intel Iris Xe Graphics còn hỗ trợ mình với các tác vụ đồ họa, hoàn thành các công việc chỉnh sửa hình ảnh trên Photoshop, AI,... hay thực hiện các bản trình chiếu với Capcut, Canva thì vẫn hoàn toàn đáp ứng tốt.",
                         "Laptop Lenovo IdeaPad 3 15ITL6 i7 1165G7 (82H803CUVN) được trang bị hiệu năng tương đối ổn định và phù hợp cho các công việc của bạn, đi kèm với đó là có một mức giá rất hợp lý. Đây chắc chắn sẽ là một sản phẩm đáng để bạn cân nhắc sắm cho mình."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP27",
@@ -1035,7 +1098,8 @@
                         "Những bạn nào còn phân vân về vấn đề nâng cấp để sử dụng lâu dài thì không cần phải lăn tăn nữa, cả RAM và SSD của máy đều có thể nâng cấp thêm, thoải mái để sử dụng trong bốn năm đại học và kể cả khi ra trường làm việc.",
                         "Nhìn chung Lenovo Ideapad 3 15IAU7 i3 1215U (82RK001MVN) sẽ phù hợp với đối tượng người dùng là học sinh, sinh viên và nhân viên văn phòng khi sở hữu phong cách thiết kế hiện đại cùng hiệu năng ổn định, có khả năng nâng cấp để sử dụng dài hạn."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP28",
@@ -1073,7 +1137,8 @@
                         "Touch Pad có độ lớn vừa phải cùng độ nhạy khá tốt nên khi kéo thả hay di chuyển con trỏ để thao tác thì cho mình cảm giác suôn sẻ. Tuy nhiên, với cổ tay nam hơi quá to so với bàn di chuột nên đôi khi mình cũng bị khựng lại khi thao tác, các bạn cũng gặp những tình trạng như vậy thì có thể lưu ý sắm thêm chuột bên ngoài để phục vụ công việc tốt hơn.",
                         "Các cổng kết nối của laptop thì cũng được trang bị khá đầy đủ với: USB 2.0, USB 3.2, HDMI, Jack 3.5 mm và USB Type-C. Bạn không cần phải quá lo lắng khi không có đầu chuyển đổi trong mỗi lần thuyết trình hay trong trường hợp phải ghép nối với các thiết bị khác nữa."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP29",
@@ -1111,7 +1176,8 @@
                         "Laptop có hệ thống loa kênh đôi cùng công nghệ âm thanh Dolby Audio khuếch đại âm thanh, mang đến những âm sắc to rõ để bạn hòa mình vào không gian giải trí sống động.",
                         "Bản lề mở 180 độ cho phép bạn điều chỉnh được nhiều góc nhìn, bảo mật tuyệt đối nhờ nền tảng TPM 2.0 mã hóa mật khẩu và công tắc khóa camera tránh sự nhòm ngó từ các nguồn không xác định."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP30",
@@ -1149,7 +1215,8 @@
                         "Công nghệ Dolby Audio mang đến một chất âm trong trong trẻo, chi tiết và được khuếch đại với tần số cao làm cho các trải nghiệm phim ảnh và âm nhạc của bạn trở nên thú vị hơn rất nhiều.",
                         "Laptop Lenovo Ideapad được hoàn thiện với chất liệu nhựa cao cấp cùng thiết kế thanh lịch phù hợp trong mọi môi trường. Máy có khối lượng 1.65 kg, vừa vặn nằm trong balo của người dùng mang theo mọi nơi."
                     ]
-                }
+                },
+                "rating": []
             }
         ],
         "acer": [
@@ -1189,7 +1256,8 @@
                         "Acer Aspire 3 có thiết kế vỏ nhựa cứng cáp với tông màu vàng đẹp mắt, cùng với khối lượng 1.7 kg giúp bạn dễ dàng di chuyển khi mang theo máy bên mình.",
                         "Laptop được trang bị đầy đủ các cổng giao tiếp như USB 2.0, USB 3.0, HDMI, Jack tai nghe 3.5 mm và cổng LAN, giúp bạn kết nối và truyền dữ liệu một cách dễ dàng với các thiết bị khác."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP32",
@@ -1227,7 +1295,8 @@
                         "Laptop Acer sở hữu công nghệ âm thanh Stereo speakers cho bạn tận hưởng chất âm to rõ, mạnh mẽ, thể hiện được từng chi tiết hay hành động của một bộ phim.",
                         "Laptop có thiết kế vỏ nhựa sơn màu vàng tạo vẻ sang trọng, khối lượng 1.7 kg vẫn có thể bỏ gọn vào balo mang theo đi học, đi làm."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP33",
@@ -1265,7 +1334,8 @@
                         "Mình không kỳ vọng nhiều về thời lượng pin của chiếc laptop Acer này nhưng máy lại cho mình thời gian sử dụng vượt trên sự mong đợi dù chỉ được trang bị pin 40 Wh, nhờ bộ vi xử lý Intel dòng U tối ưu giữa hiệu năng và điện năng tiêu thụ nên mình có thể sử dụng với đa tác vụ như Chrome, Line, Zalo, Word, xem YouTube,... mà máy vẫn trụ được khoảng 4 tiếng, đáp ứng cho mình dùng trong một buổi học.",
                         "Tóm lại thì Acer Aspire 3 A315 59 314F i3 (NX.K6TSV.002) sẽ phù hợp với dân văn phòng và sinh viên bởi lối thiết kế đơn giản, gọn nhẹ đồng thời sở hữu cấu hình mạnh mẽ trong tầm giá, màn hình sắc nét đủ dùng."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP34",
@@ -1303,7 +1373,8 @@
                         "",
                         ""
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP35",
@@ -1341,7 +1412,8 @@
                         "",
                         ""
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP36",
@@ -1379,7 +1451,8 @@
                         "",
                         ""
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP37",
@@ -1417,7 +1490,8 @@
                         "",
                         ""
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP38",
@@ -1455,7 +1529,8 @@
                         "",
                         ""
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP39",
@@ -1493,7 +1568,8 @@
                         "",
                         ""
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP40",
@@ -1531,7 +1607,8 @@
                         "",
                         ""
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP41",
@@ -1569,7 +1646,8 @@
                         "Acer Aspire 3 có thiết kế vỏ nhựa cứng cáp với tông màu vàng đẹp mắt, cùng với khối lượng 1.7 kg giúp bạn dễ dàng di chuyển khi mang theo máy bên mình.",
                         "Laptop được trang bị đầy đủ các cổng giao tiếp như USB 2.0, USB 3.0, HDMI, Jack tai nghe 3.5 mm và cổng LAN, giúp bạn kết nối và truyền dữ liệu một cách dễ dàng với các thiết bị khác."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP42",
@@ -1607,7 +1685,8 @@
                         "Laptop Acer sở hữu công nghệ âm thanh Stereo speakers cho bạn tận hưởng chất âm to rõ, mạnh mẽ, thể hiện được từng chi tiết hay hành động của một bộ phim.",
                         "Laptop có thiết kế vỏ nhựa sơn màu vàng tạo vẻ sang trọng, khối lượng 1.7 kg vẫn có thể bỏ gọn vào balo mang theo đi học, đi làm."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP43",
@@ -1645,7 +1724,8 @@
                         "Mình không kỳ vọng nhiều về thời lượng pin của chiếc laptop Acer này nhưng máy lại cho mình thời gian sử dụng vượt trên sự mong đợi dù chỉ được trang bị pin 40 Wh, nhờ bộ vi xử lý Intel dòng U tối ưu giữa hiệu năng và điện năng tiêu thụ nên mình có thể sử dụng với đa tác vụ như Chrome, Line, Zalo, Word, xem YouTube,... mà máy vẫn trụ được khoảng 4 tiếng, đáp ứng cho mình dùng trong một buổi học.",
                         "Tóm lại thì Acer Aspire 3 A315 59 314F i3 (NX.K6TSV.002) sẽ phù hợp với dân văn phòng và sinh viên bởi lối thiết kế đơn giản, gọn nhẹ đồng thời sở hữu cấu hình mạnh mẽ trong tầm giá, màn hình sắc nét đủ dùng."
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP44",
@@ -1683,7 +1763,8 @@
                         "",
                         ""
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP45",
@@ -1721,7 +1802,8 @@
                         "",
                         ""
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP46",
@@ -1759,7 +1841,8 @@
                         "",
                         ""
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP47",
@@ -1797,7 +1880,8 @@
                         "",
                         ""
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP48",
@@ -1835,7 +1919,8 @@
                         "",
                         ""
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP49",
@@ -1873,7 +1958,8 @@
                         "",
                         ""
                     ]
-                }
+                },
+                "rating": []
             },
             {
                 "id": "SP50",
@@ -1911,7 +1997,8 @@
                         "",
                         ""
                     ]
-                }
+                },
+                "rating": []
             }
         ]
     },
@@ -1930,7 +2017,8 @@
                 ],
                 "price": 100000,
                 "old_price": 150000,
-                "quantity": 100
+                "quantity": 100,
+                "rating": []
             },
             {
                 "id": "SP52",
@@ -1944,7 +2032,8 @@
                 ],
                 "price": 100000,
                 "old_price": 150000,
-                "quantity": 100
+                "quantity": 100,
+                "rating": []
             },
             {
                 "id": "SP53",
@@ -1959,7 +2048,8 @@
                 ],
                 "price": 1350000,
                 "old_price": 1690000,
-                "quantity": 100
+                "quantity": 100,
+                "rating": []
             },
             {
                 "id": "SP54",
@@ -1974,7 +2064,8 @@
                 ],
                 "price": 450000,
                 "old_price": 550000,
-                "quantity": 100
+                "quantity": 100,
+                "rating": []
             },
             {
                 "id": "SP55",
@@ -1989,7 +2080,8 @@
                 ],
                 "price": 780000,
                 "old_price": 920000,
-                "quantity": 100
+                "quantity": 100,
+                "rating": []
             },
             {
                 "id": "SP56",
@@ -2004,7 +2096,8 @@
                 ],
                 "price": 1990000,
                 "old_price": 2490000,
-                "quantity": 100
+                "quantity": 100,
+                "rating": []
             },
             {
                 "id": "SP57",
@@ -2019,7 +2112,8 @@
                 ],
                 "price": 450000,    
                 "old_price": 750000,
-                "quantity": 100
+                "quantity": 100,
+                "rating": []
             },
             {
                 "id": "SP58",
@@ -2034,7 +2128,8 @@
                 ],
                 "price": 640000,    
                 "old_price": 990000,
-                "quantity": 100
+                "quantity": 100,
+                "rating": []
             },
             {
                 "id": "SP59",
@@ -2049,7 +2144,8 @@
                 ],
                 "price": 314000,    
                 "old_price": 419000,
-                "quantity": 100
+                "quantity": 100,
+                "rating": []
             },
             {
                 "id": "SP60",
@@ -2064,7 +2160,8 @@
                 ],
                 "price": 1020000,    
                 "old_price": 1190000,
-                "quantity": 100
+                "quantity": 100,
+                "rating": []
             }
         ],
         "keybroad": [
@@ -2081,7 +2178,8 @@
                 ],
                 "price": 531000,
                 "old_price": 666000,
-                "quantity": 100
+                "quantity": 100,
+                "rating": []
             },
             {
                 "id": "SP62",
@@ -2096,7 +2194,8 @@
                 ],
                 "price": 495000,
                 "old_price": 550000,
-                "quantity": 100
+                "quantity": 100,
+                "rating": []
             },
             {
                 "id": "SP63",
@@ -2111,7 +2210,8 @@
                 ],
                 "price": 1000000,
                 "old_price": 1390000,
-                "quantity": 100
+                "quantity": 100,
+                "rating": []
             },
             {
                 "id": "SP64",
@@ -2126,7 +2226,8 @@
                 ],
                 "price": 450000,
                 "old_price": 500000,
-                "quantity": 100
+                "quantity": 100,
+                "rating": []
             },
             {
                 "id": "SP65",
@@ -2141,7 +2242,8 @@
                 ],
                 "price": 2000000,
                 "old_price": 3640000,
-                "quantity": 100
+                "quantity": 100,
+                "rating": []
             },
             {
                 "id": "SP66",
@@ -2156,7 +2258,8 @@
                 ],
                 "price": 1950000,
                 "old_price": 3550000,
-                "quantity": 100
+                "quantity": 100,
+                "rating": []
             },
             {
                 "id": "SP67",
@@ -2171,7 +2274,8 @@
                 ],
                 "price": 340000,
                 "old_price": 390000,
-                "quantity": 100
+                "quantity": 100,
+                "rating": []
             },
             {
                 "id": "SP68",
@@ -2186,7 +2290,8 @@
                 ],
                 "price": 630000,
                 "old_price": 790000,
-                "quantity": 100
+                "quantity": 100,
+                "rating": []
             },
             {
                 "id": "SP69",
@@ -2201,7 +2306,8 @@
                 ],
                 "price": 2000000,
                 "old_price": 2500000,
-                "quantity": 100
+                "quantity": 100,
+                "rating": []
             },
             {
                 "id": "SP70",
@@ -2216,7 +2322,8 @@
                 ],
                 "price": 1340000,
                 "old_price": 1490000,
-                "quantity": 100
+                "quantity": 100,
+                "rating": []
             }
         ],
         "gamepad": [
@@ -2228,7 +2335,8 @@
                 ],
                 "price": 525000,
                 "old_price": 750000,
-                "quantity": 100
+                "quantity": 100,
+                "rating": []
             },
             {
                 "id": "SP72",
@@ -2238,7 +2346,8 @@
                 ],
                 "price": 760000,
                 "old_price": 1090000,
-                "quantity": 100
+                "quantity": 100,
+                "rating": []
             },
             {
                 "id": "SP73",
@@ -2248,7 +2357,8 @@
                 ],
                 "price": 460000,
                 "old_price": 590000,
-                "quantity": 100
+                "quantity": 100,
+                "rating": []
             }
         ]
     }

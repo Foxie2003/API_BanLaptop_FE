@@ -151,6 +151,10 @@
     background-color: #fb6e2e;
     border-radius: 10px;
 }
+.rating-list {
+    overflow: auto;
+    max-height: 500px;
+}
 .rating-item {
     margin-top: 10px;
 }
@@ -538,3 +542,89 @@
     color: #ff0020;
 }
 /* END HOT DEAL */
+
+/* RATING BOX */
+.rating-box {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    border-radius: 6px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.rating-box-content {
+    width: 60%;
+    height: 94%;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.rating-box-content > label {
+    font-size: 20px;
+    align-self: start;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.rating-box-content > label > a {
+    font-size: 16px;
+}
+.rating-box-header {
+    font-size: 18px;
+    font-weight: bold;
+}
+.rating-box-product-img {
+    width: 240px;
+    margin-top: 10px;
+}
+.rating-box-product-name {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.rating-box-rate-panel {
+    display: flex;
+}
+.rate-panel-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.rate-panel-item > i {
+    font-size: 60px;
+    color: #FF9F00;
+    margin: 10px;
+}
+.rate-panel-item > p {
+    font-size: 18px;
+    color: #666;
+}
+.rating-comment {
+    width: 96%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#btn-rating {
+    font-size: 15px;
+    background: none;
+    padding: 16px 0;
+    width: 96%;
+    margin: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    color: #fff;
+    background-color: #2f80ed;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+/* END RATING BOX */

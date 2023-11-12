@@ -21,6 +21,41 @@
         <title id="title">Some thing</title>
     </head>
     <body>
+        <!--        RATING BOX        -->
+        <div class="rating-box">
+            <!-- <div class="rating-box-content">
+                <i class="fa-solid fa-xmark" style="height: 0; align-self: flex-end; font-size: 24px;" onclick="hideRatingBox();"></i>
+                <div class="rating-box-header">Đánh giá sản phẩm</div>
+                <img class="rating-box-product-img" src="./assets/img/asus-tuf-gaming-f15-fx506he-i7-hn378w-thumb-600x600.jpg"></img>
+                <div class="rating-box-product-name">Laptop HP 15s fq5229TU i3 1215U/8GB/512GB/Win11 (8U237PA)</div>
+                <div class="rating-box-rate-panel">
+                    <div class="rate-panel-item" onmouseover="starMouseOver(1)">
+                        <i class="fa-regular fa-star"></i>
+                        <p>Rất tệ</p>
+                    </div>
+                    <div class="rate-panel-item" onmouseover="starMouseOver(2)">
+                        <i class="fa-regular fa-star"></i>
+                        <p>Tệ</p>
+                    </div>
+                    <div class="rate-panel-item" onmouseover="starMouseOver(3)">
+                        <i class="fa-regular fa-star"></i>
+                        <p>Tạm ổn</p>
+                    </div>
+                    <div class="rate-panel-item" onmouseover="starMouseOver(4)">
+                        <i class="fa-regular fa-star"></i>
+                        <p>Tốt</p>
+                    </div>
+                    <div class="rate-panel-item" onmouseover="starMouseOver(5)">
+                        <i class="fa-regular fa-star"></i>
+                        <p>Rất tốt</p>
+                    </div>
+                </div>
+                <label> Nội dung: </label>
+                <textarea rows="8" placeholder="Mời bạn chia sẻ thêm cảm nhận" class="rating-comment"></textarea>
+                <label style="font-size: 16px;"><input type="checkbox" id="chk-rating" onchange="checkBoxRating()"> Tôi đồng ý với <a href="#">Quy định đánh giá</a> & <a href="#">Chính sách bảo mật thông tin</a>: </label>
+                <button id="btn-rating" onclick="sendRating();">Gửi đánh giá</button>
+            </div> -->
+        </div>
         <!--        QUESTION BOX         -->
         <div id="question-panel">
             <!-- <div class="question-box">
@@ -93,7 +128,7 @@
                     <i class="fa-solid fa-star fa-xs" style="color: #fb6e2e;"></i>
                     <i class="fa-solid fa-star fa-xs" style="color: #fb6e2e;"></i>
                     <i class="fa-solid fa-star fa-xs" style="color: #e0e0e0;"></i>
-                    <span style="font-size: 13px; color: #2f80ed;">69 đánh giá</span>
+                    <span style="font-size: 13px; color: #2f80ed;" class="rating-count">69 đánh giá</span>
                 </div>
             </div>
             </div>
@@ -194,7 +229,7 @@
                                 <i class="fa-solid fa-star fa-xs" style="color: #fb6e2e;"></i>
                                 <i class="fa-solid fa-star fa-xs" style="color: #e0e0e0;"></i>
                                 <br>
-                                <span style="font-size: 13px; color: #2f80ed;">69 đánh giá</span>
+                                <span style="font-size: 13px; color: #2f80ed;" class="rating-count">69 đánh giá</span>
                             </div>
                             <div class="rating-panel-right">
                                 <div class="rating-bar">
@@ -245,7 +280,7 @@
                             </div>
                         </div>
                         <div class="rating-list">
-                            <div class="rating-item">
+                            <!-- <div class="rating-item">
                                 <div class="rating-item-name">Nam cá heo</div>
                                 <div class="rating-item-rate">
                                     <i class="fa-solid fa-star fa-xs" style="color: #fb6e2e;"></i>
@@ -280,11 +315,11 @@
                                     <span>Hữu ích</span>
                                     <div>20:00 15/10/2023</div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="rating-nav">
-                            <button id="btn-showMoreRating">Xem 69 đánh giá</button>
-                            <button id="btn-WriteRating">Viết đánh giá</button>
+                            <button id="btn-showMoreRating" onclick="showAllRating();">Xem 69 đánh giá</button>
+                            <button id="btn-WriteRating" onclick="showRatingBox();">Viết đánh giá</button>
                         </div>
                     </div>
                 </div>
@@ -474,6 +509,7 @@
             loadPrice();
             showDescBody();
             loadSpec();
+            showRating();
             showLoginData();
             showProductInCart();
             loadAcessoryProduct();

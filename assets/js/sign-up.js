@@ -73,3 +73,9 @@ function signIn(e) {
         showMessage("Mật khẩu hoặc tài khoản sai", "fail-message", '<i class="fa-solid fa-triangle-exclamation"></i>');
     }
 }
+
+function checkLogin() {
+    if (localStorage.getItem("loginData") != null) {
+        window.location.href = "home-page.html";
+    }
+}

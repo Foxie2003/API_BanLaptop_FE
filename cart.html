@@ -238,7 +238,7 @@
             </div>
             <form id="user-form">
                 <div id="gender">
-                    <input type="radio" value="male" name="gender" style="margin-left: 0;">
+                    <input type="radio" value="male" checked name="gender" style="margin-left: 0;">
                     <label>Anh</label>
                     <input type="radio" value="female" name="gender">
                     <label>Chị</label>
@@ -247,17 +247,28 @@
                     <label for="name">Họ và tên:</label>
                     <input type="text" id="name" placeholder="Họ và tên">
                     <label for="phone">SĐT:</label>
-                    <input type="text" id="phone" placeholder="+84">
+                    <input type="number" id="phone" placeholder="+84">
                 </div>
                 <div style="margin-top: 16px; font-size: 18px;">CHỌN CÁCH THỨC NHẬN HÀNG</div>
                 <div id="ship-option">
-                    <input type="radio" value="giao" name="ship" style="margin-left: 0;">
+                    <input type="radio" value="giao" checked name="ship" style="margin-left: 0;">
                     <label>Giao tận nơi</label>
                     <input type="radio" value="nhan" name="ship" >
                     <label>Nhận tại siêu thị</label>
                 </div>
                 <label for="address">Địa chỉ:</label>
-                <input type="text" id="address" placeholder="Địa chỉ">
+                <!-- <input type="text" id="address" placeholder="Địa chỉ"> -->
+                <select class="address" id="city" aria-label=".form-select-sm">
+                <option value="" selected>Chọn tỉnh thành</option>           
+                </select>
+                          
+                <select class="address" id="district" aria-label=".form-select-sm">
+                <option value="" selected>Chọn quận huyện</option>
+                </select>
+                
+                <select class="address" id="ward" aria-label=".form-select-sm">
+                <option value="" selected>Chọn phường xã</option>
+                </select>  
                 <input type="text" id="other-request" placeholder="Yêu cầu khác (Không bắt buộc)" style="margin-bottom: 10px;">
                 <label for="offer">Sử dụng mã giảm giá:</label>
                 <input type="text" id="offer" placeholder="Mã giảm giá">
@@ -269,7 +280,7 @@
                         </div>
                     </div>
                 </div>
-                <button id="order">
+                <button id="order" onclick="createBill()">
                     <b>ĐẶT HÀNG</b>
                 </button>
                 <button id="installment">
@@ -310,5 +321,48 @@
         loadCartData();
         showLoginData();
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script>
+	var citis = document.getElementById("city");
+var districts = document.getElementById("district");
+var wards = document.getElementById("ward");
+var Parameter = {
+  url: "https://raw.githubusercontent.com/kenzouno1/DiaGioiHanhChinhVN/master/data.json", 
+  method: "GET", 
+  responseType: "application/json", 
+};
+var promise = axios(Parameter);
+promise.then(function (result) {
+  renderCity(result.data);
+});
+
+function renderCity(data) {
+  for (const x of data) {
+    citis.options[citis.options.length] = new Option(x.Name, x.Id);
+  }
+  citis.onchange = function () {
+    district.length = 1;
+    ward.length = 1;
+    if(this.value != ""){
+      const result = data.filter(n => n.Id === this.value);
+
+      for (const k of result[0].Districts) {
+        district.options[district.options.length] = new Option(k.Name, k.Id);
+      }
+    }
+  };
+  district.onchange = function () {
+    ward.length = 1;
+    const dataCity = data.filter((n) => n.Id === citis.value);
+    if (this.value != "") {
+      const dataWards = dataCity[0].Districts.filter(n => n.Id === this.value)[0].Wards;
+
+      for (const w of dataWards) {
+        wards.options[wards.options.length] = new Option(w.Name, w.Id);
+      }
+    }
+  };
+}
+	</script>
 </body>
 </html>

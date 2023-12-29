@@ -89,3 +89,68 @@ function btnDelete(id) {
     }
 }
 
+function saveBillData() {
+    // Lấy thông tin từ các trường form
+    var name = document.getElementById('name').value;
+    var phone = document.getElementById('phone').value;
+    var city = document.getElementById('city').value;
+    var district = document.getElementById('district').value;
+    var ward = document.getElementById('ward').value;
+    var gender = document.querySelector('input[name="gender"]:checked').value;
+    var shipOption = document.querySelector('input[name="ship"]:checked').value;
+    var otherRequest = document.getElementById('other-request').value;
+    var offer = document.getElementById('offer').value;
+
+    var orderData = {
+        name: name,
+        phone: phone,
+        city: city,
+        district: district,
+        ward: ward,
+        gender: gender,
+        shipOption: shipOption,
+        otherRequest: otherRequest,
+        offer: offer
+    };
+
+    var ordersArray = JSON.parse(localStorage.getItem('bills')) || [];
+    ordersArray.push(orderData);
+    localStorage.setItem('bills', JSON.stringify(ordersArray));
+}
+
+function checkBillInfo() {
+     var name = document.getElementById('name').value;
+     var phone = document.getElementById('phone').value;
+     var city = document.getElementById('city').value;
+     var district = document.getElementById('district').value;
+     var ward = document.getElementById('ward').value;
+
+     if (name === '' || phone === '' || city === '' || district === '' || ward === '') {
+         return false;
+     }
+
+     var genderMale = document.getElementById('gender-male').checked;
+     var genderFemale = document.getElementById('gender-female').checked;
+     if (!genderMale && !genderFemale) {
+         alert('Vui lòng chọn giới tính.');
+         return false;
+     }
+
+     var shipGiao = document.getElementById('ship-giao').checked;
+     var shipNhan = document.getElementById('ship-nhan').checked;
+     if (!shipGiao && !shipNhan) {
+         alert('Vui lòng chọn cách thức nhận hàng.');
+         return false;
+     }
+
+     return true;
+}
+
+function createBill() {
+    event.preventDefault();
+    if (!checkBillInfo()) {
+        alert('Vui lòng điền đầy đủ thông tin và chọn các lựa chọn.');
+        return;
+    }
+    saveBillData();
+}

@@ -69,9 +69,14 @@ body, html {
 }
 .show-menu {
     animation: 0.4s show-menu linear;
+    color: #000000;
 }
 .hide-menu {
     animation: 0.4s hide-menu linear;
+    color: transparent;
+}
+.hide-menu i {
+    color: #000000;
 }
 @keyframes show-menu {
     0% {

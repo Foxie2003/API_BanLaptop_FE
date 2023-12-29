@@ -143,10 +143,11 @@ input::-webkit-inner-spin-button {
     justify-content: space-between;
     align-items: center;
 }
-#name-phone input, #address, #other-request, #offer {
+#name-phone input, .address, #other-request, #offer {
     padding: 10px 6px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 16px;
 }
 #ship-option {
     margin: 10px 0;
@@ -155,7 +156,7 @@ input::-webkit-inner-spin-button {
 #ship-option input {
     margin: 0 5px 0 10px;
 }
-#address, #other-request, #offer {
+.address, #other-request, #offer {
     width: 100%;
     margin-top: 6px;
 }

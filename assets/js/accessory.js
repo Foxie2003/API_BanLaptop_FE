@@ -4,7 +4,6 @@ const format = new Intl.NumberFormat({ maximumSignificantDigits: 3 });
 
 
 function loadInnerAccessory(sanpham) {
-    console.log((sanpham.old_price));
     document.getElementById("products").innerHTML
         += `<div class="product-item col-2-4 col-s-6" onclick="showDetails('${sanpham.id.trim()}')">
         <div class="sale-percent">
@@ -55,4 +54,49 @@ function countProduct() {
         }
     }
     return count;
+}
+
+function selectAccessoryType(button) {
+    var img = button.querySelector("img");
+    if(button.classList.contains("item-selected")) {
+        button.classList.remove("item-selected");
+        img.style.border = "";
+    }
+    else {
+        var productItem = document.querySelectorAll(".product-type-item");
+        productItem.forEach(item => {
+            var productItemImg = item.querySelector("img");
+            item.classList.remove("item-selected"); 
+            productItemImg.style.border = "";
+        });
+        button.classList.add("item-selected");
+        img.style.border = "1px solid #288ad6";
+    }
+}
+
+function loadMouse() {
+    const products = JSON.parse(localStorage.getItem("sanpham"));
+        document.getElementById("products").innerHTML = "";
+        document.getElementById("showMoreProduct").style.display = "none";
+        products.phukien.mouse.forEach(sanpham => {
+        loadInnerProduct(sanpham);
+    });
+}
+
+function loadKeybroad() {
+    const products = JSON.parse(localStorage.getItem("sanpham"));
+        document.getElementById("products").innerHTML = "";
+        document.getElementById("showMoreProduct").style.display = "none";
+        products.phukien.keybroad.forEach(sanpham => {
+        loadInnerProduct(sanpham);
+    });
+}
+
+function loadGamepad() {
+    const products = JSON.parse(localStorage.getItem("sanpham"));
+        document.getElementById("products").innerHTML = "";
+        document.getElementById("showMoreProduct").style.display = "none";
+        products.phukien.gamepad.forEach(sanpham => {
+        loadInnerProduct(sanpham);
+    });
 }

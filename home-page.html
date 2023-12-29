@@ -17,6 +17,19 @@
     <script src="./assets/js/slick.js"></script>
     <title>Home page</title>
 </head>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/65530f6e958be55aeaaf60b0/1hf678itd';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+</script>
+<!--End of Tawk.to Script-->
 <body>
     <!--        SLIDE SHOW (Top)       -->
     <div class="slide-show">
@@ -26,7 +39,7 @@
     </div>
     <!--        TOP HEADER       -->
     <div class="top-header">
-        <img src="./assets/img/logo/horizontal-logo.png" alt="" id="top-logo">
+        <img src="./assets/img/logo/horizontal-logo.png" alt id="top-logo" onclick="window.location.href = 'home-page.html';">
         <div id="top-search">
             <input type="search" id="top-search-input" placeholder="Bạn đang tìm...">
             <button id="top-search-button" onclick="window.location.href = 'search.html?value=' + document.getElementById('top-search-input').value">
@@ -81,16 +94,16 @@
             <div class="top-sub-menu">
                 <i class="fa-solid fa-caret-up fa-lg"></i>
                 <div class="top-sub-menu-panel">
-                    <div class="top-sub-menu-item">
+                    <div class="top-sub-menu-item" onclick="loadHpProduct();">
                         Laptop HP
                     </div>
-                    <div class="top-sub-menu-item">
+                    <div class="top-sub-menu-item" onclick="loadAsusProduct();">
                         Laptop Asus
                     </div>
-                    <div class="top-sub-menu-item">
+                    <div class="top-sub-menu-item" onclick="loadLenovoProduct();">
                         Laptop Lenovo
                     </div>
-                    <div class="top-sub-menu-item">
+                    <div class="top-sub-menu-item" onclick="loadAcerProduct();">
                         Laptop Acer
                     </div>
                     <div class="top-sub-menu-item">

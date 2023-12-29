@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/sign-up.css">
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/product-details.css">
+    <link href="./assets/font/fontawesome-free-6.4.2-web/css/fontawesome.css" rel="stylesheet">
+    <link href="./assets/font/fontawesome-free-6.4.2-web/css/brands.css" rel="stylesheet">
+    <link href="./assets/font/fontawesome-free-6.4.2-web/css/solid.css" rel="stylesheet">
+    <script src="./assets/js/accessory-management.js"></script>
+    <script src="./assets/js/product-details.js"></script>
+    <title>Admin</title>
+</head>
+<body>
+    <!--        QUESTION BOX         -->
+    <div id="question-panel">
+        <!-- <div class="question-box">
+            <div class="question-title">Bạn chưa đăng nhập ! <i class="fa-solid fa-xmark"></i></div>
+            <div class="question-content">
+                <div class="question-icon"><i class="fa-regular fa-circle-question"></i></div>
+                <div class="question">Bạn có muốn chuyển hướng đến trang đăng nhập không?</div>
+            </div>
+            <div class="question-button-panel">
+                <div class="question-button" id="question-button-yes">Có</div>
+                <div class="question-button" id="question-button-no">Không</div>
+            </div>
+        </div> -->
+    </div>
+    <!--       MESSAGE BOX        -->
+    <div id="message-panel">
+        <!-- <div class="message-timeout" id="addSuccess">
+            <div class="message-box">
+                <div class="message-icon"><i class="fa-solid fa-cart-plus"></i></div>
+                <div class="message">Thêm vào giỏ hàng thành công</div>
+                <div class="message-button"><i class="fa-regular fa-circle-xmark"></i></div>
+            </div>
+            <div class="timeout"></div>
+        </div> -->
+    </div>
+    <!--        SHOW PRODUCT DETAILS         -->
+    <div class="product-detail">
+        <i class="fa-solid fa-rectangle-xmark" onclick='document.querySelector(".product-detail").style.display = "none";'></i>
+        <iframe class="product-detail-panel" src="" id="product-iframe"></iframe>
+    </div>
+    <!--        SHOW EDIT DETAILS        -->
+    <div class="edit-detail">
+    </div>
+    <!--        SHOW ADD PRODUCT        -->
+    <div class="add-product">
+        
+    </div>
+    <!--        ADMIN HEADER         -->
+    <div class="admin-header">
+        <div class="admin-header-left">
+            <div class="admin-header-logo">
+                <img src="./assets/img/logo/admin-page-logo.png"></img>
+            </div>
+            <div class="admin-header-button" onclick="showMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="admin-header-right">
+            <div class="admin-header-button">
+                <i class="fa-solid fa-gear"></i>
+            </div>
+            <div class="admin-header-button">
+                <i class="fa-solid fa-bell"></i>
+            </div>
+            <div class="admin-header-button">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="admin-header-button" onclick="toggleFullScreen()">
+                <i class="fa-solid fa-expand"></i>
+            </div>
+            <div class="admin-header-profile">
+                <img src="./assets/img/logo/admin-profile-pic.jfif" alt="">
+                <div class="header-profile-info">
+                    <div class="profile-info-name">Foxie2003</div>
+                    <div class="profile-info-email">foxie@gmail.com</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--        ADMIN PANEL          -->
+    <div class="admin-panel">
+        <div class="admin-panel-left show-menu" id="menu">
+            <div class="panel-left-item">
+                <div class="left-item-content" id="home-panel" onclick="showSubItems('home-sub-panel');">
+                    <i class="fa-solid fa-house"></i>
+                    <div>Bảng điều khiển</div>
+                    <i class="fa-solid fa-angle-down" style="margin-left: auto;"></i>
+                </div>
+                <div class="left-sub-item-panel" id="home-sub-panel">
+                    <div class="left-sub-item">
+                        <i class="fa-solid fa-minus"></i>
+                        <div>Dark theme</div>
+                    </div>
+                    <div class="left-sub-item">
+                        <i class="fa-solid fa-minus"></i>
+                        <div>Light theme</div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-left-item">
+                <div class="left-item-content" id="product-panel" onclick="showSubItems('product-sub-panel');">
+                    <i class="fa-solid fa-box-open"></i>
+                    <div>Quản lý sản phẩm</div>
+                    <i class="fa-solid fa-angle-down" style="margin-left: auto;"></i>
+                </div>
+                <div class="left-sub-item-panel" id="product-sub-panel">
+                    <div class="left-sub-item">
+                        <i class="fa-solid fa-minus"></i>
+                        <div>Laptop</div>
+                    </div>
+                    <div class="left-sub-item">
+                        <i class="fa-solid fa-minus"></i>
+                        <div>Phụ kiện</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="admin-panel-right">
+            <div class="admin-panel-right-header" id="print">
+                Quản lý sản phẩm
+            </div>
+            <div class="admin-table-header">
+                <div class="table-header-content">
+                    <i class="fa-solid fa-chevron-right"></i>
+                    Quản lý phụ kiện
+                </div>
+                <div style="display: flex;">
+                    <div class="table-button">
+                        <i class="fa-solid fa-print"></i>
+                        In danh sách
+                    </div>
+                    <div class="table-button" onclick="showAddProduct();">
+                        <i class="fa-solid fa-plus"></i>
+                        Thêm sản phẩm
+                    </div>
+                </div>
+            </div>
+            <table class="admin-table" id="admin-table">
+                <tr>
+                    <th>
+                        ID sản phẩm
+                    </th>
+                    <th>
+                        Tên
+                    </th>
+                    <th>
+                        Ảnh thumbnail
+                    </th>
+                    <th>
+                        Giá mới
+                    </th>
+                    <th>
+                        Giá cũ
+                    </th>
+                    <th>
+                        Số lượng
+                    </th>
+                    <th>
+                        Chức năng
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        SP31
+                    </td>
+                    <td style="max-width: 500px; overflow: hidden; text-overflow: ellipsis;">
+                        Laptop Acer Aspire 3 A315 58 589K i5 1135G7/8GB/256GB/Win11 (NX.AM0SV.008)
+                    </td>
+                    <td>
+                        <img class="table-image" src="./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-thumb-600x600.jpg" alt="">
+                    </td>
+                    <td>
+                        1000000
+                    </td>
+                    <td>
+                        9999999
+                    </td>
+                    <td>
+                        100
+                    </td>
+                    <td>
+                        <div style="display: flex;">
+                            <div class="table-button">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                            <div class="table-button">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </div>
+                            <div class="table-button">
+                                <i class="fa-solid fa-trash"></i>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div class="table-nav">
+                <div class="table-button" onclick="setCurrentPage(1);">
+                    <i class="fa-solid fa-angles-left"></i>
+                </div>
+                <div class="table-button" onclick="setCurrentPage(getCurrentPage() - 1);">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <input type="text" id="currentPage">
+                <div id="totalPage">/ 1</div>
+                <div class="table-button" onclick="setCurrentPage(getCurrentPage() + 1);">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                <div class="table-button"onclick="setCurrentPage(getTotalPage());">
+                    <i class="fa-solid fa-angles-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        showDataTableAccessory();
+    </script>
+</body>
+</html>

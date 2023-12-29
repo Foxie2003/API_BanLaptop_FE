@@ -407,13 +407,12 @@ function editDetals() {
     });
     var descBody = [];
     productBody.value.split("\n").forEach(item => {
-        alert("push")
         descBody.push(item);
     });
 
     editLaptopObj(createLaptopObj(productID.value, productName.value, productVideo.value,
         imagesData, productNewPrice.value.replaceAll(",", ""), productOldPrice.value.replaceAll(",", ""),
-        productQuantity.value,
+        productQuantity.value.replaceAll(",", ""),
         createLaptopSpecsObj(productCpu.value, productRam.value, productDisk.value, productScreen.value,
             productGpu.value, productPort.value, productOS.value, productSize.value),
             createLaptopDescsObj(productHeader.value, descBody)), productID.value);

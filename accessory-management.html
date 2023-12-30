@@ -39,6 +39,9 @@
             <div class="timeout"></div>
         </div> -->
     </div>
+    <!--        SHOW SEARCH BOX          -->
+    <div class="search-box">
+    </div>
     <!--        SHOW PRODUCT DETAILS         -->
     <div class="product-detail">
         <i class="fa-solid fa-rectangle-xmark" onclick='document.querySelector(".product-detail").style.display = "none";'></i>
@@ -48,8 +51,7 @@
     <div class="edit-detail">
     </div>
     <!--        SHOW ADD PRODUCT        -->
-    <div class="add-product">
-        
+    <div class="add-product">   
     </div>
     <!--        ADMIN HEADER         -->
     <div class="admin-header">
@@ -145,6 +147,10 @@
                             Nhỏ
                         </option>
                     </select>
+                    <div class="table-button" onclick="showSearchProduct()">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Tìm kiếm
+                    </div>
                     <div class="table-button">
                         <i class="fa-solid fa-print"></i>
                         In danh sách

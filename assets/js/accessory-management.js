@@ -62,6 +62,8 @@ var sortByQuantity = 0;
 function getAccessoriesData() {
     var storage = JSON.parse(localStorage.getItem("sanpham"));
     var accessories = [];
+    var searchInput = document.querySelector("#search-product-name");
+    var searchValue = searchInput != null ? searchInput.value.trim().toUpperCase() : "";
     for (const band in storage.phukien) {
         storage.phukien[band].forEach(product => {
             accessories.push(product);
@@ -161,6 +163,13 @@ function getAccessoriesData() {
             const quantityB = b.quantity;
             return quantityB - quantityA;
         });
+    }
+
+    if(searchValue != "") {
+        const filteredAccessories = accessories.filter(accessorie =>
+            accessorie.name.trim().toUpperCase().includes(searchValue)
+        );
+        return filteredAccessories;
     }
     return accessories;
 }
@@ -394,6 +403,32 @@ function setImageLink(button) {
         link = "./assets/img/" + selectedFile.name;
         showImageAddProduct(button, link);
     }
+}
+
+function showSearchProduct() {
+    var panel = document.querySelector(".search-box");
+    panel.innerHTML =
+        `<i class="fa-solid fa-rectangle-xmark" onclick='hideSearchProduct()'></i>
+        <div class="search-box-panel">
+            <div class="add-product-header">
+                Tìm kiếm sản phẩm
+            </div>
+            <form class="add-product-form">
+                <label for="product-name">Tên:</label>
+                <input type="text" id="search-product-name" placeholder="Chuột Không dây Rapoo B2">
+                <div class="detail-nav">
+                    <button class="form-button" onclick="searchProduct(event)">Tìm kiếm</button>
+                    <button class="form-button" onclick="hideSearchProduct()">Hủy</button>
+                </div>
+            </form>
+        </div>`;
+    panel.style.display = "flex";
+}
+
+function hideSearchProduct() {
+    var panel = document.querySelector(".search-box");
+    panel.style.display = "none";
+    panel.innerHTML = "";
 }
 
 function showAddProduct() {
@@ -764,4 +799,9 @@ function changeDisplayImageSize() {
     images.forEach(image => {
         image.style.width = sizeValue + "px";
     });
+}
+
+function searchProduct(event) {
+    event.preventDefault();
+    showDataTableAccessory(getAccessoriesData());
 }

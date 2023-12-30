@@ -272,7 +272,7 @@ body, html {
 /* END PRODUCT DETAILS PANEL */
 
 /* EDIT DETAILS && ADD PRODUCT */
-.edit-detail, .add-product {
+.edit-detail, .add-product, .search-box {
     position: absolute;
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.25);
@@ -283,17 +283,20 @@ body, html {
     align-items: center;
     justify-content: center;
 }
-.edit-detail > i, .add-product > i {
+.edit-detail > i, .add-product > i, .search-box > i {
     background-color: #fff;
     color: #ccc;
     font-size: 32px;
     align-self: flex-end;
     margin-right: 5%;
 }
-.edit-detail > i:hover, .add-product > i:hover {
+.search-box > i {
+    margin-right: 30%;
+}
+.edit-detail > i:hover, .add-product > i:hover, .search-box > i:hover {
     color: #ff5100;
 }
-.edit-detail-panel, .add-product-panel {
+.edit-detail-panel, .add-product-panel, .search-box-panel {
     width: 90%;
     height: 90%;
     background-color: #fff;
@@ -301,6 +304,11 @@ body, html {
     border: 1px solid #E6E6E6;
     padding: 10px 60px;
     overflow: auto;
+}
+.search-box-panel {
+    width: 40%;
+    height: auto;
+    margin-bottom: 20%;
 }
 .edit-detail-header, .add-product-header {
     text-align: center;

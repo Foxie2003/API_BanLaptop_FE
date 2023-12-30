@@ -131,6 +131,20 @@
                     Quản lý laptop
                 </div>
                 <div style="display: flex;">
+                    <div style="margin-top: auto; margin-bottom: auto;">
+                        <i class="fa-solid fa-grip"></i> Chế độ hiện thị: 
+                    </div>
+                    <select id="display-select" style="border: none; font-size: 14px;" onchange="changeDisplayImageSize()">
+                        <option value="160">
+                            Lớn
+                        </option>
+                        <option value="120" selected>
+                            Bình thường
+                        </option>
+                        <option value="80">
+                            Nhỏ
+                        </option>
+                    </select>
                     <div class="table-button">
                         <i class="fa-solid fa-print"></i>
                         In danh sách

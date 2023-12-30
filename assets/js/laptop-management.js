@@ -927,3 +927,11 @@ function resetDefaultSortValue() {
     sortByOldPrice = 0;
     sortByQuantity = 0;
 }
+
+function changeDisplayImageSize() {
+    var sizeValue = document.querySelector("#display-select").value;
+    var images = document.querySelectorAll(".table-image");
+    images.forEach(image => {
+        image.style.width = sizeValue + "px";
+    });
+}

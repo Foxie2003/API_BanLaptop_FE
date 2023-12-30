@@ -353,7 +353,7 @@
     display: none;
 }
 .show-message-animation {
-    animation: show-message 5.25s;
+    animation: show-message 3.25s;
 }
 @keyframes show-message {
     0%{
@@ -370,7 +370,7 @@
       }
   }
 .timeout-animation {
-    animation: message-timeout 5s linear;
+    animation: message-timeout 3s linear;
 }
 @keyframes message-timeout {
     0%{

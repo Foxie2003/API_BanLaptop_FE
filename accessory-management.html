@@ -142,62 +142,64 @@
                 </div>
             </div>
             <table class="admin-table" id="admin-table">
-                <tr>
-                    <th>
-                        ID sản phẩm
+                <tr id="admin-table-header">
+                    <th id="sort-by-id" onclick="sortProductById()">
+                    <i class="fa-solid fa-sort-up"></i> ID sản phẩm
                     </th>
-                    <th>
-                        Tên
+                    <th id="sort-by-name" onclick="sortProductByName()">
+                    <i class="fa-solid fa-sort"></i> Tên
                     </th>
                     <th>
                         Ảnh thumbnail
                     </th>
-                    <th>
-                        Giá mới
+                    <th id="sort-by-newPrice" onclick="sortProductByNewPrice()">
+                    <i class="fa-solid fa-sort"></i> Giá mới
                     </th>
-                    <th>
-                        Giá cũ
+                    <th id="sort-by-oldPrice" onclick="sortProductByOldPrice()">
+                    <i class="fa-solid fa-sort"></i> Giá cũ
                     </th>
-                    <th>
-                        Số lượng
+                    <th id="sort-by-quantity" onclick="sortProductByQuantity()">
+                    <i class="fa-solid fa-sort"></i> Số lượng
                     </th>
                     <th>
                         Chức năng
                     </th>
                 </tr>
-                <tr>
-                    <td>
-                        SP31
-                    </td>
-                    <td style="max-width: 500px; overflow: hidden; text-overflow: ellipsis;">
-                        Laptop Acer Aspire 3 A315 58 589K i5 1135G7/8GB/256GB/Win11 (NX.AM0SV.008)
-                    </td>
-                    <td>
-                        <img class="table-image" src="./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-thumb-600x600.jpg" alt="">
-                    </td>
-                    <td>
-                        1000000
-                    </td>
-                    <td>
-                        9999999
-                    </td>
-                    <td>
-                        100
-                    </td>
-                    <td>
-                        <div style="display: flex;">
-                            <div class="table-button">
-                                <i class="fa-solid fa-eye"></i>
+                <tbody id="admin-table-data">
+                    <!-- <tr>
+                        <td>
+                            SP31
+                        </td>
+                        <td style="max-width: 500px; overflow: hidden; text-overflow: ellipsis;">
+                            Laptop Acer Aspire 3 A315 58 589K i5 1135G7/8GB/256GB/Win11 (NX.AM0SV.008)
+                        </td>
+                        <td>
+                            <img class="table-image" src="./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-thumb-600x600.jpg" alt="">
+                        </td>
+                        <td>
+                            1000000
+                        </td>
+                        <td>
+                            9999999
+                        </td>
+                        <td>
+                            100
+                        </td>
+                        <td>
+                            <div style="display: flex;">
+                                <div class="table-button">
+                                    <i class="fa-solid fa-eye"></i>
+                                </div>
+                                <div class="table-button">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </div>
+                                <div class="table-button">
+                                    <i class="fa-solid fa-trash"></i>
+                                </div>
                             </div>
-                            <div class="table-button">
-                                <i class="fa-solid fa-pen-to-square"></i>
-                            </div>
-                            <div class="table-button">
-                                <i class="fa-solid fa-trash"></i>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
+                        </td>
+                    </tr> -->
+                </tbody>
             </table>
             <div class="table-nav">
                 <div class="table-button" onclick="setCurrentPage(1);">
@@ -218,7 +220,7 @@
         </div>
     </div>
     <script>
-        showDataTableAccessory();
+        showDataTableAccessory(getAccessoriesData());
     </script>
 </body>
 </html>

@@ -262,7 +262,7 @@ function showMessage(message, type, icon) {
     document.querySelector(".timeout").classList.add("timeout-animation");
     setTimeout(function () {
         message.style.display = "none";
-    }, 5250);
+    }, 3250);
 }
 
 function hideMessage() {

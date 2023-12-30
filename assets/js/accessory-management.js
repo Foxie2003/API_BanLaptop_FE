@@ -1,4 +1,5 @@
 const priceFormat = new Intl.NumberFormat({ maximumSignificantDigits: 3 });
+var accessoriesData = null;
 function showSubItems(subPanelId) {
     var menu = document.getElementById("menu");
     var admin = document.querySelector(".admin-panel-right");
@@ -47,27 +48,127 @@ function printDivContent(divId) {
     printWindow.print();
 }
 
-// var arr = ['a', 's', 'e', 'a', 'g', 'd', 'l'];
-// console.log(arr.sort().reverse())
-function getAccessoriesData() {
-    var storage = JSON.parse(localStorage.getItem("sanpham"));
-    var acessories = [];
-    for (const band in storage.phukien) {
-        storage.phukien[band].forEach(product => {
-            acessories.push(product);
-        });
-    }
-    return acessories;
-}
-
 var currentPage = 1;
 var productPerPage = 15;
 var totalPage = Math.ceil(getAccessoriesData().length / productPerPage);
 
+var sortById = 1;
+var sortByName = 0;
+var sortByNewPrice = 0;
+var sortByOldPrice = 0;
+var sortByQuantity = 0;
+
+
+function getAccessoriesData() {
+    var storage = JSON.parse(localStorage.getItem("sanpham"));
+    var accessories = [];
+    for (const band in storage.phukien) {
+        storage.phukien[band].forEach(product => {
+            accessories.push(product);
+        });
+    }
+    accessories.sort((a, b) => {
+        var idA = parseInt(a.id.replace("SP", ""));
+        var idB = parseInt(b.id.replace("SP", ""));
+
+        return idA - idB;
+    });
+    // if (sortById == 1) {
+    //     accessories.sort((a, b) => {
+    //         var idA = parseInt(a.id.replace("SP", ""));
+    //         var idB = parseInt(b.id.replace("SP", ""));
+    
+    //         return idA - idB;
+    //     });
+    // }
+    if (sortById == -1) {
+        accessories.sort((a, b) => {
+            var idA = parseInt(a.id.replace("SP", ""));
+            var idB = parseInt(b.id.replace("SP", ""));
+    
+            return idB - idA;
+        });
+    }
+
+    else if (sortByName == 1) {
+        accessories.sort((a, b) => {
+            const nameA = a.name.toUpperCase();
+            const nameB = b.name.toUpperCase();
+
+            // So sánh hai chuỗi "name"
+            if (nameA < nameB) {
+                return -1;
+            }
+            if (nameA > nameB) {
+                return 1;
+            }
+            return 0;
+        });
+    }
+    else if (sortByName == -1) {
+        accessories.sort((a, b) => {
+            const nameA = a.name.toUpperCase();
+            const nameB = b.name.toUpperCase();
+
+            // So sánh hai chuỗi "name"
+            if (nameA < nameB) {
+                return 1;
+            }
+            if (nameA > nameB) {
+                return -1;
+            }
+            return 0;
+        });
+    }
+    else if (sortByNewPrice == 1) {
+        accessories.sort((a, b) => {
+            const priceA = a.price;
+            const priceB = b.price;
+            return priceA - priceB;
+        });
+    }
+    else if (sortByNewPrice == -1) {
+        accessories.sort((a, b) => {
+            const priceA = a.price;
+            const priceB = b.price;
+            return priceB - priceA;
+        });
+    }
+    else if (sortByOldPrice == 1) {
+        accessories.sort((a, b) => {
+            const priceA = a.old_price;
+            const priceB = b.old_price;
+            return priceA - priceB;
+        });
+    }
+    else if (sortByOldPrice == -1) {
+        accessories.sort((a, b) => {
+            const priceA = a.old_price;
+            const priceB = b.old_price;
+            return priceB - priceA;
+        });
+    }
+    else if (sortByQuantity == 1) {
+        accessories.sort((a, b) => {
+            const quantityA = a.quantity;
+            const quantityB = b.quantity;
+            return quantityA - quantityB;
+        });
+    }
+    else if (sortByQuantity == -1) {
+        accessories.sort((a, b) => {
+            const quantityA = a.quantity;
+            const quantityB = b.quantity;
+            return quantityB - quantityA;
+        });
+    }
+    return accessories;
+}
+
 function setCurrentPage(page) {
     if (page > 0 && page <= totalPage) {
         currentPage = page;
-        showDataTableAccessory();
+        showDataTableAccessory(getAccessoriesData());
     }
 }
 
@@ -77,35 +178,13 @@ function getCurrentPage() {
 function getTotalPage() {
     return totalPage;
 }
-function showDataTableAccessory() {
+function showDataTableAccessory(data) {
+    data = data || [];
     document.getElementById("totalPage").textContent = "/ " + totalPage;
     document.getElementById("currentPage").value = currentPage;
-    var tableData = document.getElementById("admin-table");
-    tableData.innerHTML =
-        `<tr>
-        <th>
-            ID sản phẩm
-        </th>
-        <th>
-            Tên
-        </th>
-        <th>
-            Ảnh thumbnail
-        </th>
-        <th>
-            Giá mới
-        </th>
-        <th>
-            Giá cũ
-        </th>
-        <th>
-            Số lượng
-        </th>
-        <th>
-            Chức năng
-        </th>
-    </tr>`;
-    var productToShow = getAccessoriesData().splice((currentPage - 1) * productPerPage, productPerPage);
+    var tableData = document.getElementById("admin-table-data");
+    tableData.innerHTML = "";
+    var productToShow = data.splice((currentPage - 1) * productPerPage, productPerPage);
     productToShow.forEach(product => {
         tableData.innerHTML +=
             `
@@ -267,7 +346,7 @@ function addDetals() {
         }
     });
 
-    addAccessoryObj(createAccessoryObj(productID.value, productName.value, productVideo.value,
+    addAccessoryObj(createAccessoryObj(productID.value, productName.value,
         imagesData, productNewPrice.value.replaceAll(",", ""), productOldPrice.value.replaceAll(",", ""),
         productQuantity.value.replaceAll(",", "")), productBand.value);
 }
@@ -327,7 +406,7 @@ function showAddProduct() {
         </div>
         <form class="add-product-form">
             <label for="product-id">ID:</label>
-            <input type="text" id="product-id" placeholder="SP01">
+            <input type="text" id="product-id" placeholder="SP01" readonly>
             <label for="product-name">Tên:</label>
             <input type="text" id="product-name" placeholder="Chuột Không dây Rapoo B2">
             <label for="product-band">Loại:</label>
@@ -375,6 +454,7 @@ function showAddProduct() {
             <input type="file" onchange="setImageLink(this)" class="product-image" accept="image/*">
         </div>`;
     });
+    document.getElementById("product-id").value = autoGenerateProductId();
 }
 
 function hideAddProduct() {
@@ -449,8 +529,34 @@ function formatInputNumber(input) {
 }
 
 function createAccessoryObj(id, name, images, price, oldPrice, quantity) {
-    if (id == "") {
-        id = getNewProductID();
+    if (!checkProductId(id)) {
+        showMessage("Mã sản phẩm đã tồn tại", "fail-message", '<i class="fa-solid fa-triangle-exclamation"></i>');
+        return;
+    }
+
+    if (name.trim() === "") {
+        showMessage("Tên sản phẩm không được để trống", "fail-message", '<i class="fa-solid fa-triangle-exclamation"></i>');
+        return;
+    }
+
+    if (images.length == 0) {
+        showMessage("Hình sản phẩm không được để trống", "fail-message", '<i class="fa-solid fa-triangle-exclamation"></i>');
+        return;
+    }
+
+    if (price === "" || price < 0) {
+        showMessage("Giá mới của sản phẩm không hợp lệ", "fail-message", '<i class="fa-solid fa-triangle-exclamation"></i>');
+        return;
+    }
+
+    if (oldPrice === "" || oldPrice < 0 || oldPrice < price) {
+        showMessage("Giá cũ của sản phẩm không hợp lệ", "fail-message", '<i class="fa-solid fa-triangle-exclamation"></i>');
+        return;
+    }
+
+    if (quantity === "" || quantity < 0) {
+        showMessage("Giá sản phẩm không hợp lệ", "fail-message", '<i class="fa-solid fa-triangle-exclamation"></i>');
+        return;
     }
     var laptopObj = {
         id: `${id}`,
@@ -475,18 +581,26 @@ function getNewProductID() {
 }
 
 function addAccessoryObj(accessoryObj, accessoryType) {
+    if(accessoryObj == null) {
+        return;
+    }
+    debugger;
     var storage = JSON.parse(localStorage.getItem("sanpham"));
-    var accessoryStorage = storage.phanloai;
+    var accessoryStorage = storage.phukien;
     for(const type in accessoryStorage) {
         if(type == accessoryType) {
             accessoryStorage[type].push(accessoryObj);
             localStorage.setItem("sanpham", JSON.stringify(storage));
+            showMessage("Thêm sản phẩm thành công", "success-message", '<i class="fa-regular fa-face-smile"></i>');
             break;
         }
     }
 }
 
 function editAccessoryObj(accessoryObj, accessoryID) {
+    if(accessoryObj == null) {
+        return;
+    }
     var storage = JSON.parse(localStorage.getItem("sanpham"));
     var accessoryStorage = storage.phukien;
     for(const type in accessoryStorage) {
@@ -494,6 +608,7 @@ function editAccessoryObj(accessoryObj, accessoryID) {
             if(accessoryStorage[type][i].id == accessoryID) {
                 accessoryStorage[type][i] = accessoryObj;
                 localStorage.setItem("sanpham", JSON.stringify(storage));
+                showMessage("Sửa sản phẩm thành công", "success-message", '<i class="fa-regular fa-face-smile"></i>');
                 break;
             }
         }
@@ -512,4 +627,133 @@ function showDeleteDetals(id) {
             }
         }
     }
+}
+
+function checkProductId(productID) {
+    var products = JSON.parse(localStorage.getItem("sanpham"));
+    var isDuplicate = false;
+    for (const type in products) {
+        for (const band in products[type]) {
+            products[type][band].forEach(product => {
+                if(productID == product.id) {
+                    isDuplicate = true;
+                }
+            });
+        }
+    }
+    return !isDuplicate;
+}
+
+function autoGenerateProductId() {
+    var productId = 0;
+    do {
+        productId++;
+        if(productId < 10) {
+            productId = "0" + productId;
+        }
+    }while(!checkProductId("SP" + productId));
+    return "SP" + productId;
+}
+
+function sortProductById() {
+    resetDefaultSortValue();
+    var icon = document.querySelector("#sort-by-id > i");
+    if (icon.className == "fa-solid fa-sort" || icon.className == "fa-solid fa-sort-down") {
+        sortById = 1;
+        showDataTableAccessory(getAccessoriesData());
+        resetDefaultIcon();
+        document.querySelector("#sort-by-id > i").className ="fa-solid fa-sort-up";
+    }
+    else if (icon.className == "fa-solid fa-sort-up") {
+
+        sortById = -1;
+        showDataTableAccessory(getAccessoriesData());
+        resetDefaultIcon();
+        document.querySelector("#sort-by-id > i").className ="fa-solid fa-sort-down";
+    }
+}
+
+function sortProductByName() {
+    resetDefaultSortValue();
+    var icon = document.querySelector("#sort-by-name > i");
+    if (icon.className == "fa-solid fa-sort" || icon.className == "fa-solid fa-sort-down") {
+        sortByName = 1;
+        showDataTableAccessory(getAccessoriesData());
+        resetDefaultIcon();
+        document.querySelector("#sort-by-name > i").className ="fa-solid fa-sort-up";
+    }
+    else if (icon.className == "fa-solid fa-sort-up") {
+        sortByName = -1;
+        showDataTableAccessory(getAccessoriesData());
+        resetDefaultIcon();
+        document.querySelector("#sort-by-name > i").className ="fa-solid fa-sort-down";
+    }
+}
+
+function sortProductByNewPrice() {
+    resetDefaultSortValue();
+    var icon = document.querySelector("#sort-by-newPrice > i");
+    if (icon.className == "fa-solid fa-sort" || icon.className == "fa-solid fa-sort-down") {
+        sortByNewPrice = 1;
+        showDataTableAccessory(getAccessoriesData());
+        resetDefaultIcon();
+        document.querySelector("#sort-by-newPrice > i").className ="fa-solid fa-sort-up";
+    }
+    else if (icon.className == "fa-solid fa-sort-up") {
+        sortByNewPrice = -1;
+        showDataTableAccessory(getAccessoriesData());
+        resetDefaultIcon();
+        document.querySelector("#sort-by-newPrice > i").className ="fa-solid fa-sort-down";
+    }
+}
+
+function sortProductByOldPrice() {
+    resetDefaultSortValue();
+    var icon = document.querySelector("#sort-by-oldPrice > i");
+    if (icon.className == "fa-solid fa-sort" || icon.className == "fa-solid fa-sort-down") {
+        sortByOldPrice = 1;
+        showDataTableAccessory(getAccessoriesData());
+        resetDefaultIcon();
+        document.querySelector("#sort-by-oldPrice > i").className ="fa-solid fa-sort-up";
+    }
+    else if (icon.className == "fa-solid fa-sort-up") {
+        sortByOldPrice = -1;
+        showDataTableAccessory(getAccessoriesData());
+        resetDefaultIcon();
+        document.querySelector("#sort-by-oldPrice > i").className ="fa-solid fa-sort-down";
+    }
+}
+
+function sortProductByQuantity() {
+    resetDefaultSortValue();
+    var icon = document.querySelector("#sort-by-quantity > i");
+    if (icon.className == "fa-solid fa-sort" || icon.className == "fa-solid fa-sort-down") {
+        sortByQuantity = 1;
+        showDataTableAccessory(getAccessoriesData());
+        resetDefaultIcon();
+        document.querySelector("#sort-by-quantity > i").className ="fa-solid fa-sort-up";
+    }
+    else if (icon.className == "fa-solid fa-sort-up") {
+        sortByQuantity = -1;
+        showDataTableAccessory(getAccessoriesData());
+        resetDefaultIcon();
+        document.querySelector("#sort-by-quantity > i").className ="fa-solid fa-sort-down";
+    }
+}
+
+// Reset other icon to default
+function resetDefaultIcon() {
+    var icons = document.querySelectorAll("#admin-table-header > th > i");
+    icons.forEach(icon => {
+        icon.className = "fa-solid fa-sort";
+    });
+}
+
+// Reset sort value to default
+function resetDefaultSortValue() {
+    sortById = 0;
+    sortByName = 0;
+    sortByNewPrice = 0;
+    sortByOldPrice = 0;
+    sortByQuantity = 0;
 }

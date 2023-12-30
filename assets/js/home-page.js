@@ -382,3 +382,16 @@ function priceFilter() {
             = `<p style="font-size: 32px; font-weight: bold; color: #333; width: 100%; text-align: center; margin:200px 0;">Không có sản phẩm nào trong khoảng giá</p>`;
     }
 }
+
+function showLaptopBand() {
+    var subMenu = document.getElementById("laptop-bands-sub-menu");
+    subMenu.innerHTML = "";
+    var storage = JSON.parse(localStorage.getItem("sanpham"));
+    for (const band in storage.phanloai) {
+        var bandName = band.charAt(0).toUpperCase() + band.slice(1);
+        subMenu.innerHTML += 
+        `<div class="top-sub-menu-item" onclick="load${bandName}Product();">
+            Laptop ${bandName}
+        </div>`;
+    }
+}

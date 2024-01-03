@@ -127,6 +127,31 @@
                     </div>
                 </div>
             </div>
+            <div class="panel-left-item">
+                <div class="left-item-content" id="statistics-panel" onclick="showSubItems('statistics-sub-panel');">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <div>Thống kê</div>
+                    <i class="fa-solid fa-angle-down" style="margin-left: auto;"></i>
+                </div>
+                <div class="left-sub-item-panel" id="statistics-sub-panel">
+                    <div class="left-sub-item" onclick="window.location.href = 'revenue-statistics.html'">
+                        <i class="fa-solid fa-minus"></i>
+                        <div>Thống kê doanh thu</div>
+                    </div>
+                    <div class="left-sub-item" onclick="window.location.href = 'product-type-management.html'">
+                        <i class="fa-solid fa-minus"></i>
+                        <div>Thống kê loại sản phẩm</div>
+                    </div>
+                    <div class="left-sub-item" onclick="window.location.href = 'laptop-management.html'">
+                        <i class="fa-solid fa-minus"></i>
+                        <div>Thống kê laptop</div>
+                    </div>
+                    <div class="left-sub-item" onclick="window.location.href = 'accessory-management.html'">
+                        <i class="fa-solid fa-minus"></i>
+                        <div>Thống kê phụ kiện</div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="admin-panel-right">
             <div class="admin-panel-right-header" id="print">
@@ -135,92 +160,25 @@
             <div class="admin-table-header">
                 <div class="table-header-content">
                     <i class="fa-solid fa-chevron-right"></i>
-                    Thống kê doanh thu
+                    Thống kê doanh thu trong năm
                 </div>
-                <!-- <div style="display: flex;">
-                    <div style="margin-top: auto; margin-bottom: auto;">
-                        <i class="fa-solid fa-grip"></i> Số bản ghi: 
-                    </div>
-                    <input type="number" id="productPerPage" style="margin: 5px; width: 40px; font-size: 14px;" value="15" onchange="changeproductPerPage()">
-                    <div style="margin-top: auto; margin-bottom: auto;">
-                        <i class="fa-solid fa-grip"></i> Chế độ hiện thị: 
-                    </div>
-                    <select id="display-select" style="border: none; font-size: 14px;" onchange="changeDisplayImageSize()">
-                        <option value="160">
-                            Lớn
-                        </option>
-                        <option value="120" selected>
-                            Bình thường
-                        </option>
-                        <option value="80">
-                            Nhỏ
-                        </option>
-                    </select>
-                    <div class="table-button" onclick="showSearchProduct()">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        Tìm kiếm
-                    </div>
-                    <div class="table-button" onclick="printDivContent('admin-table')">
-                        <i class="fa-solid fa-print"></i>
-                        In danh sách
-                    </div>
-                    <div class="table-button" onclick="showAddProduct();">
-                        <i class="fa-solid fa-plus"></i>
-                        Thêm sản phẩm
-                    </div>
-                </div> -->
             </div>
-            <!-- <table class="admin-table" id="admin-table">
-                <tr id="admin-table-header">
-                    <th id="sort-by-id" onclick="sortProductById()">
-                    <i class="fa-solid fa-sort-up"></i> ID sản phẩm
-                    </th>
-                    <th id="sort-by-name" onclick="sortProductByName()">
-                    <i class="fa-solid fa-sort"></i> Tên
-                    </th>
-                    <th>
-                        Ảnh thumbnail
-                    </th>
-                    <th id="sort-by-newPrice" onclick="sortProductByNewPrice()">
-                    <i class="fa-solid fa-sort"></i> Giá mới
-                    </th>
-                    <th id="sort-by-oldPrice" onclick="sortProductByOldPrice()">
-                    <i class="fa-solid fa-sort"></i> Giá cũ
-                    </th>
-                    <th id="sort-by-quantity" onclick="sortProductByQuantity()">
-                    <i class="fa-solid fa-sort"></i> Số lượng
-                    </th>
-                    <th>
-                        Chức năng
-                    </th>
-                </tr>
-                <tbody id="admin-table-data">
-                </tbody>
-            </table>
-            <div class="table-nav">
-                <div class="table-button" onclick="setCurrentPage(1);">
-                    <i class="fa-solid fa-angles-left"></i>
-                </div>
-                <div class="table-button" onclick="setCurrentPage(getCurrentPage() - 1);">
-                    <i class="fa-solid fa-angle-left"></i>
-                </div>
-                <input type="text" id="currentPage">
-                <div id="totalPage">/ 1</div>
-                <div class="table-button" onclick="setCurrentPage(getCurrentPage() + 1);">
-                    <i class="fa-solid fa-angle-right"></i>
-                </div>
-                <div class="table-button"onclick="setCurrentPage(getTotalPage());">
-                    <i class="fa-solid fa-angles-right"></i>
-                </div>
-            </div> -->
             <div class="dashbroad-container">
+                <div class="dashboard-item" style="background-color: #321fdb;">
+                    <div class="dashboard-item-header">Tổng số sản phẩm đã bán:</div>
+                    <div class="dashboard-item-content" id="totalSell">1</div>
+                </div>
                 <div class="dashboard-item" style="background-color: #3399ff;">
-                    <div class="dashboard-item-header">Số sản phẩm đã bán:</div>
-                    <div class="dashboard-item-content">1</div>
+                    <div class="dashboard-item-header">Số laptop đã bán:</div>
+                    <div class="dashboard-item-content" id="totalLaptopSell">1</div>
+                </div>
+                <div class="dashboard-item" style="background-color: #f9b115;">
+                    <div class="dashboard-item-header">Số phụ kiện đã bán:</div>
+                    <div class="dashboard-item-content" id="totalAccessorySell">1</div>
                 </div>
                 <div class="dashboard-item" style="background-color: #e55353;">
                     <div class="dashboard-item-header">Doanh thu ước tính:</div>
-                    <div class="dashboard-item-content">1</div>
+                    <div class="dashboard-item-content" id="revenue">1</div>
                 </div>
             </div>
             <canvas id="canvas" style="margin: 0 160px;"></canvas>
@@ -231,6 +189,7 @@
     <script>
         checkAdminLogin();
         showChart();
+        showData();
     </script>
 </body>
 </html>

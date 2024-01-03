@@ -413,16 +413,18 @@ body, html {
 .dashboard-item {
     background-color: #2f80ed;
     /* padding: 20px; */
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     border-radius: 2px;
     color: #FFFFFF;
+    width: 240px;
+    height: 120px;
+    padding: 20px;
 }
 .dashboard-item-header {
-    padding: 26px;
+    height: 60px;
 }
 .dashboard-item-content {
-    padding: 26px;
     text-align: right;
 }
 /* END STATISTICS */

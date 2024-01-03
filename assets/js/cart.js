@@ -1,8 +1,35 @@
 var loginData = JSON.parse(localStorage.getItem("loginData"));
 var cartInfo = loginData.cart;
+
+function showMessage(message, type, icon) {
+    var messagePanel = document.getElementById("message-panel");
+    messagePanel.innerHTML += `
+    <div class="message-timeout">
+                <div class="message-box ${type}">
+                    <div class="message-icon">${icon}</i></div>
+                    <div class="message">${message}</div>
+                    <div class="message-button ${type}" onclick="hideMessage()"><i class="fa-regular fa-circle-xmark"></i></div>
+                </div>
+                <div class="timeout ${type}"></div>
+            </div>`;
+    var arrMessage = document.getElementsByClassName("message-timeout");
+    var message = arrMessage[arrMessage.length - 1];
+    message.style.display = "block";
+    message.classList.add("show-message-animation");
+    document.querySelector(".timeout").classList.add("timeout-animation");
+    setTimeout(function () {
+        message.style.display = "none";
+    }, 3250);
+}
+
+function hideMessage() {
+    var messagePanel = document.getElementById("message-panel");
+    messagePanel.innerHTML = "";
+}
+
 function loadCartData() {
     if(cartInfo.length <= 0) {
-        alert("Giỏ hàng trống \nHãy tiếp tục mua sắm nhé <3")
+        showMessage("Giỏ hàng trống \nHãy tiếp tục mua sắm nhé <3" + `<a href="home-page.html">[Đến trang chủ]</a>`, "success-message", '<i class="fa-solid fa-cart-plus">');
         document.getElementById("cart-info").innerHTML = 
         `<p style="font-size: 32px; font-weight: bold; color: #333; width: 100%; text-align: center; margin:200px 0;">Không có sản phẩm nào trong giỏ</p>`;
         document.querySelector('.user-info').style.display = "none";
@@ -101,6 +128,16 @@ function saveBillData() {
     var otherRequest = document.getElementById('other-request').value;
     var offer = document.getElementById('offer').value;
 
+    const currentDate = new Date();
+
+    const year = currentDate.getFullYear();
+    const month = currentDate.getMonth() + 1; // Tháng bắt đầu từ 0, cần cộng thêm 1
+    const day = currentDate.getDate();
+    const hours = currentDate.getHours();
+    const minutes = currentDate.getMinutes();
+    const seconds = currentDate.getSeconds();
+
+    var cartData = JSON.parse(localStorage.getItem("loginData")).cart || [];
     var orderData = {
         name: name,
         phone: phone,
@@ -110,12 +147,30 @@ function saveBillData() {
         gender: gender,
         shipOption: shipOption,
         otherRequest: otherRequest,
-        offer: offer
+        offer: offer,
+        cart : cartData,
+        date : `${day}/${month}/${year}`
     };
 
     var ordersArray = JSON.parse(localStorage.getItem('bills')) || [];
     ordersArray.push(orderData);
     localStorage.setItem('bills', JSON.stringify(ordersArray));
+    deleteCart();
+    showMessage("Cảm ơn bạn đã mua hàng tại thegioilaptop.com", "success-message", '<i class="fa-solid fa-cart-plus">');
+    loginData = JSON.parse(localStorage.getItem("loginData"));
+    cartInfo = loginData.cart;
+    loadCartData();
+}
+
+function deleteCart() {
+    var loginData = JSON.parse(localStorage.getItem("loginData"));
+    var userData = JSON.parse(localStorage.getItem(loginData.userName));
+
+    loginData.cart = [];
+    userData.cart = [];
+
+    localStorage.setItem("loginData", JSON.stringify(loginData));
+    localStorage.setItem(loginData.userName, JSON.stringify(userData));
 }
 
 function checkBillInfo() {

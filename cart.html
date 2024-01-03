@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./assets/css/sign-up.css">
     <link rel="stylesheet" href="./assets/css/home-page.css">
     <link rel="stylesheet" href="./assets/css/cart.css">
+    <link rel="stylesheet" href="./assets/css/product-details.css">
     <script src="./assets/js/home-page.js"></script>
     <script src="./assets/js/cart.js"></script>
     <script src="https://kit.fontawesome.com/fd095985f5.js"
@@ -30,6 +31,17 @@
 </script>
 <!--End of Tawk.to Script-->
 <body>
+    <!--       MESSAGE BOX        -->
+    <div id="message-panel">
+        <!-- <div class="message-timeout" id="addSuccess">
+            <div class="message-box">
+                <div class="message-icon"><i class="fa-solid fa-cart-plus"></i></div>
+                <div class="message">Thêm vào giỏ hàng thành công</div>
+                <div class="message-button"><i class="fa-regular fa-circle-xmark"></i></div>
+            </div>
+            <div class="timeout"></div>
+        </div> -->
+    </div>
     <!--        SLIDE SHOW (Top)       -->
     <div class="slide-show">
         <img
@@ -238,9 +250,9 @@
             </div>
             <form id="user-form">
                 <div id="gender">
-                    <input type="radio" value="male" checked name="gender" style="margin-left: 0;">
+                    <input type="radio" id="gender-male" value="male" checked name="gender" style="margin-left: 0;">
                     <label>Anh</label>
-                    <input type="radio" value="female" name="gender">
+                    <input type="radio" id="gender-female" value="female" name="gender">
                     <label>Chị</label>
                 </div>
                 <div id="name-phone">
@@ -251,9 +263,9 @@
                 </div>
                 <div style="margin-top: 16px; font-size: 18px;">CHỌN CÁCH THỨC NHẬN HÀNG</div>
                 <div id="ship-option">
-                    <input type="radio" value="giao" checked name="ship" style="margin-left: 0;">
+                    <input type="radio" id="ship-giao" value="giao" checked name="ship" style="margin-left: 0;">
                     <label>Giao tận nơi</label>
-                    <input type="radio" value="nhan" name="ship" >
+                    <input type="radio" id="ship-nhan" value="nhan" name="ship" >
                     <label>Nhận tại siêu thị</label>
                 </div>
                 <label for="address">Địa chỉ:</label>

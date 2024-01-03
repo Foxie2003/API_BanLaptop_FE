@@ -9,7 +9,7 @@
     <link href="./assets/font/fontawesome-free-6.4.2-web/css/fontawesome.css" rel="stylesheet">
     <link href="./assets/font/fontawesome-free-6.4.2-web/css/brands.css" rel="stylesheet">
     <link href="./assets/font/fontawesome-free-6.4.2-web/css/solid.css" rel="stylesheet">
-    <script src="./assets/js/product-type-management.js"></script>
+    <script src="./assets/js/laptop-management.js"></script>
     <script src="./assets/js/product-details.js"></script>
     <title>Admin</title>
 </head>
@@ -51,7 +51,8 @@
     <div class="edit-detail">
     </div>
     <!--        SHOW ADD PRODUCT        -->
-    <div class="add-product">   
+    <div class="add-product">
+        
     </div>
     <!--        ADMIN HEADER         -->
     <div class="admin-header">
@@ -80,7 +81,7 @@
                 <img src="./assets/img/logo/admin-profile-pic.jfif" alt="">
                 <div class="header-profile-info">
                     <div class="profile-info-name">Foxie2003</div>
-                    <div class="profile-info-email">foxie@gmail.com</div>
+                    <div class="profile-info-email">ducphuongtk4@gmail.com</div>
                 </div>
             </div>
         </div>
@@ -126,42 +127,35 @@
                     </div>
                 </div>
             </div>
-            <div class="panel-left-item">
-                <div class="left-item-content" id="statistics-panel" onclick="showSubItems('statistics-sub-panel');">
-                    <i class="fa-solid fa-box-open"></i>
-                    <div>Thống kê</div>
-                    <i class="fa-solid fa-angle-down" style="margin-left: auto;"></i>
-                </div>
-                <div class="left-sub-item-panel" id="statistics-sub-panel">
-                    <div class="left-sub-item" onclick="window.location.href = 'revenue-statistics.html'">
-                        <i class="fa-solid fa-minus"></i>
-                        <div>Thống kê doanh thu</div>
-                    </div>
-                    <div class="left-sub-item" onclick="window.location.href = 'product-type-management.html'">
-                        <i class="fa-solid fa-minus"></i>
-                        <div>Thống kê loại sản phẩm</div>
-                    </div>
-                    <div class="left-sub-item" onclick="window.location.href = 'laptop-management.html'">
-                        <i class="fa-solid fa-minus"></i>
-                        <div>Thống kê laptop</div>
-                    </div>
-                    <div class="left-sub-item" onclick="window.location.href = 'accessory-management.html'">
-                        <i class="fa-solid fa-minus"></i>
-                        <div>Thống kê phụ kiện</div>
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="admin-panel-right">
             <div class="admin-panel-right-header" id="print">
-                Quản lý loại sản phẩm
+                Thống kê
             </div>
             <div class="admin-table-header">
                 <div class="table-header-content">
                     <i class="fa-solid fa-chevron-right"></i>
-                    Quản lý phụ kiện
+                    Thống kê doanh thu
                 </div>
-                <div style="display: flex;">
+                <!-- <div style="display: flex;">
+                    <div style="margin-top: auto; margin-bottom: auto;">
+                        <i class="fa-solid fa-grip"></i> Số bản ghi: 
+                    </div>
+                    <input type="number" id="productPerPage" style="margin: 5px; width: 40px; font-size: 14px;" value="15" onchange="changeproductPerPage()">
+                    <div style="margin-top: auto; margin-bottom: auto;">
+                        <i class="fa-solid fa-grip"></i> Chế độ hiện thị: 
+                    </div>
+                    <select id="display-select" style="border: none; font-size: 14px;" onchange="changeDisplayImageSize()">
+                        <option value="160">
+                            Lớn
+                        </option>
+                        <option value="120" selected>
+                            Bình thường
+                        </option>
+                        <option value="80">
+                            Nhỏ
+                        </option>
+                    </select>
                     <div class="table-button" onclick="showSearchProduct()">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         Tìm kiếm
@@ -172,59 +166,35 @@
                     </div>
                     <div class="table-button" onclick="showAddProduct();">
                         <i class="fa-solid fa-plus"></i>
-                        Thêm loại sản phẩm
+                        Thêm sản phẩm
                     </div>
-                </div>
+                </div> -->
             </div>
-            <table class="admin-table" id="admin-table">
+            <!-- <table class="admin-table" id="admin-table">
                 <tr id="admin-table-header">
-                    <th style="width: 0%;">
-                        STT
+                    <th id="sort-by-id" onclick="sortProductById()">
+                    <i class="fa-solid fa-sort-up"></i> ID sản phẩm
                     </th>
-                    <th style="width: 40%;">
-                        Tên
+                    <th id="sort-by-name" onclick="sortProductByName()">
+                    <i class="fa-solid fa-sort"></i> Tên
                     </th>
-                    <th style="width: 30%;">
-                        Phân loại
+                    <th>
+                        Ảnh thumbnail
                     </th>
-                    <th style="width: 30%;">
+                    <th id="sort-by-newPrice" onclick="sortProductByNewPrice()">
+                    <i class="fa-solid fa-sort"></i> Giá mới
+                    </th>
+                    <th id="sort-by-oldPrice" onclick="sortProductByOldPrice()">
+                    <i class="fa-solid fa-sort"></i> Giá cũ
+                    </th>
+                    <th id="sort-by-quantity" onclick="sortProductByQuantity()">
+                    <i class="fa-solid fa-sort"></i> Số lượng
+                    </th>
+                    <th>
                         Chức năng
                     </th>
                 </tr>
                 <tbody id="admin-table-data">
-                    <!-- <tr>
-                        <td>
-                            SP31
-                        </td>
-                        <td style="max-width: 500px; overflow: hidden; text-overflow: ellipsis;">
-                            Laptop Acer Aspire 3 A315 58 589K i5 1135G7/8GB/256GB/Win11 (NX.AM0SV.008)
-                        </td>
-                        <td>
-                            <img class="table-image" src="./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-thumb-600x600.jpg" alt="">
-                        </td>
-                        <td>
-                            1000000
-                        </td>
-                        <td>
-                            9999999
-                        </td>
-                        <td>
-                            100
-                        </td>
-                        <td>
-                            <div style="display: flex;">
-                                <div class="table-button">
-                                    <i class="fa-solid fa-eye"></i>
-                                </div>
-                                <div class="table-button">
-                                    <i class="fa-solid fa-pen-to-square"></i>
-                                </div>
-                                <div class="table-button">
-                                    <i class="fa-solid fa-trash"></i>
-                                </div>
-                            </div>
-                        </td>
-                    </tr> -->
                 </tbody>
             </table>
             <div class="table-nav">
@@ -242,12 +212,25 @@
                 <div class="table-button"onclick="setCurrentPage(getTotalPage());">
                     <i class="fa-solid fa-angles-right"></i>
                 </div>
+            </div> -->
+            <div class="dashbroad-container">
+                <div class="dashboard-item" style="background-color: #3399ff;">
+                    <div class="dashboard-item-header">Số sản phẩm đã bán:</div>
+                    <div class="dashboard-item-content">1</div>
+                </div>
+                <div class="dashboard-item" style="background-color: #e55353;">
+                    <div class="dashboard-item-header">Doanh thu ước tính:</div>
+                    <div class="dashboard-item-content">1</div>
+                </div>
             </div>
+            <canvas id="canvas" style="margin: 0 160px;"></canvas>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./assets/js/statistics.js"></script>
     <script>
         checkAdminLogin();
-        showDataTableProductTypes(getProductTypesData());
+        showChart();
     </script>
 </body>
 </html>

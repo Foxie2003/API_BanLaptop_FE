@@ -38,13 +38,29 @@ function showMenu() {
 }
 
 function printDivContent(divId) {
-    const content = document.getElementById(divId).innerHTML;
+    const content = document.getElementById(divId).outerHTML;
     const printWindow = window.open('', '_blank');
-    printWindow.document.write('<html><head><title>Print</title></head><body>');
+    printWindow.document.write(`<html>
+    <head>
+    <title>Print</title>
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <style>
+        #admin-table {
+            overflow: visible;
+        }
+        tr > th:last-child, tr > td:last-child {
+            display: none;
+        }
+    </style>
+    </head>
+    <body>`);
+    printWindow.document.write(`<h1 style="margin-left: 50px;">Danh sách phụ kiện</h1>`);
     printWindow.document.write(content);
     printWindow.document.write('</body></html>');
     printWindow.document.close();
-    printWindow.print();
+    setTimeout(() => {
+        printWindow.print();
+    }, 500);
 }
 
 var currentPage = 1;

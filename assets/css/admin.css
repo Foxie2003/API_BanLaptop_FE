@@ -404,3 +404,25 @@ body, html {
     color: #fff;
 }
 /* END EDIT DETAILS */
+
+/* STATISTICS */
+.dashbroad-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+.dashboard-item {
+    background-color: #2f80ed;
+    /* padding: 20px; */
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 2px;
+    color: #FFFFFF;
+}
+.dashboard-item-header {
+    padding: 26px;
+}
+.dashboard-item-content {
+    padding: 26px;
+    text-align: right;
+}
+/* END STATISTICS */

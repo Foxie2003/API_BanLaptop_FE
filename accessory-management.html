@@ -80,7 +80,7 @@
                 <img src="./assets/img/logo/admin-profile-pic.jfif" alt="">
                 <div class="header-profile-info">
                     <div class="profile-info-name">Foxie2003</div>
-                    <div class="profile-info-email">foxie@gmail.com</div>
+                    <div class="profile-info-email">ducphuongtk4@gmail.com</div>
                 </div>
             </div>
         </div>
@@ -112,11 +112,11 @@
                     <i class="fa-solid fa-angle-down" style="margin-left: auto;"></i>
                 </div>
                 <div class="left-sub-item-panel" id="product-sub-panel">
-                    <div class="left-sub-item">
+                    <div class="left-sub-item" onclick="window.location.href = 'laptop-management.html'">
                         <i class="fa-solid fa-minus"></i>
                         <div>Laptop</div>
                     </div>
-                    <div class="left-sub-item">
+                    <div class="left-sub-item" onclick="window.location.href = 'accessory-management.html'">
                         <i class="fa-solid fa-minus"></i>
                         <div>Phụ kiện</div>
                     </div>
@@ -133,6 +133,10 @@
                     Quản lý phụ kiện
                 </div>
                 <div style="display: flex;">
+                    <div style="margin-top: auto; margin-bottom: auto;">
+                        <i class="fa-solid fa-grip"></i> Số bản ghi: 
+                    </div>
+                    <input type="number" id="productPerPage" style="margin: 5px; width: 40px; font-size: 14px;" value="15" onchange="changeproductPerPage()">
                     <div style="margin-top: auto; margin-bottom: auto;">
                         <i class="fa-solid fa-grip"></i> Chế độ hiện thị: 
                     </div>
@@ -151,7 +155,7 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                         Tìm kiếm
                     </div>
-                    <div class="table-button">
+                    <div class="table-button" onclick="printDivContent('admin-table')">
                         <i class="fa-solid fa-print"></i>
                         In danh sách
                     </div>
@@ -240,6 +244,7 @@
         </div>
     </div>
     <script>
+        checkAdminLogin();
         showDataTableAccessory(getAccessoriesData());
     </script>
 </body>

@@ -38,13 +38,29 @@ function showMenu() {
 }
 
 function printDivContent(divId) {
-    const content = document.getElementById(divId).innerHTML;
+    const content = document.getElementById(divId).outerHTML;
     const printWindow = window.open('', '_blank');
-    printWindow.document.write('<html><head><title>Print</title></head><body>');
+    printWindow.document.write(`<html>
+    <head>
+    <title>Print</title>
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <style>
+        #admin-table {
+            overflow: visible;
+        }
+        tr > th:last-child, tr > td:last-child {
+            display: none;
+        }
+    </style>
+    </head>
+    <body>`);
+    printWindow.document.write(`<h1 style="text-align: center;">Danh sách laptop</h1>`);
     printWindow.document.write(content);
     printWindow.document.write('</body></html>');
     printWindow.document.close();
-    printWindow.print();
+    setTimeout(() => {
+        printWindow.print();
+    }, 500);
 }
 
 // var arr = ['a', 's', 'e', 'a', 'g', 'd', 'l'];
@@ -643,6 +659,7 @@ function showAddProduct() {
             <input type="file" onchange="setImageLink(this)" class="product-image" accept="image/*">
         </div>`;
     });
+    document.getElementById("product-id").value = autoGenerateProductId();
 }
 
 function hideAddProduct() {
@@ -717,11 +734,6 @@ function formatInputNumber(input) {
 }
 
 function createLaptopObj(id, name, video, images, price, oldPrice, quantity, specs, desc) {
-    if (!checkProductId(id)) {
-        showMessage("Mã sản phẩm đã tồn tại", "fail-message", '<i class="fa-solid fa-triangle-exclamation"></i>');
-        return;
-    }
-
     if (name.trim() === "") {
         showMessage("Tên sản phẩm không được để trống", "fail-message", '<i class="fa-solid fa-triangle-exclamation"></i>');
         return;
@@ -757,7 +769,6 @@ function createLaptopObj(id, name, video, images, price, oldPrice, quantity, spe
         specs: specs,
         desc: desc
     };
-    alert(JSON.stringify(laptopObj));
     return laptopObj;
 }
 
@@ -800,12 +811,14 @@ function addLaptopObj(laptopObj, bandName) {
             laptopStorage[band].push(laptopObj);
             localStorage.setItem("sanpham", JSON.stringify(storage));
             showMessage("Thêm sản phẩm thành công", "success-message", '<i class="fa-regular fa-face-smile"></i>');
+            showDataTableLaptop();
             break;
         }
     }
 }
 
 function editLaptopObj(laptopObj, laptopID) {
+    debugger;
     var storage = JSON.parse(localStorage.getItem("sanpham"));
     var laptopStorage = storage.phanloai;
     for(const band in laptopStorage) {
@@ -814,6 +827,7 @@ function editLaptopObj(laptopObj, laptopID) {
                 laptopStorage[band][i] = laptopObj;
                 localStorage.setItem("sanpham", JSON.stringify(storage));
                 showMessage("Sửa sản phẩm thành công", "success-message", '<i class="fa-regular fa-face-smile"></i>');
+                showDataTableLaptop();
                 break;
             }
         }
@@ -828,6 +842,8 @@ function showDeleteDetals(id) {
             if(laptopStorage[band][i].id == id) {
                 laptopStorage[band].splice(i, 1);
                 localStorage.setItem("sanpham", JSON.stringify(storage));
+                showMessage("Xóa sản phẩm thành công", "success-message", '<i class="fa-regular fa-face-smile"></i>');
+                showDataTableLaptop();
                 break;
             }
         }
@@ -974,4 +990,23 @@ function changeDisplayImageSize() {
 function searchProduct(event) {
     event.preventDefault();
     showDataTableLaptop(getLaptopsData());
+}
+
+function checkAdminLogin() {
+    const loginData = JSON.parse(localStorage.getItem("loginData"));
+    if (loginData.userName != "ducphuongtk4@gmail.com") {
+        window.location.href = "home-page.html";
+    }
+}
+
+function changeproductPerPage() {
+    var value = document.getElementById("productPerPage").value;
+    if (value != "" && value > 0) {
+        productPerPage = value;
+    }
+    else {
+        productPerPage = 1000;
+    }
+    totalPage = Math.ceil(getLaptopsData().length / productPerPage);
+    showDataTableLaptop();
 }

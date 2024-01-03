@@ -75,7 +75,7 @@ function signIn(e) {
 }
 
 function checkLogin() {
-    if (localStorage.getItem("loginData") != null) {
+    if (JSON.parse(localStorage.getItem("loginData")) != null) {
         window.location.href = "home-page.html";
     }
 }

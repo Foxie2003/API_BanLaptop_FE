@@ -1,3 +1,5 @@
+var app = angular.module('appBanLaptop', []);
+
 // Slide show
 let slideIndexTop = 0;
 function showSlideTop() {
@@ -172,34 +174,34 @@ function showBorder(index) {
 
 // Load all products from local storage
 function loadAllProduct() {
-    showBorder(0);
-    document.querySelector(".main-title").textContent = "Tất cả sản phẩm";
-    const products = JSON.parse(localStorage.getItem("sanpham"));
-    var loading = 0;
-    for (const property in products.phanloai) {
-        var check = false;
-        for (var i = 0; i < products.phanloai[property].length; i++){
-            loading++;
-            if(loading > loaded) {
-                loadInnerProduct(products.phanloai[property][i]);
-                loaded++;
-                if(loaded % 15 == 0) {
-                    check = true;
-                    break;
-                }
-            }
-        };
-        let button = document.getElementById("showMoreProduct");
-        button.innerHTML = `Xem thêm ${countProduct() - loaded} sản phẩm
-        <i class="fa-solid fa-caret-down fa-lg"></i>`
-        if(loaded == countProduct()) {
-            // let button = document.getElementById("showMoreProduct");
-            button.style.display = "none";
-        }
-        if(check) {
-            break;
-        };
-    }
+    // showBorder(0);
+    // document.querySelector(".main-title").textContent = "Tất cả sản phẩm";
+    // const products = JSON.parse(localStorage.getItem("sanpham"));
+    // var loading = 0;
+    // for (const property in products.phanloai) {
+    //     var check = false;
+    //     for (var i = 0; i < products.phanloai[property].length; i++){
+    //         loading++;
+    //         if(loading > loaded) {
+    //             loadInnerProduct(products.phanloai[property][i]);
+    //             loaded++;
+    //             if(loaded % 15 == 0) {
+    //                 check = true;
+    //                 break;
+    //             }
+    //         }
+    //     };
+    //     let button = document.getElementById("showMoreProduct");
+    //     button.innerHTML = `Xem thêm ${countProduct() - loaded} sản phẩm
+    //     <i class="fa-solid fa-caret-down fa-lg"></i>`
+    //     if(loaded == countProduct()) {
+    //         // let button = document.getElementById("showMoreProduct");
+    //         button.style.display = "none";
+    //     }
+    //     if(check) {
+    //         break;
+    //     };
+    // }
 }
 
 
@@ -299,7 +301,7 @@ function btnLoginOnClick() {
 
 //Btn cart
 function btnCartOnClick() {
-    var loginData = JSON.parse(localStorage.getItem("loginData"));
+    var loginData = JSON.parse(localStorage.getItem("user"));
     var cartInfo = loginData.cart;
     window.location.href = "cart.html";
     
@@ -364,34 +366,26 @@ function getSearchProduct() {
     return searchProduct = Array.from(productsContainer.querySelectorAll(".product-item"));
 }
 
-function priceFilter() {
-    var productsContainer = document.getElementById("products");
-    var products = searchProduct;
-    var minPrice = document.getElementById("min_price").value.replaceAll(",", "");
-    var maxPrice = document.getElementById("max_price").value.replaceAll(",", "");
-    productsContainer.innerHTML = "";
-    var filterProducts = products.filter(function(product) {
-        price = parseInt(product.querySelector(".price").textContent.replaceAll(",", "").split("đ")[0]);
-        return (price >= minPrice && price <= maxPrice)
-    });
-    filterProducts.forEach(function(product) {
-        productsContainer.appendChild(product);
-    });
-    if(filterProducts.length == 0) {
-        document.getElementById("products").innerHTML
-            = `<p style="font-size: 32px; font-weight: bold; color: #333; width: 100%; text-align: center; margin:200px 0;">Không có sản phẩm nào trong khoảng giá</p>`;
-    }
-}
+// function priceFilter() {
+//     var productsContainer = document.getElementById("products");
+//     var products = searchProduct;
+//     var minPrice = document.getElementById("min_price").value.replaceAll(",", "");
+//     var maxPrice = document.getElementById("max_price").value.replaceAll(",", "");
+//     productsContainer.innerHTML = "";
+//     var filterProducts = products.filter(function(product) {
+//         price = parseInt(product.querySelector(".price").textContent.replaceAll(",", "").split("đ")[0]);
+//         return (price >= minPrice && price <= maxPrice)
+//     });
+//     filterProducts.forEach(function(product) {
+//         productsContainer.appendChild(product);
+//     });
+//     if(filterProducts.length == 0) {
+//         document.getElementById("products").innerHTML
+//             = `<p style="font-size: 32px; font-weight: bold; color: #333; width: 100%; text-align: center; margin:200px 0;">Không có sản phẩm nào trong khoảng giá</p>`;
+//     }
+// }
 
 function showLaptopBand() {
-    var subMenu = document.getElementById("laptop-bands-sub-menu");
-    subMenu.innerHTML = "";
-    var storage = JSON.parse(localStorage.getItem("sanpham"));
-    for (const band in storage.phanloai) {
-        var bandName = band.charAt(0).toUpperCase() + band.slice(1);
-        subMenu.innerHTML += 
-        `<div class="top-sub-menu-item" onclick="load${bandName}Product();">
-            Laptop ${bandName}
-        </div>`;
-    }
+    
 }
+

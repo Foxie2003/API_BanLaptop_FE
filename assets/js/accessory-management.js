@@ -91,14 +91,6 @@ function getAccessoriesData() {
 
         return idA - idB;
     });
-    // if (sortById == 1) {
-    //     accessories.sort((a, b) => {
-    //         var idA = parseInt(a.id.replace("SP", ""));
-    //         var idB = parseInt(b.id.replace("SP", ""));
-    
-    //         return idA - idB;
-    //     });
-    // }
     if (sortById == -1) {
         accessories.sort((a, b) => {
             var idA = parseInt(a.id.replace("SP", ""));

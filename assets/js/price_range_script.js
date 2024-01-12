@@ -18,7 +18,7 @@ $(document).ready(function(){
 			}
 			$("#min_price").val(priceFormat.format(ui.values[0]));
 			$("#max_price").val(priceFormat.format(ui.values[1]));
-			priceFilter();
+			// priceFilter();
 		}
 	  });
 

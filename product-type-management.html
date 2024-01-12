@@ -11,9 +11,16 @@
     <link href="./assets/font/fontawesome-free-6.4.2-web/css/solid.css" rel="stylesheet">
     <script src="./assets/js/product-type-management.js"></script>
     <script src="./assets/js/product-details.js"></script>
+    <script src="./assets/angular/global.js"></script>
+    <script src="./assets/angular/angular.min.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            crossorigin="anonymous"></script>
+    <script src="./assets/angular/admin.js"></script>
     <title>Admin</title>
 </head>
-<body>
+<body ng-app="appBanLaptop" ng-controller="admin">
     <!--        QUESTION BOX         -->
     <div id="question-panel">
         <!-- <div class="question-box">
@@ -51,7 +58,24 @@
     <div class="edit-detail">
     </div>
     <!--        SHOW ADD PRODUCT        -->
-    <div class="add-product">   
+    <div class="add-product">
+        <div class="add-product-panel">
+            <div class="add-product-header">
+                Thêm loại sản phẩm
+            </div>
+            <form class="add-product-form">
+                <label for="typeId">Mã loại:</label>
+                <input type="text" id="typeId" placeholder="Mã loại" ng-model="typeId" readonly>
+                <label for="product-name">Tên:</label>
+                <input type="text" id="product-name" placeholder="Tên loại" ng-model="typeName">
+                <label for="product-name">Mô tả:</label>
+                <input type="text" id="product-name" placeholder="Mô tả" ng-model="typeDesc">
+                <div class="detail-nav">
+                    <button class="form-button" ng-click="themLoaiSanPham()">Lưu</button>
+                    <button class="form-button" onclick="hideAddProduct()">Hủy</button>
+                </div>
+            </form>
+        </div>
     </div>
     <!--        ADMIN HEADER         -->
     <div class="admin-header">
@@ -116,9 +140,9 @@
                         <i class="fa-solid fa-minus"></i>
                         <div>Laptop</div>
                     </div>
-                    <div class="left-sub-item" onclick="window.location.href = 'accessory-management.html'">
+                    <div class="left-sub-item" onclick="window.location.href = 'bill-sell.html'">
                         <i class="fa-solid fa-minus"></i>
-                        <div>Phụ kiện</div>
+                        <div>Hóa đơn bán</div>
                     </div>
                     <div class="left-sub-item" onclick="window.location.href = 'product-type-management.html'">
                         <i class="fa-solid fa-minus"></i>
@@ -179,52 +203,40 @@
             <table class="admin-table" id="admin-table">
                 <tr id="admin-table-header">
                     <th style="width: 0%;">
-                        STT
+                        Mã loại
                     </th>
                     <th style="width: 40%;">
-                        Tên
+                        Tên loại
                     </th>
                     <th style="width: 30%;">
-                        Phân loại
+                        Mô tả
                     </th>
                     <th style="width: 30%;">
                         Chức năng
                     </th>
                 </tr>
                 <tbody id="admin-table-data">
-                    <!-- <tr>
+                    <tr ng-repeat="x in listDanhMuc">
                         <td>
-                            SP31
+                            {{x.maLoai}}
                         </td>
-                        <td style="max-width: 500px; overflow: hidden; text-overflow: ellipsis;">
-                            Laptop Acer Aspire 3 A315 58 589K i5 1135G7/8GB/256GB/Win11 (NX.AM0SV.008)
-                        </td>
-                        <td>
-                            <img class="table-image" src="./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-thumb-600x600.jpg" alt="">
+                        <td style="max-width: 350px; overflow: hidden; text-overflow: ellipsis;">
+                            {{x.tenLoai}}
                         </td>
                         <td>
-                            1000000
-                        </td>
-                        <td>
-                            9999999
-                        </td>
-                        <td>
-                            100
+                            {{x.moTa}}
                         </td>
                         <td>
                             <div style="display: flex;">
-                                <div class="table-button">
-                                    <i class="fa-solid fa-eye"></i>
-                                </div>
-                                <div class="table-button">
+                                <div class="table-button" ng-click="showEditLoaiSanPham(x.maLoai, x.tenLoai, x.moTa);">
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </div>
-                                <div class="table-button">
+                                <div class="table-button" ng-click="deleteLoaiSanPham(x.maLoai)">
                                     <i class="fa-solid fa-trash"></i>
                                 </div>
                             </div>
                         </td>
-                    </tr> -->
+                    </tr>`
                 </tbody>
             </table>
             <div class="table-nav">
@@ -246,8 +258,8 @@
         </div>
     </div>
     <script>
-        checkAdminLogin();
-        showDataTableProductTypes(getProductTypesData());
+        // checkAdminLogin();
+        // showDataTableProductTypes(getProductTypesData());
     </script>
 </body>
 </html>

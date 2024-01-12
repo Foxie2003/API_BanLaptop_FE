@@ -140,70 +140,76 @@ function showProductDetails(id) {
 }
 
 function showEditDetals(id) {
-    var panel = document.querySelector(".edit-detail");
-    panel.innerHTML = `<i class="fa-solid fa-rectangle-xmark" onclick='hideEditDetals()'></i>
-    <div class="edit-detail-panel">
-        <div class="edit-detail-header">
-            Chỉnh sửa thông tin sản phẩm
-        </div>
-        <form class="edit-detail-form">
-            <label for="product-name">Tên:</label>
-            <input type="text" id="product-name" placeholder="Asus">
-            <label for="product-band">Loại:</label>
-            <select id="product-band">
-                <option value="phanloai">Laptop</option>
-                <option value="phukien">Phụ kiện</option>
-            </select>
-            <div class="detail-nav">
-                <button class="form-button" onclick="addDetals()">Lưu</button>
-                <button class="form-button" onclick="hideAddProduct()">Hủy</button>
-            </div>
-        </form>
-    `;
-    var productID = document.getElementById("product-id");
-    var productName = document.getElementById("product-name");
-    var productImages = document.querySelector(".detail-image");
-    var productNewPrice = document.getElementById("product-new-price");
-    var productOldPrice = document.getElementById("product-old-price");
-    var productQuantity = document.getElementById("product-quantity");
-    var productData = "";
-    var ImagesData = "";
-
+    var panel = document.querySelector(".add-product");
+    var productImages = document.querySelectorAll(".detail-image");
     panel.style.display = "flex";
-    getProductTypesData().forEach(product => {
-        if (product.id == id) {
-            productData = product;
-            return;
-        }
-    });
-    productID.value = productData.id;
-    productName.value = productData.name;
-    for (var i = 0; i < productData.images.length; i++) {
-        ImagesData +=
-            `<div class="product-image-container">
-            <div class="product-image-hover" onclick="addProductImage(this);">
-                <i class="fa-solid fa-circle-xmark" onclick="deleteProductImage(this)"></i>
-                <i class="fa-solid fa-plus"></i>
-            </div>
-            <img src="${productData.images[i]}" alt="">
-            <input type="file" onchange="setImageLink(this)" class="product-image" accept="image/*">
-        </div>`;
-    }
-    ImagesData +=
-                `<div class="product-image-container">
-            <div class="product-image-hover" style="display: flex; opacity: 0.4; width: 250px; height: 180px;" onclick="addProductImage(this);">
-                <i class="fa-solid fa-circle-xmark" style="display: none" onclick="deleteProductImage(this)"></i>
-                <i class="fa-solid fa-plus"></i>
-            </div>
-            <img src="" alt="">
-            <input type="file" onchange="setImageLink(this)" class="product-image" accept="image/*">
-        </div>`;
-    productImages.innerHTML =
-        `<label for="product-image" style="float: left;">Hình ảnh:</label>
-    ${ImagesData}`;
-    productNewPrice.value = priceFormat.format(productData.price);
-    productOldPrice.value = priceFormat.format(productData.old_price);
-    productQuantity.value = productData.quantity;
+    document.querySelector(".add-product-header").textContent = "Cập nhật loại tài khoản";
+
+
+    // var panel = document.querySelector(".edit-detail");
+    // panel.innerHTML = `<i class="fa-solid fa-rectangle-xmark" onclick='hideEditDetals()'></i>
+    // <div class="edit-detail-panel">
+    //     <div class="edit-detail-header">
+    //         Chỉnh sửa thông tin sản phẩm
+    //     </div>
+    //     <form class="edit-detail-form">
+    //         <label for="product-name">Tên:</label>
+    //         <input type="text" id="product-name" placeholder="Asus">
+    //         <label for="product-band">Loại:</label>
+    //         <select id="product-band">
+    //             <option value="phanloai">Laptop</option>
+    //             <option value="phukien">Phụ kiện</option>
+    //         </select>
+    //         <div class="detail-nav">
+    //             <button class="form-button" onclick="addDetals()">Lưu</button>
+    //             <button class="form-button" onclick="hideAddProduct()">Hủy</button>
+    //         </div>
+    //     </form>
+    // `;
+    // var productID = document.getElementById("product-id");
+    // var productName = document.getElementById("product-name");
+    // var productImages = document.querySelector(".detail-image");
+    // var productNewPrice = document.getElementById("product-new-price");
+    // var productOldPrice = document.getElementById("product-old-price");
+    // var productQuantity = document.getElementById("product-quantity");
+    // var productData = "";
+    // var ImagesData = "";
+
+    // panel.style.display = "flex";
+    // getProductTypesData().forEach(product => {
+    //     if (product.id == id) {
+    //         productData = product;
+    //         return;
+    //     }
+    // });
+    // productID.value = productData.id;
+    // productName.value = productData.name;
+    // for (var i = 0; i < productData.images.length; i++) {
+    //     ImagesData +=
+    //         `<div class="product-image-container">
+    //         <div class="product-image-hover" onclick="addProductImage(this);">
+    //             <i class="fa-solid fa-circle-xmark" onclick="deleteProductImage(this)"></i>
+    //             <i class="fa-solid fa-plus"></i>
+    //         </div>
+    //         <img src="${productData.images[i]}" alt="">
+    //         <input type="file" onchange="setImageLink(this)" class="product-image" accept="image/*">
+    //     </div>`;
+    // }
+    // ImagesData +=
+    //             `<div class="product-image-container">
+    //         <div class="product-image-hover" style="display: flex; opacity: 0.4; width: 250px; height: 180px;" onclick="addProductImage(this);">
+    //             <i class="fa-solid fa-circle-xmark" style="display: none" onclick="deleteProductImage(this)"></i>
+    //             <i class="fa-solid fa-plus"></i>
+    //         </div>
+    //         <img src="" alt="">
+    //         <input type="file" onchange="setImageLink(this)" class="product-image" accept="image/*">
+    //     </div>`;
+    // productImages.innerHTML =
+    //     `<label for="product-image" style="float: left;">Hình ảnh:</label>
+    // ${ImagesData}`;
+    // productNewPrice.value = priceFormat.format(productData.price);
+    // productOldPrice.value = priceFormat.format(productData.old_price);
+    // productQuantity.value = productData.quantity;
 }
 
 function addDetals() {
@@ -303,26 +309,26 @@ function hideSearchProduct() {
 
 function showAddProduct() {
     var panel = document.querySelector(".add-product");
-    panel.innerHTML =
-        `<i class="fa-solid fa-rectangle-xmark" onclick='hideAddProduct()'></i>
-    <div class="add-product-panel">
-        <div class="add-product-header">
-            Thêm loại sản phẩm
-        </div>
-        <form class="add-product-form">
-            <label for="product-name">Tên:</label>
-            <input type="text" id="product-name" placeholder="Asus">
-            <label for="product-band">Loại:</label>
-            <select id="product-band">
-                <option value="phanloai">Laptop</option>
-                <option value="phukien">Phụ kiện</option>
-            </select>
-            <div class="detail-nav">
-                <button class="form-button" onclick="addDetals()">Lưu</button>
-                <button class="form-button" onclick="hideAddProduct()">Hủy</button>
-            </div>
-        </form>
-    </div>`;
+    // panel.innerHTML =
+    //     `<i class="fa-solid fa-rectangle-xmark" onclick='hideAddProduct()'></i>
+    // <div class="add-product-panel">
+    //     <div class="add-product-header">
+    //         Thêm loại sản phẩm
+    //     </div>
+    //     <form class="add-product-form">
+    //         <label for="product-name">Tên:</label>
+    //         <input type="text" id="product-name" placeholder="Asus">
+    //         <label for="product-band">Loại:</label>
+    //         <select id="product-band">
+    //             <option value="phanloai">Laptop</option>
+    //             <option value="phukien">Phụ kiện</option>
+    //         </select>
+    //         <div class="detail-nav">
+    //             <button class="form-button" onclick="addDetals()">Lưu</button>
+    //             <button class="form-button" onclick="hideAddProduct()">Hủy</button>
+    //         </div>
+    //     </form>
+    // </div>`;
     var productImages = document.querySelectorAll(".detail-image");
     panel.style.display = "flex";
     productImages.forEach(item => {
@@ -337,13 +343,13 @@ function showAddProduct() {
             <input type="file" onchange="setImageLink(this)" class="product-image" accept="image/*">
         </div>`;
     });
-    document.getElementById("product-id").value = autoGenerateProductId();
+    // document.getElementById("product-id").value = autoGenerateProductId();
 }
 
 function hideAddProduct() {
     var panel = document.querySelector(".add-product");
     panel.style.display = "none";
-    panel.innerHTML = "";
+    // panel.innerHTML = "";
 }
 
 function showImageAddProduct(button, imageURL) {

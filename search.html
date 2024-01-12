@@ -9,9 +9,12 @@
     <link rel="stylesheet" href="./assets/css/slick.css">
     <link rel="stylesheet" href="./assets/css/slick-theme.css">
     <link rel="stylesheet" href="./assets/css/price_range_style.css">
+    <link rel="stylesheet" href="assets/css/admin.css">
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
         <script src="https://kit.fontawesome.com/fd095985f5.js" crossorigin="anonymous"></script>
+        <script src="./assets/angular/angular.min.js"></script>
+        <script src="./assets/angular/global.js"></script>
         <script src="./assets/js/home-page.js"></script>
         <script src="./assets/js/saveJson.js"></script>
         <script src="./assets/js/slick.js"></script>
@@ -31,7 +34,7 @@
     })();
 </script>
 <!--End of Tawk.to Script-->
-<body>
+<body ng-app="appBanLaptop", ng-controller="search">
     <!--        SLIDE SHOW (Top)       -->
     <div class="slide-show">
         <img src="./assets/img/slide-show/slide-show top/BIG-T10-1200-44-1200x44.webp" alt="" class="top-slides">
@@ -42,8 +45,8 @@
     <div class="top-header">
         <img src="./assets/img/logo/horizontal-logo.png" alt="" id="top-logo" onclick="window.location.href = 'home-page.html';">
         <div id="top-search">
-            <input type="search" id="top-search-input" placeholder="Bạn đang tìm...">
-            <button id="top-search-button" onclick="window.location.href = 'search.html?value=' + document.getElementById('top-search-input').value">
+            <input type="search" id="top-search-input" placeholder="Bạn đang tìm..." ng-model="searchInput">
+            <button id="top-search-button" ng-click="searchLaptop(searchInput)">
                 <i class="fa-solid fa-magnifying-glass fa-lg fa-beat-fade" style="color: #000000;"></i>
             </button>
         </div>
@@ -190,10 +193,10 @@
             <p>Tìm theo khoảng giá: </p>
             <div id="slider-range" class="price-filter-range" name="rangeInput" style="width: 300px;"></div>
             Từ
-            <input type="text" id="min_price" class="price-range-field" disabled/>
+            <input type="text" id="min_price" class="price-range-field" ng-model="min_price" disabled/>
             đ
             Đến
-            <input type="text" id="max_price" class="price-range-field" disabled/>
+            <input type="text" id="max_price" class="price-range-field" ng-model="max_price" disabled/>
             đ
         </div>
         <select class="sort-box" onchange="sort()">
@@ -206,28 +209,34 @@
     <div class="products-container" id="products">
         <!-- <p style="font-size: 32px; font-weight: bold; color: #333; width: 100%; text-align: center; margin:200px 0;">Không có sản phẩm nào </p>
         <p style="font-size: 26px; color: #333; width: 100%; text-align: center; margin-bottom: 20px;">Xem các sản phẩm khác</p> -->
-        <!-- <div class="product-item col-3 col-s-6" onclick="showDetails()">
-            <span class="product-id" style="display: none;"></span>
-            <img src="./assets/img/asus/asus-tuf-gaming-f15-fx506he-i7-hn378w/asus-tuf-gaming-f15-fx506he-i7-hn378w-1.jpg" alt="">
-            <div class="title">HP 15s fq2716TU i3 1115G4 (7C0X3PA)</div>
-            <div class="container" style="align-items: center;">
-                <div class="price">10.190.000₫</div>
-                <div class="price" style="font-size: 14px; margin-top: -2px;">10000₫</div>
+        <div class="product-item col-2-4 col-s-6" onclick="showDetails('SP01')" ng-repeat="laptop in listLaptop">
+            <div class="sale-percent">
+                -{{getRandomNum(1, 30)}}%<i class="fa-solid fa-tag fa-xl" aria-hidden="true"></i>
             </div>
-        <ul class="desc">
-                <li class="screen">some data</li>
-                <li class="cpu">some data</li>
-                <li class="gpu">some data</li>
-                <li class="ram">some data</li>
-                <li class="weight">some data</li>
+            <img class="product-img" src="{{host}}{{laptop.hinhAnhDaiDien}}" alt="">
+            <div class="title">{{laptop.tenSanPham}}</div>
+            <div class="price">{{priceFormat.format(laptop.donGia)}}đ</div>
+            <div class="price-old">{{priceFormat.format(laptop.donGia + laptop.donGia * 0.15)}}đ</div>
+            <ul class="desc" ng-repeat="spec in laptop.listThongSoKyThuat" ng-if="$index < 5">
+                <li>{{spec.tenThongSo}}: {{spec.moTa}}</li>
             </ul>
-        </div> -->
+        </div>
     </div>
-    <div class="container">
-        <!--        Show more        -->
-        <button id="showMoreProduct" onclick="" style="display: none;">
-            Xem thêm sản phẩm
-        </button>
+    <div class="table-nav">
+        <div class="table-button" ng-click="firstPageLaptops()">
+            <i class="fa-solid fa-angles-left"></i>
+        </div>
+        <div class="table-button" ng-click="backPageLaptops()">
+            <i class="fa-solid fa-angle-left"></i>
+        </div>
+        <input type="text" id="currentPage" value="{{pageIndex}}">
+        <div id="totalPage">/ {{totalPage}}</div>
+        <div class="table-button" ng-click="nextPageLaptops()">
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
+        <div class="table-button" ng-click="lastPageLaptops()">
+            <i class="fa-solid fa-angles-right"></i>
+        </div>
     </div>
     <button id="btnBackToTop" onclick="document.documentElement.scrollTop = 0;"><i class="fa-solid fa-angle-up fa-bounce fa-xl"></i></button>
     <!--        FOOTER      -->
@@ -253,12 +262,13 @@
         </div>
         <p style="width: 100%; text-align: center;">Copyright by Phương</p>
     </div>
+    <script src="./assets/angular/timkiem.js"></script>
     <script>
-        showSlideTop();
-        showLoginData();
-        showProductInCart();
-        searchProduct(window.location.href.split("?value=")[1]);
-        showLaptopBand();
+        // showSlideTop();
+        // showLoginData();
+        // showProductInCart();
+        // searchProduct(window.location.href.split("?value=")[1]);
+        // showLaptopBand();
 
         //Search when press enter
         var searchInput = document.getElementById("top-search-input");

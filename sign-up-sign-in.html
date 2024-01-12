@@ -7,10 +7,13 @@
     <link rel="stylesheet" href="./assets/css/home-page.css">
     <link rel="stylesheet" href="./assets/css/product-details.css">
     <script src="https://kit.fontawesome.com/fd095985f5.js" crossorigin="anonymous"></script>
-    <!-- <script src="./assets/js/search.js" defer></script> -->
     <script src="./assets/js/home-page.js"></script>
     <script src="./assets/js/product-details.js"></script>
     <script src="./assets/js/sign-up.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="./assets/angular/angular.min.js"></script>
+    <script src="./assets/angular/global.js"></script>
+    <script src="./assets/angular/login.js"></script>
     <title>Thegioilaptop.com</title>
 </head>
 <!--Start of Tawk.to Script-->
@@ -176,13 +179,13 @@
     <!--        sign-up PANEL      -->
     <div class="sign-up-panel container hide" id="sign-up">
         <img src="./assets/img/logo/sign-up.png" alt="logo-sign-up">
-        <form class="sign-up-form" onsubmit="signUp()">
+        <form class="sign-up-form" onsubmit="register({'username': document.querySelector('#username-sign-up').value, 'password':  document.querySelector('#password-sign-up').value, 'confirmPassword':  document.querySelector('#confirm-password-sign-up').value})">
             <h2 style="padding: 5px; font-size: 20px;">ĐĂNG KÝ TÀI KHOẢN</h2>
             <label for="username">Tài khoản<span style="color: red;">*</span></label>
             <div class="input-wrap">
                 <!-- <label for="username" style="position: absolute; margin-top: -65px;">adu</label> -->
                 <i class="fa-solid fa-user fa-lg"></i>
-                <input id="username-sign-up" type="email" name="username" placeholder="Email" required>
+                <input id="username-sign-up" type="text" name="username" placeholder="Tài khoản" required>
             </div>
             <div class="err"></div>
             <label for="password">Mật khẩu<span style="color: red;">*</span></label>
@@ -204,12 +207,12 @@
     <!--        sign-in PANEL      -->
     <div class="sign-up-panel container" id="sign-in">
         <img src="./assets/img/logo/sign-up.png" alt="logo-sign-up">
-        <form class="sign-up-form" onsubmit="signIn()">
+        <form class="sign-up-form" onsubmit="login({'username': document.querySelector('#username-sign-in').value,'password':  document.querySelector('#password-sign-in').value})">
             <h2 style="padding-bottom: 20px;">ĐĂNG NHẬP TÀI KHOẢN</h2>
             <label for="username">Tài khoản</label>
             <div class="input-wrap">
                 <i class="fa-solid fa-user fa-lg"></i>
-                <input id="username-sign-in" type="email" name="username" placeholder="Email" required>
+                <input id="username-sign-in" type="text" name="username" placeholder="Tài khoản" required>
             </div>
             <label for="password">Mật khẩu</label>
             <div class="input-wrap">

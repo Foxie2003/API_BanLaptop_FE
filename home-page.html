@@ -3,18 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./assets/font/fontawesome-free-6.4.2-web/css/fontawesome.css" rel="stylesheet">
+    <link href="./assets/font/fontawesome-free-6.4.2-web/css/brands.css" rel="stylesheet">
+    <link href="./assets/font/fontawesome-free-6.4.2-web/css/solid.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/sign-up.css">
     <link rel="stylesheet" href="./assets/css/home-page.css">
     <link rel="stylesheet" href="./assets/css/slick.css">
     <link rel="stylesheet" href="./assets/css/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/admin.css">
     <script
             src="https://code.jquery.com/jquery-3.7.1.js"
             integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
             crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/fd095985f5.js" crossorigin="anonymous"></script>
+    <script src="./assets/angular/angular.min.js"></script>
+    <script src="./assets/angular/global.js"></script>
     <script src="./assets/js/home-page.js"></script>
     <script src="./assets/js/saveJson.js"></script>
     <script src="./assets/js/slick.js"></script>
+    <script src="./assets/angular/trangchu.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
+    <!-- <script src="./assets/angular/trangchu.js"></script> -->
     <title>Home page</title>
 </head>
 <!--Start of Tawk.to Script-->
@@ -30,7 +39,7 @@
     })();
 </script>
 <!--End of Tawk.to Script-->
-<body>
+<body ng-app="appBanLaptop", ng-controller="home-page">
     <!--        SLIDE SHOW (Top)       -->
     <div class="slide-show">
         <img src="./assets/img/slide-show/slide-show top/BIG-T10-1200-44-1200x44.webp" alt="" class="top-slides">
@@ -41,8 +50,8 @@
     <div class="top-header">
         <img src="./assets/img/logo/horizontal-logo.png" alt id="top-logo" onclick="window.location.href = 'home-page.html';">
         <div id="top-search">
-            <input type="search" id="top-search-input" placeholder="Bạn đang tìm...">
-            <button id="top-search-button" onclick="window.location.href = 'search.html?value=' + document.getElementById('top-search-input').value">
+            <input type="search" id="top-search-input" placeholder="Bạn đang tìm..." ng-model="searchInput">
+            <button id="top-search-button" ng-click="searchLaptopByName(searchInput)">
                 <i class="fa-solid fa-magnifying-glass fa-lg fa-beat-fade" style="color: #000000;"></i>
             </button>
         </div>
@@ -52,7 +61,7 @@
         <div class="top-button" id="btn-cart" onclick="btnCartOnClick();">
             <i class="fa-solid fa-cart-shopping fa-lg"></i>
             <span style="margin-left: 2px;"></span>
-            Giỏ hàng (0)
+            Giỏ hàng
         </div>
     </div>
     <!--        TOP MENU         -->
@@ -94,10 +103,10 @@
             <div class="top-sub-menu">
                 <i class="fa-solid fa-caret-up fa-lg"></i>
                 <div class="top-sub-menu-panel" id="laptop-bands-sub-menu">
-                    <div class="top-sub-menu-item" onclick="loadHpProduct();">
-                        Laptop HP
+                    <div class="top-sub-menu-item" ng-click="alert(x.maLoai);" ng-repeat="x in listDanhMuc">
+                        {{x.tenLoai}}
                     </div>
-                    <div class="top-sub-menu-item" onclick="loadAsusProduct();">
+                    <!-- <div class="top-sub-menu-item" onclick="loadAsusProduct();">
                         Laptop Asus
                     </div>
                     <div class="top-sub-menu-item" onclick="loadLenovoProduct();">
@@ -132,7 +141,7 @@
                     </div>
                     <div class="top-sub-menu-item">
                         Laptop Singpc
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -220,47 +229,47 @@
     <div class="bands-gallery">
         <div class="container" style="border-bottom-left-radius: 0; border-bottom-right-radius: 0; padding-top: 10px;">
             <div class="bands-item">
-                <img src="./assets/img/logo/bands/logo-all.png" onclick="document.getElementById('products').innerHTML = ''; loaded = 0; loadAllProduct(); document.getElementById('showMoreProduct').style.display = 'block'; window.scrollTo(0, 1050);" alt="" >
+                <img src="./assets/img/logo/bands/logo-all.png" ng-click="loadAllLaptopsByBandName('')" alt="" >
             </div>
-            <div class="bands-item" onclick="loadHpProduct();">
+            <div class="bands-item" ng-click="loadAllLaptopsByBandName('hp')">
                 <img src="./assets/img/logo/bands/logo-hp-149x40-1.png" alt="" >
             </div>
-            <div class="bands-item" onclick="loadAsusProduct();">
+            <div class="bands-item" ng-click="loadAllLaptopsByBandName('asus')">
                 <img src="./assets/img/logo/bands/logo-asus-149x40.png" alt="" >
             </div>
-            <div class="bands-item" onclick="loadLenovoProduct();">
+            <div class="bands-item" ng-click="loadAllLaptopsByBandName('lenovo')">
                 <img src="./assets/img/logo/bands/logo-lenovo-149x40.png" alt="" >
             </div>
-            <div class="bands-item" onclick="loadAcerProduct();">
+            <div class="bands-item" ng-click="loadAllLaptopsByBandName('acer')">
                 <img src="./assets/img/logo/bands/logo-acer-149x40.png" alt="" >
             </div>
-            <div class="bands-item">
+            <div class="bands-item" ng-click="loadAllLaptopsByBandName('dell')">
                 <img src="./assets/img/logo/bands/logo-dell-149x40.png" alt="" >
             </div>
-            <div class="bands-item">
+            <div class="bands-item" ng-click="loadAllLaptopsByBandName('msi')">
                 <img src="./assets/img/logo/bands/logo-msi-149x40.png" alt="" >
             </div>
-            <div class="bands-item">
+            <div class="bands-item" ng-click="loadAllLaptopsByBandName('macbook')">
                 <img src="./assets/img/logo/bands/logo-macbook-149x40.png" alt="" >
             </div>
         </div>
         <div class="container" style="border-top-left-radius: 0; border-top-right-radius: 0; padding-bottom: 10px;">
-            <div class="bands-item">
+            <div class="bands-item" ng-click="loadAllLaptopsByBandName('itel')">
                 <img src="./assets/img/logo/bands/logo-itel-149x40.png" alt="" >
             </div>
-            <div class="bands-item">
+            <div class="bands-item" ng-click="loadAllLaptopsByBandName('gigabyte')">
                 <img src="./assets/img/logo/bands/logo-gigabyte-149x40.png" alt="" >
             </div>
-            <div class="bands-item">
+            <div class="bands-item" ng-click="loadAllLaptopsByBandName('surface')">
                 <img src="./assets/img/logo/bands/logo-surface-149x40-1.png" alt="" >
             </div>
-            <div class="bands-item">
+            <div class="bands-item" ng-click="loadAllLaptopsByBandName('masstel')">
                 <img src="./assets/img/logo/bands/Masstel42-b0-200x48-1.png" alt="" >
             </div>
-            <div class="bands-item">
+            <div class="bands-item" ng-click="loadAllLaptopsByBandName('masstel')">
                 <img src="./assets/img/logo/bands/logo-lg-149x40.png" alt="" >
             </div>
-            <div class="bands-item">
+            <div class="bands-item" ng-click="loadAllLaptopsByBandName('masstel')">
                 <img src="./assets/img/logo/bands/logo-singpc-149x40-1.jpg" alt="" >
             </div>
             <div class="bands-item" style="background: none !important; border: none !important;">
@@ -284,26 +293,34 @@
     <div class="products-container" id="products">
         <!-- <p style="font-size: 32px; font-weight: bold; color: #333; width: 100%; text-align: center; margin:200px 0;">Không có sản phẩm nào </p>
         <p style="font-size: 26px; color: #333; width: 100%; text-align: center; margin-bottom: 20px;">Xem các sản phẩm khác</p> -->
-        <!-- <div class="product-item col-2-4 col-s-6" onclick="showDetails('SP02')">
-            <div class="sale-percent">-90%</div>
-            <img class="product-img" src="./assets/img/asus/vi-vn-asus-vivobook-x515ea-i3-ej3948w-slider/asus-vivobook-x515ea-i3-ej3948w-thumb-600x600.jpg" alt="">
-            <div class="title">Laptop Asus Vivobook X515EA i3 1115G4</div>
-            <div class="price">9,990,000₫</div>
-            <div class="price-old">10,989,000₫</div>
-            <ul class="desc">
-                <li class="screen">Màn hình: 15.6", Full HD (1920 x 1080)</li>
-                <li class="cpu">CPU: i3, 1115G4, 3GHz</li>
-                <li class="gpu">Card: Card tích hợp, Intel UHD</li>
-                <li class="ram">Ram: 8 GB, DDR4 2 khe, 3200 MHz</li>
-                <li class="weight">Cân nặng:  Nặng 1.8 kg</li>
+        <div class="product-item col-2-4 col-s-6" ng-click="loadLaptopById(laptop.maSanPham)" ng-repeat="laptop in listLaptop">
+            <div class="sale-percent">
+                -{{getRandomNum(1, 30)}}%<i class="fa-solid fa-tag fa-xl" aria-hidden="true"></i>
+            </div>
+            <img class="product-img" src="{{host}}{{laptop.hinhAnhDaiDien}}" alt="">
+            <div class="title">{{laptop.tenSanPham}}</div>
+            <div class="price">{{priceFormat.format(laptop.donGia)}}đ</div>
+            <div class="price-old">{{priceFormat.format(laptop.donGia + laptop.donGia * 0.15)}}đ</div>
+            <ul class="desc" ng-repeat="spec in laptop.listThongSoKyThuat" ng-if="$index < 5">
+                <li>{{spec.tenThongSo}}: {{spec.moTa}}</li>
             </ul>
-        </div> -->
+        </div>
     </div>
-    <div class="container">
-        <!--        Show more        -->
-        <button id="showMoreProduct" onclick="loadAllProduct()">
-            Xem thêm sản phẩm
-        </button>
+    <div class="table-nav">
+        <div class="table-button" ng-click="firstPageLaptops()">
+            <i class="fa-solid fa-angles-left"></i>
+        </div>
+        <div class="table-button" ng-click="backPageLaptops()">
+            <i class="fa-solid fa-angle-left"></i>
+        </div>
+        <input type="number" id="currentPage" value="{{pageIndex}}">
+        <div id="totalPage">/ {{totalPage}}</div>
+        <div class="table-button" ng-click="nextPageLaptops()">
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
+        <div class="table-button" ng-click="lastPageLaptops()">
+            <i class="fa-solid fa-angles-right"></i>
+        </div>
     </div>
     <button id="btnBackToTop" onclick="document.documentElement.scrollTop = 0;"><i class="fa-solid fa-angle-up fa-bounce fa-xl"></i></button>
     <!--        FOOTER      -->

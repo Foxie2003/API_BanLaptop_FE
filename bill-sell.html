@@ -11,9 +11,16 @@
     <link href="./assets/font/fontawesome-free-6.4.2-web/css/solid.css" rel="stylesheet">
     <script src="./assets/js/accessory-management.js"></script>
     <script src="./assets/js/product-details.js"></script>
+    <script src="./assets/angular/global.js"></script>
+    <script src="./assets/angular/angular.min.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            crossorigin="anonymous"></script>
+    <script src="./assets/angular/admin.js"></script>
     <title>Admin</title>
 </head>
-<body>
+<body ng-app="appBanLaptop" ng-controller="admin">
     <!--        QUESTION BOX         -->
     <div id="question-panel">
         <!-- <div class="question-box">
@@ -116,9 +123,9 @@
                         <i class="fa-solid fa-minus"></i>
                         <div>Laptop</div>
                     </div>
-                    <div class="left-sub-item" onclick="window.location.href = 'accessory-management.html'">
+                    <div class="left-sub-item" onclick="window.location.href = 'bill-sell.html'">
                         <i class="fa-solid fa-minus"></i>
-                        <div>Phụ kiện</div>
+                        <div>Hóa đơn bán</div>
                     </div>
                     <div class="left-sub-item" onclick="window.location.href = 'product-type-management.html'">
                         <i class="fa-solid fa-minus"></i>
@@ -188,70 +195,60 @@
                         <i class="fa-solid fa-print"></i>
                         In danh sách
                     </div>
-                    <div class="table-button" onclick="showAddProduct();">
-                        <i class="fa-solid fa-plus"></i>
-                        Thêm sản phẩm
-                    </div>
                 </div>
             </div>
             <table class="admin-table" id="admin-table">
                 <tr id="admin-table-header">
-                    <th id="sort-by-id" onclick="sortProductById()">
-                    <i class="fa-solid fa-sort-up"></i> ID sản phẩm
+                    <th id="sort-by-id" onclick="">
+                        ID hóa đơn
                     </th>
-                    <th id="sort-by-name" onclick="sortProductByName()">
-                    <i class="fa-solid fa-sort"></i> Tên
+                    <th id="sort-by-name" onclick="">
+                        Ngày bán
                     </th>
                     <th>
-                        Ảnh thumbnail
+                        Tên khách hàng
                     </th>
-                    <th id="sort-by-newPrice" onclick="sortProductByNewPrice()">
-                    <i class="fa-solid fa-sort"></i> Giá mới
+                    <th>
+                        Địa chỉ
                     </th>
-                    <th id="sort-by-oldPrice" onclick="sortProductByOldPrice()">
-                    <i class="fa-solid fa-sort"></i> Giá cũ
+                    <th>
+                        SĐT
                     </th>
-                    <th id="sort-by-quantity" onclick="sortProductByQuantity()">
-                    <i class="fa-solid fa-sort"></i> Số lượng
+                    <th>
+                        Trạng thái
                     </th>
                     <th>
                         Chức năng
                     </th>
                 </tr>
                 <tbody id="admin-table-data">
-                    <!-- <tr>
+                    <tr ng-repeat="bill in listBillSell">
                         <td>
-                            SP31
-                        </td>
-                        <td style="max-width: 500px; overflow: hidden; text-overflow: ellipsis;">
-                            Laptop Acer Aspire 3 A315 58 589K i5 1135G7/8GB/256GB/Win11 (NX.AM0SV.008)
+                            {{bill.maHoaDonBan}}
                         </td>
                         <td>
-                            <img class="table-image" src="./assets/img/acer/acer-aspire-3-a315-58-54xf-i5-nxam0sv007/acer-aspire-3-a315-58-54xf-i5-nxam0sv007-thumb-600x600.jpg" alt="">
+                            {{bill.ngayBan}}
                         </td>
                         <td>
-                            1000000
+                            {{bill.tenKhachHang}}
                         </td>
                         <td>
-                            9999999
+                            {{bill.diaChi}}
                         </td>
                         <td>
-                            100
+                            {{bill.sdt}}
+                        </td>
+                        <td>
+                            {{bill.trangThai}}
                         </td>
                         <td>
                             <div style="display: flex;">
-                                <div class="table-button">
-                                    <i class="fa-solid fa-eye"></i>
-                                </div>
-                                <div class="table-button">
-                                    <i class="fa-solid fa-pen-to-square"></i>
-                                </div>
-                                <div class="table-button">
-                                    <i class="fa-solid fa-trash"></i>
+                                <div class="table-button" ng-click="xacNhanDonHang(bill.maHoaDonBan)">
+                                    <i class="fa-solid fa-clipboard-check"></i>
                                 </div>
                             </div>
                         </td>
-                    </tr> -->
+                    </tr>
                 </tbody>
             </table>
             <div class="table-nav">
@@ -273,8 +270,8 @@
         </div>
     </div>
     <script>
-        checkAdminLogin();
-        showDataTableAccessory(getAccessoriesData());
+        // checkAdminLogin();
+        // showDataTableAccessory(getAccessoriesData());
     </script>
 </body>
 </html>
